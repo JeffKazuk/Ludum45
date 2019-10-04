@@ -6,13 +6,14 @@ onready var cineTimer = get_parent().get_node("cineTimer")
 onready var button = get_parent().get_node("Button")
 var json_result = {}
 var dialogues = 0;
+var filepath = ""
 
 func _ready():
-	
+	filepath = get_parent().get_parent().get_file()
 	button.set_text("Next")
 	
 	var file = File.new()
-	file.open("res://dialogue/guard.json", file.READ)
+	file.open(filepath, file.READ)
 	var json = file.get_as_text()
 	json_result = JSON.parse(json).result
 	file.close()
