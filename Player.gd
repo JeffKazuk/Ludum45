@@ -1,13 +1,26 @@
 extends KinematicBody
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var gravity = Vector3.DOWN * 12  # strength of gravity
+var speed = 4  # movement speed
+var jump_speed = 6  # jump strength
+var spin = 0.1  # rotation speed
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var velocity = Vector3()
+var jump = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func get_input():
+    velocity.x = 0
+    velocity.z = 0
+    if Input.is_action_pressed("move_forward"):
+        velocity.z -= speed
+    if Input.is_action_pressed("move_back"):
+        velocity.z += speed
+    if Input.is_action_pressed("strafe_right"):
+        velocity.x += speed
+    if Input.is_action_pressed("strafe_left"):
+        velocity.x -= speed
+
+func _physics_process(delta):
+    velocity += gravity * delta
+    get_input(delta)
+    velocity = move_and_slide(velocity, Vector3.UP)
