@@ -1,0 +1,28 @@
+{
+    "say":[
+        {
+            "name":"GUARD",
+            "says":"Hey! you're finally awake! So today's the day huh?"
+        },
+        {
+            "name":"YOU",
+            "says":"I guess it is."
+        },
+        {
+            "name":"GUARD",
+            "says":"You excited?"
+        },
+        {
+            "name":"YOU:",
+            "says":"I'm not sure. I don't feel much of anything honestly."
+        },
+        {
+            "name":"GAURD:",
+            "says":"Well hopefully that changes. You get your life back today! What do you think you'll do?"
+        },
+        {
+            "name":"YOU:",
+            "says":"I think I'm going home to find my daughter..."
+        }]
+}
+
