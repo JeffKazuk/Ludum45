@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://models/prisonscene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Main Character Bad Boy.png" type="Texture" id=2]
 [ext_resource path="res://transitions/fade.tscn" type="PackedScene" id=3]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://dialogue/Dialogue.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -60,3 +62,8 @@ material/0 = SubResource( 3 )
 [node name="fade" parent="." instance=ExtResource( 3 )]
 fadeTime = 3
 alphaEnd = 0
+
+[node name="changeScene" parent="." instance=ExtResource( 4 )]
+
+[node name="Control" parent="." instance=ExtResource( 5 )]
+file = "guard"

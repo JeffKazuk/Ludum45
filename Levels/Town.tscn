@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://world.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/world.tscn" type="PackedScene" id=2]
+[ext_resource path="res://dialogue/Dialogue.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -15,13 +16,13 @@ background_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 [node name="Spatial" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 11.8908 )
 
 [node name="Spatial" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.923127, 0.384497, 0, -0.384497, 0.923127, 0, 3.03842, 4.11099 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986, -0.000297091, 0.00256742, 0.000310637, 0.999997, 0, 2.88616, 4.01354 )
+transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986, -0.000297091, 0.00256742, 0.000310637, 0.999997, 0, 2.88616, 15.9043 )
 environment = SubResource( 2 )
 target = NodePath("../Player/Spatial")
 speed = 4.0
@@ -29,3 +30,6 @@ enabled = true
 
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="root" parent="." instance=ExtResource( 3 )]
+file = "jogger1"

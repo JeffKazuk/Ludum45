@@ -14,3 +14,4 @@ polygon = PoolVector2Array( 0, 0, 0, 600, 1020, 600, 1020, 0 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
