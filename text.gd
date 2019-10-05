@@ -4,6 +4,7 @@ onready var top = get_parent().get_parent().get_node("Tp")
 onready var bottom = get_parent().get_parent().get_node("Btm")
 onready var cineTimer = get_parent().get_node("cineTimer")
 onready var button = get_parent().get_node("Button")
+onready var nameBox = get_parent().get_parent().get_node("nameBox/name")
 var json_result = {}
 var dialogues = 0;
 var filepath = ""
@@ -20,7 +21,7 @@ func _ready():
 	print(json_result)
 	set_bbcode(json_result["say"][dialogues]["says"])
 	set_visible_characters(0)
-
+	nameBox.set_bbcode(json_result["say"][dialogues]["name"])
 
 
 func _physics_process(delta):
@@ -38,6 +39,7 @@ func _on_Button_pressed():
 	
 	if (dialogues<=json_result["say"].size()-1):
 		set_bbcode(json_result["say"][dialogues]["says"])
+		nameBox.set_bbcode(json_result["say"][dialogues]["name"])
 		set_visible_characters(0)
 	if(dialogues==json_result["say"].size()-1):
 		button.set_text("Continue")

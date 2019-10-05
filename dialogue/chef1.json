@@ -1,0 +1,40 @@
+{
+    "say":[
+        {
+            "name":"CHEF:",
+            "says":"You've got a lot of nerve showing yourself in FLAVOURVILLE!!!!"
+        },
+        {
+            "name":"YOU:",
+            "says":"I'm sorry Chef. I'm just looking for Kate. Do you know where she went?"
+        },
+        {
+            "name":"CHEF:",
+            "says":"You think I'M going to help YOU? HA! You STOLE my precious burger recipe and sold it to BurgerTown!"
+        },
+        {
+            "name":"YOU:",
+            "says":"I know and I'm sorry. Is there anything I can do to make it up to you?"
+        },
+        {
+            "name":"CHEF:",
+            "says":"NO!"
+        },
+        {
+            "name":"CHEF:",
+            "says":"Wait. YES!"
+        },
+        {
+            "name":"CHEF:",
+            "says":"WAIT NO!!"
+        },
+        {
+            "name":"CHEF:",
+            "says":"..."
+        },
+        {
+            "name":"CHEF:",
+            "says":"Fine. if you can prove your cooking skills to me, then I'll tell you what I know about Kate. BUT FIRST! The ultimate test! THE CHEF'S FAMOUS BURGER RECIPE! The NOT BurgerTown Burger!"
+        }]
+}
+
