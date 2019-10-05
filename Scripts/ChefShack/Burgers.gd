@@ -8,5 +8,5 @@ func _ready():
     self.connect("pickup", chefshack, "_pickup", ["Burger_Raw"])
 
 func _on_interact():
-    
     emit_signal("pickup")
+    

@@ -19,7 +19,7 @@ func _ready():
 	
 func _pickup(item):
 	currently_holding = item
-	print(currently_holding)
+	#print(currently_holding)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

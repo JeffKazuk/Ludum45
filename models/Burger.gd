@@ -5,10 +5,13 @@ extends KinematicBody
 # var b = "text"
 var gravity = Vector3.DOWN * 12
 var velocity = Vector3()
+var material
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+    material = $Cylinder.get_surface_material(0)
+    material = material.duplicate()
+    $Cylinder.set_surface_material(0, material)
 
 func _physics_process(delta):
     velocity += gravity * delta

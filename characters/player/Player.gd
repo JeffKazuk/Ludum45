@@ -19,12 +19,16 @@ func get_input():
     velocity.z = 0
     if Input.is_action_pressed("move_forward"):
         velocity.z -= speed
+        $Sprite.frame = 2
     if Input.is_action_pressed("move_back"):
         velocity.z += speed
+        $Sprite.frame = 0
     if Input.is_action_pressed("strafe_right"):
         velocity.x += speed
+        $Sprite.frame = 3
     if Input.is_action_pressed("strafe_left"):
         velocity.x -= speed
+        $Sprite.frame = 1
        
 func _input(event):
     if event.is_action_pressed("interact"):

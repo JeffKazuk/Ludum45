@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Main Character Front.png-bc2b3f272f30a5107fde2863bbb7abdc.s3tc.stex"
-path.etc2="res://.import/Main Character Front.png-bc2b3f272f30a5107fde2863bbb7abdc.etc2.stex"
+path.s3tc="res://.import/Main Character Other Side.png-dbd01669df0f86275a2e9008c92f733e.s3tc.stex"
+path.etc2="res://.import/Main Character Other Side.png-dbd01669df0f86275a2e9008c92f733e.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/Main Character Front.png"
-dest_files=[ "res://.import/Main Character Front.png-bc2b3f272f30a5107fde2863bbb7abdc.s3tc.stex", "res://.import/Main Character Front.png-bc2b3f272f30a5107fde2863bbb7abdc.etc2.stex" ]
+source_file="res://images/Main Character Other Side.png"
+dest_files=[ "res://.import/Main Character Other Side.png-dbd01669df0f86275a2e9008c92f733e.s3tc.stex", "res://.import/Main Character Other Side.png-dbd01669df0f86275a2e9008c92f733e.etc2.stex" ]
 
 [params]
 

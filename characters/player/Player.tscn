@@ -1,34 +1,40 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://characters/player/Player.gd" type="Script" id=1]
-[ext_resource path="res://characters/player/Player.png" type="Texture" id=2]
+[ext_resource path="res://images/Main Character Front.png" type="Texture" id=2]
+[ext_resource path="res://images/Main Character Side.png" type="Texture" id=3]
+[ext_resource path="res://images/Main Character Sprite Back.png" type="Texture" id=4]
+[ext_resource path="res://images/Main Character Other Side.png" type="Texture" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.5
+radius = 0.39415
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.4, 0.1, 0.4 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0 )
 collision_layer = 9
 script = ExtResource( 1 )
 
 [node name="Body" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="Feet" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.914058, 0 )
 shape = SubResource( 2 )
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.0792165, 0 )
 frames = SubResource( 3 )
 animation = "walk"
+frame = 2
