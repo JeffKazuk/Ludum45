@@ -84,8 +84,6 @@ margin_right = 170.0
 margin_bottom = 90.0
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
-bbcode_text = "chef"
-text = "chef"
 scroll_active = false
 [connection signal="timeout" from="box/TextTimer" to="box/text" method="_on_TextTimer_timeout"]
 [connection signal="timeout" from="box/cineTimer" to="box/text" method="_on_cineTimer_timeout"]
