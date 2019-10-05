@@ -6,7 +6,7 @@ extends Spatial
 
 var burger = preload("res://models/Burger.tscn")
 var plate = preload("res://models/PhysicsPlate.tscn")
-export var currently_holding = ""
+export(String) var currently_holding
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

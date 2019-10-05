@@ -10,6 +10,10 @@ var currently_interactable
 var can_interact = false
 signal interact
 
+func _ready():
+    if null:
+        print("nah")
+
 func get_input():
     velocity.x = 0
     velocity.z = 0
@@ -22,19 +26,21 @@ func get_input():
     if Input.is_action_pressed("strafe_left"):
         velocity.x -= speed
     if Input.is_action_pressed("interact"):
-        self.connect("interact", currently_interactable, "_on_interact")
+        if not self.is_connected("interact", currently_interactable, "_on_interact"):
+            self.connect("interact", currently_interactable, "_on_interact")
         if can_interact:
             emit_signal("interact")
 
 
 func _process(delta):
     distances.clear()
-    interactables = get_parent().get_node("Interactables").get_children()
-    for interactable in interactable:
-        distances.append(self.translation.distance_squared_to(interactable.translation))
-    currently_interactable = interactables[distances.find(distances.min())]
-    if distances.min() <= 2:
-        can_interact = true
+    if get_parent().find_node("Interactables"):
+        interactables = get_parent().find_node("Interactables").get_children()
+        for interactable in interactable:
+            distances.append(self.translation.distance_squared_to(interactable.translation))
+        currently_interactable = interactables[distances.find(distances.min())]
+        if distances.min() <= 2:
+            can_interact = true
     
 
 func _physics_process(delta):

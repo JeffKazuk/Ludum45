@@ -12,7 +12,7 @@
 [ext_resource path="res://Scripts/ChefShack/Toppings.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/ChefShack/Stove.gd" type="Script" id=11]
 
-[node name="ChefShack" index="0" instance=ExtResource( 1 )]
+[node name="ChefShack" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="ChefShack" parent="." index="0"]
