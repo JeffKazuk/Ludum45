@@ -1,10 +1,18 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://models/prisonscene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Main Character Bad Boy.png" type="Texture" id=2]
 [ext_resource path="res://transitions/fade.tscn" type="PackedScene" id=3]
 [ext_resource path="res://changeScene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://dialogue/Dialogue.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Timer.gd" type="Script" id=5]
+[ext_resource path="res://images/Guard/Guard Back.png" type="Texture" id=6]
+[ext_resource path="res://images/Guard/walking guard0.png" type="Texture" id=7]
+[ext_resource path="res://images/Guard/walking guard1.png" type="Texture" id=8]
+[ext_resource path="res://images/Guard/walking guard2.png" type="Texture" id=9]
+[ext_resource path="res://images/Guard/walking guard3.png" type="Texture" id=10]
+[ext_resource path="res://images/Guard/walking guard4.png" type="Texture" id=11]
+[ext_resource path="res://images/Guard/walking guard5.png" type="Texture" id=12]
+[ext_resource path="res://Levels/AnimatedSprite3D.gd" type="Script" id=13]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -15,6 +23,19 @@ background_mode = 1
 flags_transparent = true
 albedo_color = Color( 0, 0, 0, 0.733333 )
 
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
 [node name="Spatial" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
@@ -24,22 +45,22 @@ environment = SubResource( 1 )
 [node name="Scene Root" parent="." instance=ExtResource( 1 )]
 
 [node name="SpotLight" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.15662, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23211, 6.15662, 0 )
 spot_range = 11.5
 spot_angle = 65.9841
 
 [node name="SpotLight3" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.15662, -16 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23211, 6.15662, -16 )
 spot_range = 11.5
 spot_angle = 65.9841
 
 [node name="SpotLight5" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.93051, 6.15662, -16 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.6984, 6.15662, -16 )
 spot_range = 11.5
 spot_angle = 65.9841
 
 [node name="SpotLight4" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.15662, 17 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.23211, 6.15662, 17 )
 spot_range = 11.5
 spot_angle = 65.9841
 
@@ -49,8 +70,8 @@ spot_range = 11.5
 spot_angle = 65.9841
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-editor/display_folded = true
 transform = Transform( -0.0841144, 0, -1.99823, 0, 2, 0, 1.99823, 0, -0.0841144, 8.34904, 1.25565, 0.479334 )
+shaded = true
 alpha_cut = 1
 texture = ExtResource( 2 )
 
@@ -65,5 +86,21 @@ alphaEnd = 0
 
 [node name="changeScene" parent="." instance=ExtResource( 4 )]
 
-[node name="Control" parent="." instance=ExtResource( 5 )]
-file = "guard"
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform( -8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 5.96046e-08, 1.29555, 16.9855 )
+shaded = true
+alpha_cut = 1
+frames = SubResource( 4 )
+animation = "New Anim"
+script = ExtResource( 13 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="AnimatedSprite3D"]
+transform = Transform( 0.34969, 0, -0.00630857, 0, 0.001, 0, 0.01472, 0, 0.149867, 0.0428314, -0.647238, -0.00309721 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )

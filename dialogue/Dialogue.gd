@@ -7,3 +7,6 @@ export var file = ""
 #	pass
 func get_file():
 	return "res://dialogue/" + file + ".json"
+	
+func set_file(s):
+	file = "res://dialogue/" + s + ".json"
