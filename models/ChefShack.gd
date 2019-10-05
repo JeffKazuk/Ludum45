@@ -6,7 +6,7 @@ extends Spatial
 
 var burger = preload("res://models/Burger.tscn")
 var plate = preload("res://models/PhysicsPlate.tscn")
-export(String) var currently_holding
+var currently_holding
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +17,9 @@ func _ready():
 	add_child(plate)
 	plate.translation = $"Interactables/Plates".translation
 	
-
+func _pickup(item):
+	currently_holding = item
+	print(currently_holding)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

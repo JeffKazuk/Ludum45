@@ -1,10 +1,12 @@
 extends Spatial
 
-var chefshack 
+var chefshack
+signal pickup
 
 func _ready():
-    chefshack = get_parent().get_parent()
+	chefshack = get_parent().get_parent()
+	self.connect("pickup", chefshack, "_pickup", ["Burger"])
 
 func _on_interact():
-	chefshack.currently_holding = "Bun"
-	print(chefshack.currently_holding)
+	
+	emit_signal("pickup")
