@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://characters/bus/BusScene.gd" type="Script" id=1]
-
-
-[sub_resource type="ShaderMaterial" id=1]
 
 [node name="Bus Scene" type="Spatial"]
 script = ExtResource( 1 )
@@ -11,9 +8,4 @@ script = ExtResource( 1 )
 [node name="Spatial" type="Spatial" parent="."]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.37114e-008, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-008, -3.78552e-008, 11.7746, 6.13205, 0 )
-
-[node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.667613, 1.31244, 0 )
-depth = 3.9207
-material = SubResource( 1 )
+transform = Transform( -4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-08, -3.78552e-08, 11.7746, 6.13205, 0 )

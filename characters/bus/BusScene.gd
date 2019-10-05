@@ -1,6 +1,6 @@
 extends Spatial
 
-var road = preload("res://Road.tscn")
+var road = preload("res://models/Road.tscn")
 var newestcopy
 var oldcopy
 var delcopy
