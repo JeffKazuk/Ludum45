@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var gravity = Vector3.DOWN * 12  # strength of gravity
-var speed = 4  # movement speed
+export var speed = 4  # movement speed
 var jump_speed = 6  # jump strength
 var spin = 0.1  # rotation speed
 
