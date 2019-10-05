@@ -11,3 +11,9 @@ material/0 = ExtResource( 2 )
 
 [node name="Scene Root" parent="." index="2" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.16003, 0.0164113, -0.0103101 )
+
+[node name="Scene Root2" parent="." index="3" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.16003, 0.0164113, -15.9951 )
+
+[node name="Scene Root3" parent="." index="4" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.16003, 0.0164113, 16.1179 )
