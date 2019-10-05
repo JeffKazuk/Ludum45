@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://prisonscene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://models/prisonscene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Main Character Bad Boy.png" type="Texture" id=2]
-[ext_resource path="res://bed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/bed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/boilet.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -53,3 +54,6 @@ material/0 = SubResource( 3 )
 
 [node name="Scene Root2" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.75, 0, -6.55671e-08, 0, 0.75, 0, 6.55671e-08, 0, -0.75, 7, 0.874361, 2.21549 )
+
+[node name="Scene Root3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 7.2396, 1.04282, -3.71133 )
