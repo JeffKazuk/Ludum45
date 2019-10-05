@@ -1,0 +1,21 @@
+{
+    "say":[
+        {
+            "name":"JOGGER:",
+            "says":"Hweh... Heugh... How... How did you catch up to me?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Lots of cardio opportunities in prison."
+        },
+        {
+            "name":"JOGGER:",
+            "says":"I guess so... okay... well all I know about where Kate went is that she wanted to move as close to the mountains as she could. We took a trip to Jubilee Town together and loved it so much..."
+        },
+        {
+            "name":"YOU:",
+            "says":"Thank you."
+        }
+        ]
+}
+
