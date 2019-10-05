@@ -1,0 +1,20 @@
+{
+    "say":[
+        {
+            "name":"CHEF:",
+            "says":"Wow, you did it! Just like I used to make before BurgerTown sued me. You've won my affection and trust."
+        },
+        {
+            "name":"YOU:",
+            "says":"Thank you Chef."
+        },
+        {
+            "name":"CHEF:",
+            "says":"When Kate moved out of town, I am positive she moved somewhere near a beach! It was her dream to do so. That is ALL I KNOW!!"
+        },
+        {
+            "name":"YOU:",
+            "says":"Okay. thanks Chef."
+        }]
+}
+

@@ -1,15 +1,15 @@
 {
     "say":[
         {
-            "name":"GUARD",
+            "name":"GUARD:",
             "says":"Hey! you're finally awake! So today's the day huh?"
         },
         {
-            "name":"YOU",
+            "name":"YOU:",
             "says":"I guess it is."
         },
         {
-            "name":"GUARD",
+            "name":"GUARD:",
             "says":"You excited?"
         },
         {
