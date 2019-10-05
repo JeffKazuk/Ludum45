@@ -1,6 +1,6 @@
 extends Spatial
 
-var road = preload("res://TestRoad.tscn")
+var road = preload("res://Road.tscn")
 var newestcopy
 var oldcopy
 var delcopy
@@ -16,11 +16,11 @@ func _ready():
 func _process(delta):
 	newestcopy.translation.z += speed
 	oldcopy.translation.z += speed
-	if newestcopy.translation.z > -5:
+	if newestcopy.translation.z > -40:
 		#delcopy = oldcopy
 		oldcopy.queue_free()
 		oldcopy = newestcopy
 		newestcopy = road.instance()
 		add_child(newestcopy)
-		newestcopy.translation.z = -20
+		newestcopy.translation.z = -70
 		
