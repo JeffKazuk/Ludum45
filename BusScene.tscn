@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://BusScene.gd" type="Script" id=1]
+
+[node name="Bus Scene" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.11396e-008, -0.337952, 0.941163, -1.47723e-008, 0.941163, 0.337952, -1, -8.88178e-016, -4.37114e-008, 6.81477, 6.13205, 0 )
