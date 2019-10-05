@@ -2,27 +2,46 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< Updated upstream
 path.s3tc="res://.import/Jogger run0002.png-798ae9a85a58c473ff543723543e0d1b.s3tc.stex"
 path.etc2="res://.import/Jogger run0002.png-798ae9a85a58c473ff543723543e0d1b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
+=======
+path="res://.import/Jogger run0002.png-798ae9a85a58c473ff543723543e0d1b.stex"
+metadata={
+"vram_texture": false
+>>>>>>> Stashed changes
 }
 
 [deps]
 
 source_file="res://images/Jogger Run/Jogger run0002.png"
+<<<<<<< Updated upstream
 dest_files=[ "res://.import/Jogger run0002.png-798ae9a85a58c473ff543723543e0d1b.s3tc.stex", "res://.import/Jogger run0002.png-798ae9a85a58c473ff543723543e0d1b.etc2.stex" ]
 
 [params]
 
 compress/mode=2
+=======
+dest_files=[ "res://.import/Jogger run0002.png-798ae9a85a58c473ff543723543e0d1b.stex" ]
+
+[params]
+
+compress/mode=0
+>>>>>>> Stashed changes
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
+<<<<<<< Updated upstream
 flags/repeat=true
 flags/filter=false
+=======
+flags/repeat=0
+flags/filter=true
+>>>>>>> Stashed changes
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -32,5 +51,9 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
+<<<<<<< Updated upstream
 detect_3d=false
+=======
+detect_3d=true
+>>>>>>> Stashed changes
 svg/scale=1.0
