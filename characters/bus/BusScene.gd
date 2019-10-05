@@ -28,5 +28,5 @@ func _process(delta):
 		oldcopy = newestcopy
 		newestcopy = road.instance()
 		add_child(newestcopy)
-		newestcopy.translation.z = 70
+		newestcopy.translation.z = 100
 		
