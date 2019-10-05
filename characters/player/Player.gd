@@ -25,11 +25,16 @@ func get_input():
         velocity.x += speed
     if Input.is_action_pressed("strafe_left"):
         velocity.x -= speed
-    if Input.is_action_pressed("interact"):
-        if not self.is_connected("interact", currently_interactable, "_on_interact"):
+       
+func _input(event):
+    if event.is_action_pressed("interact"):
+        if get_parent().find_node("Interactables"):
+            for interactable in interactables:
+                self.disconnect("interact", interactable, "_on_interact")
             self.connect("interact", currently_interactable, "_on_interact")
-        if can_interact:
-            emit_signal("interact")
+            if can_interact:
+                emit_signal("interact")
+
 
 
 func _process(delta):
