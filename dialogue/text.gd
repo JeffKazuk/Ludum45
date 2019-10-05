@@ -12,23 +12,23 @@ var filepath = ""
 func _ready():
 	filepath = get_parent().get_parent().get_file()
 	button.set_text("Next")
-	
-	var file = File.new()
-	file.open(filepath, file.READ)
-	var json = file.get_as_text()
-	json_result = JSON.parse(json).result
-	file.close()
+	parse_Json()
 	print(json_result)
 	set_bbcode(json_result["say"][dialogues]["says"])
 	set_visible_characters(0)
 	nameBox.set_bbcode(json_result["say"][dialogues]["name"])
 
 
-func _physics_process(delta):
+func _process(delta):
 	top.scale.x = (cineTimer.time_left/cineTimer.wait_time -1)
 	bottom.scale.x = (1-cineTimer.time_left/cineTimer.wait_time)
 
-
+func parse_Json():
+	var file = File.new()
+	file.open(filepath, file.READ)
+	var json = file.get_as_text()
+	json_result = JSON.parse(json).result
+	file.close()
 
 func _on_TextTimer_timeout():
 	set_visible_characters(get_visible_characters()+1)
