@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Tree branch.png-0bcfdbc2fc76dd9531d1fb612f31c588.s3tc.stex"
-path.etc2="res://.import/Tree branch.png-0bcfdbc2fc76dd9531d1fb612f31c588.etc2.stex"
+path.s3tc="res://.import/tree09.png-0a838cb1c0017b936b3bfddeb113195e.s3tc.stex"
+path.etc2="res://.import/tree09.png-0a838cb1c0017b936b3bfddeb113195e.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/Tree branch.png"
-dest_files=[ "res://.import/Tree branch.png-0bcfdbc2fc76dd9531d1fb612f31c588.s3tc.stex", "res://.import/Tree branch.png-0bcfdbc2fc76dd9531d1fb612f31c588.etc2.stex" ]
+source_file="res://images/kenney_background/PNG/tree09.png"
+dest_files=[ "res://.import/tree09.png-0a838cb1c0017b936b3bfddeb113195e.s3tc.stex", "res://.import/tree09.png-0a838cb1c0017b936b3bfddeb113195e.etc2.stex" ]
 
 [params]
 
@@ -22,8 +22,8 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=false
-flags/mipmaps=false
+flags/filter=true
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
