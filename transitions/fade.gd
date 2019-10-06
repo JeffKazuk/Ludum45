@@ -22,3 +22,7 @@ func _process(delta):
 		val = 1-timer.time_left/timer.wait_time
 	var color = Color(0,0,0,(val))
 	black.set_color(color)
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
