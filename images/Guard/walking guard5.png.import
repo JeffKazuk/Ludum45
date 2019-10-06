@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TILE1.png.001.png-1894cc654b22ab52011e7f9df7eda44d.stex"
+path="res://.import/walking guard5.png-436da0f674186f4fd546dc954a9aeef3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/TILE1.png.001.png"
-dest_files=[ "res://.import/TILE1.png.001.png-1894cc654b22ab52011e7f9df7eda44d.stex" ]
+source_file="res://images/Guard/walking guard5.png"
+dest_files=[ "res://.import/walking guard5.png-436da0f674186f4fd546dc954a9aeef3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

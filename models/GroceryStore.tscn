@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://models/Grocery.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Grocery/Lettuce.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Grocery/Bread.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Grocery/Tomato.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Grocery/Banana.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Grocery/Door.gd" type="Script" id=7]
+
+[node name="GroceryStore" type="Spatial"]
+
+[node name="Grocery" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.804381, 1.19666, -1.14272 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.888619, 0.458646, 0, -0.458646, 0.888619, 0, 4.33083, 6.12961 )
+
+[node name="Interactables" type="Node" parent="."]
+
+[node name="Lettuce" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42295, 0.957789, -0.435357 )
+script = ExtResource( 3 )
+
+[node name="Bread" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34619, 0.940375, -3.36096 )
+script = ExtResource( 4 )
+
+[node name="Tomato" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38576, 0.940375, -4.37098 )
+script = ExtResource( 5 )
+
+[node name="Banana" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.40581, 0.910903, -4.33616 )
+script = ExtResource( 6 )
+
+[node name="Door" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32477, 2.52182 )
+script = ExtResource( 7 )
