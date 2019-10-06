@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/House Tilesheet.png-a0c2334126456d7353a4597295971c7b.s3tc.stex"
-path.etc2="res://.import/House Tilesheet.png-a0c2334126456d7353a4597295971c7b.etc2.stex"
+path.s3tc="res://.import/PostOffice Tilesheet.png-607cc09e3d2c638c6a8fb64434a646a5.s3tc.stex"
+path.etc2="res://.import/PostOffice Tilesheet.png-607cc09e3d2c638c6a8fb64434a646a5.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/House Tilesheet.png"
-dest_files=[ "res://.import/House Tilesheet.png-a0c2334126456d7353a4597295971c7b.s3tc.stex", "res://.import/House Tilesheet.png-a0c2334126456d7353a4597295971c7b.etc2.stex" ]
+source_file="res://models/PostOffice Tilesheet.png"
+dest_files=[ "res://.import/PostOffice Tilesheet.png-607cc09e3d2c638c6a8fb64434a646a5.s3tc.stex", "res://.import/PostOffice Tilesheet.png-607cc09e3d2c638c6a8fb64434a646a5.etc2.stex" ]
 
 [params]
 
