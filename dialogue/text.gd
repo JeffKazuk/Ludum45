@@ -12,7 +12,7 @@ var filepath = ""
 signal done
 
 func _ready():
-	self.connect("done",get_parent().get_parent().get_parent().get_node("changeScene"),"change")
+	self.connect("done",get_tree().get_current_scene().get_node("changeScene"),"spawnFade")
 	filepath = get_parent().get_parent().get_file()
 	button.set_text("Next")
 	parse_Json()

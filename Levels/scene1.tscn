@@ -85,6 +85,9 @@ fadeTime = 3
 alphaEnd = 0
 
 [node name="changeScene" parent="." instance=ExtResource( 4 )]
+fadetime = 5
+fadeA = 1
+nextLevel = "BusScene"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

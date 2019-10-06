@@ -5,3 +5,8 @@
 [node name="changeScene" type="Node"]
 script = ExtResource( 1 )
 nextLevel = "Town"
+
+[node name="fadeTimer" type="Timer" parent="."]
+wait_time = 0.01
+one_shot = true
+[connection signal="timeout" from="fadeTimer" to="." method="_on_Timer_timeout"]
