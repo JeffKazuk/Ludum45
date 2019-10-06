@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Main Character Sprite Back01.png-5cb0673b0986aa44eff0d9c2edfc22b5.stex"
+path="res://.import/Main Character Sprite Back01.png-d48f72c9d2b1349670df587433223cf0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main backrun/Main Character Sprite Back01.png"
-dest_files=[ "res://.import/Main Character Sprite Back01.png-5cb0673b0986aa44eff0d9c2edfc22b5.stex" ]
+source_file="res://images/Main backrun/Main Character Sprite Back01.png"
+dest_files=[ "res://.import/Main Character Sprite Back01.png-d48f72c9d2b1349670df587433223cf0.stex" ]
 
 [params]
 
