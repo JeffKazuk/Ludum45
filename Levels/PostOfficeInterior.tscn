@@ -9,7 +9,7 @@
 [node name="PostOfficeInterior" type="Spatial"]
 
 [node name="Scene Root" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.995091, 1.08494, 1.19992 )
