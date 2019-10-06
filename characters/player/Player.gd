@@ -43,9 +43,10 @@ func get_input():
         $Sprite.flip_h = false
         last_direct = "left"
     elif not velocity:
-        $Sprite.flip_h = false
         $Sprite.animation = "Still"
         $Sprite.frame = directions[last_direct]
+        if $Sprite.frame == 2|| $Sprite.frame == 1:
+            $Sprite.flip_h = false
        
 func _input(event):
     if event.is_action_pressed("interact"):
