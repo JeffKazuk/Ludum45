@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://dialogue/Dialogue.gd" type="Script" id=1]
 [ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://dialogue/text.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=1]
-size = 25
-use_mipmaps = true
-use_filter = true
-extra_spacing_char = 1
-font_data = ExtResource( 2 )
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.133333, 0.129412, 0.129412, 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
@@ -18,8 +19,15 @@ use_filter = true
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=1]
+size = 25
+use_mipmaps = true
+use_filter = true
+extra_spacing_char = 1
+font_data = ExtResource( 2 )
+
 [sub_resource type="DynamicFont" id=3]
-size = 55
+size = 35
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
@@ -46,16 +54,6 @@ scale = Vector2( 0.970874, 1.25 )
 color = Color( 0, 0, 0, 0.596078 )
 polygon = PoolVector2Array( 0, 0, 1030, 0, 1030, 80, 0, 80 )
 
-[node name="text" type="RichTextLabel" parent="box"]
-margin_left = 21.0
-margin_top = 8.0
-margin_right = 1010.0
-margin_bottom = 72.0
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-scroll_active = false
-script = ExtResource( 3 )
-
 [node name="TextTimer" type="Timer" parent="box"]
 wait_time = 0.05
 autostart = true
@@ -70,7 +68,24 @@ margin_left = 883.0
 margin_top = 104.0
 margin_right = 983.0
 margin_bottom = 152.0
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="box"]
+margin_left = 10.0
+margin_top = 8.0
+margin_right = 1020.0
+margin_bottom = 72.0
+
+[node name="text" type="RichTextLabel" parent="box/MarginContainer"]
+margin_right = 1010.0
+margin_bottom = 64.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+text = "test
+"
+scroll_active = false
+script = ExtResource( 3 )
 
 [node name="nameBox" type="Polygon2D" parent="."]
 position = Vector2( 10, 340 )
@@ -78,13 +93,18 @@ scale = Vector2( 0.823529, 0.555555 )
 color = Color( 0, 0, 0, 0.596078 )
 polygon = PoolVector2Array( 0, 0, 0, 90, 170, 90, 170, 48.3969, 170, 0, 72.8571, 0 )
 
-[node name="name" type="RichTextLabel" parent="nameBox"]
-margin_left = 14.0
+[node name="MarginContainer" type="MarginContainer" parent="nameBox"]
+margin_left = 12.0
+margin_top = 18.0
 margin_right = 170.0
 margin_bottom = 90.0
+
+[node name="name" type="RichTextLabel" parent="nameBox/MarginContainer"]
+margin_right = 158.0
+margin_bottom = 72.0
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 scroll_active = false
-[connection signal="timeout" from="box/TextTimer" to="box/text" method="_on_TextTimer_timeout"]
-[connection signal="timeout" from="box/cineTimer" to="box/text" method="_on_cineTimer_timeout"]
-[connection signal="pressed" from="box/Button" to="box/text" method="_on_Button_pressed"]
+[connection signal="timeout" from="box/TextTimer" to="box/MarginContainer/text" method="_on_TextTimer_timeout"]
+[connection signal="timeout" from="box/cineTimer" to="box/MarginContainer/text" method="_on_cineTimer_timeout"]
+[connection signal="pressed" from="box/Button" to="box/MarginContainer/text" method="_on_Button_pressed"]

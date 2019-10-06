@@ -22,3 +22,7 @@ func todo():
     if not grocery_done:
         todo += "grocery_done "
     return todo
+
+func isdone():
+	return pop_fly_done&&mail_done&&race_done&&borgers_done&&grocery_done
+		

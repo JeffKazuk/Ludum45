@@ -33,6 +33,8 @@ SpawnLoc = "BusStation"
 [node name="Spatial" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.923127, 0.384497, 0, -0.384497, 0.923127, 0, 3.03842, 4.11099 )
 
+[node name="Control" parent="Player" instance=ExtResource( 2 )]
+
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986, -0.000297091, 0.00256742, 0.000310637, 0.999997, 0, 2.88616, 15.9043 )
 environment = SubResource( 2 )
@@ -40,8 +42,8 @@ target = NodePath("../Player/Spatial")
 speed = 4.0
 enabled = true
 
-[node name="World" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+[node name="World" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
@@ -54,31 +56,31 @@ editor/display_folded = true
 
 [node name="PostOfficeDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="HouseMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.052, 0, -21.573 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="BorgerShackMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4092, 1.24401, -37.188 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="ChefShackMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5581, 1.26154, -37.1838 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="House2MailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.799, 0, -37.188 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="GroceryMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.215, 0, -11.017 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="ChefShackDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2825, 1.15261, -38.3303 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="GroceryStoreDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4288, 1.08716, -14.0609 )

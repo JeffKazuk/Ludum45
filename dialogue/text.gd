@@ -1,10 +1,10 @@
 extends RichTextLabel
 
-onready var top = get_parent().get_parent().get_node("Tp")
-onready var bottom = get_parent().get_parent().get_node("Btm")
-onready var cineTimer = get_parent().get_node("cineTimer")
-onready var button = get_parent().get_node("Button")
-onready var nameBox = get_parent().get_parent().get_node("nameBox/name")
+onready var top = get_parent().get_parent().get_parent().get_node("Tp")
+onready var bottom = get_parent().get_parent().get_parent().get_node("Btm")
+onready var cineTimer = get_parent().get_parent().get_node("cineTimer")
+onready var button = get_parent().get_parent().get_node("Button")
+onready var nameBox = get_parent().get_parent().get_parent().get_node("nameBox/MarginContainer/name")
 var json_result = {}
 var dialogues = 0;
 var filepath = ""
@@ -13,7 +13,7 @@ signal done
 
 func _ready():
 	self.connect("done",get_tree().get_current_scene().get_node("changeScene"),"spawnFade")
-	filepath = get_parent().get_parent().get_file()
+	filepath = get_parent().get_parent().get_parent().get_file()
 	button.set_text("Next")
 	parse_Json()
 	print(json_result)
