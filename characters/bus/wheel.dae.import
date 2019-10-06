@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/wheel.dae-9d1945a06cd46e800e0663166db9d3af.scn"
+path="res://.import/wheel.dae-9343efd411dfe03873786a12e07e5256.scn"
 
 [deps]
 
-source_file="res://models/wheel.dae"
-dest_files=[ "res://.import/wheel.dae-9d1945a06cd46e800e0663166db9d3af.scn" ]
+source_file="res://characters/bus/wheel.dae"
+dest_files=[ "res://.import/wheel.dae-9343efd411dfe03873786a12e07e5256.scn" ]
 
 [params]
 
