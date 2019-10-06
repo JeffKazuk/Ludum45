@@ -2,8 +2,11 @@ extends Node
 
 
 var fade = preload("res://transitions/fade.tscn")
+var wipe = preload("res://transitions/wipe.tscn")
 var ins = fade.instance()
+var ins2 = wipe.instance()
 export var location = ""
+export var isWipe = false
 export var fadetime = 0
 export var fadeA = 0
 var faded = false
@@ -37,6 +40,13 @@ func change():
 		player.SpawnLoc = location
 
 func spawnFade():
+	if(isWipe):
+		spawnWipe()
+	else:
+		spfforty()
+
+
+func spfforty():
 	faded = true
 	$fadeTimer.wait_time = fadetime
 	$fadeTimer.start()
@@ -44,6 +54,13 @@ func spawnFade():
 	ins.alphaEnd = fadeA
 	add_child(ins)
 	
+func spawnWipe():
+	faded = true
+	$fadeTimer.wait_time = fadetime
+	$fadeTimer.start()
+	ins2.fadeTime = $fadeTimer.wait_time
+	ins2.endAlpha = fadeA
+	add_child(ins2)
 
 func _process(delta):
 	if($fadeTimer.time_left==0&&faded):

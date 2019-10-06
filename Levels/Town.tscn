@@ -49,7 +49,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
 script = ExtResource( 3 )
 
 [node name="changeScene" parent="." instance=ExtResource( 4 )]
-fadetime = 2
+isWipe = true
+fadetime = 3
 fadeA = 1
 
 [node name="wipe" parent="." instance=ExtResource( 5 )]
