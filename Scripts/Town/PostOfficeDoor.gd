@@ -8,6 +8,6 @@ func establish_change_scene():
 	changeScene = get_tree().get_current_scene().get_node("changeScene")
 
 func _on_interact():
-	changeScene.nextLevel = "Town"
-	changeScene.location = "PostOffice"
+	changeScene.nextLevel = "PostOfficeInterior"
+	changeScene.location = "Town"
 	changeScene.spawnFade()
