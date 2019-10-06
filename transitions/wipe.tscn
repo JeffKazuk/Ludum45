@@ -14,7 +14,7 @@ scale = Vector2( 1.237, 1e-05 )
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 600, 1020, 600, 1020, 0 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="tim" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 autostart = true

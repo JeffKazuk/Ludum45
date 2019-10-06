@@ -56,3 +56,4 @@ fadeA = 1
 
 [node name="wipe" parent="." instance=ExtResource( 6 )]
 endAlpha = 0
+fadeTime = 3
