@@ -1,0 +1,45 @@
+{
+    "say":[
+        {
+            "name":"POSTMAN:",
+            "says":"Wow hey there! Been quite a long time. I think the last time I saw you, you were stealing packages off of my truck."
+        },
+        {
+            "name":"YOU:",
+            "says":"Yeah... sorry about that."
+        },
+        {
+            "name":"POSTMAN:",
+            "says":"I'm sure you are. So, what can I do for ya?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Well, I'm trying to figure out where I can find Kate, and I was thinking maybe you had her new address."
+        },
+        {
+            "name":"POSTMAN:",
+            "says":"Yeah... I dunno. What makes you think she'd even want to see you?"
+        },
+        {
+            "name":"YOU:",
+            "says":"..."
+        },
+        {
+            "name":"POSTMAN:",
+            "says":"Oh gosh I'm sorry... Look. I AM the postman, so I do hear stuff here and there. Maybe if you help me. I can help you."
+        },{
+            "name":"YOU:",
+            "says":"Sure. What do you need?"
+        },{
+            "name":"POSTMAN:",
+            "says":"well, I'm kinda behind schedule with my packages. Maybe you could deliver some for me?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Sure."
+        },{
+            "name":"POSTMAN:",
+            "says":"Great! Let's go."
+        }
+    ]
+}
