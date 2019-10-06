@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var gravity = Vector3.DOWN * 12  # strength of gravity
+#var gravity = Vector3.DOWN * 12  # strength of gravity
 export var speed = 4  # movement speed
 export var SpawnLoc = ""
 var interactables
@@ -58,6 +58,6 @@ func _process(delta):
     
 
 func _physics_process(delta):
-    velocity += gravity * delta
+    #velocity += gravity * delta
     get_input()
     velocity = move_and_slide(velocity, Vector3.UP)
