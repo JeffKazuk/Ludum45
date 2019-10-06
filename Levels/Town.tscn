@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Levels/world.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/PostOfficeExterior.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Town/PostOfficeDoor.gd" type="Script" id=4]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -12,10 +16,11 @@ background_mode = 2
 background_sky = SubResource( 1 )
 background_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 
-[node name="Spatial" type="Spatial"]
+[node name="Town" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 11.8908 )
+SpawnLoc = "BusStation"
 
 [node name="Spatial" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.923127, 0.384497, 0, -0.384497, 0.923127, 0, 3.03842, 4.11099 )
@@ -27,8 +32,28 @@ target = NodePath("../Player/Spatial")
 speed = 4.0
 enabled = true
 
-[node name="Scene Root" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+[node name="World" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6687, 3.96246, 6.20676 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -1.95 )
+
+[node name="Post Office Building" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 36.8561, 0, -2.92003 )
+
+[node name="BusStation" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.036, 1, -5.979 )
+
+[node name="Interactables" type="Node" parent="."]
+
+[node name="PostOfficeDoor" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9548, 0.957861, -1.94992 )
+script = ExtResource( 4 )
+
+[node name="changeScene" parent="." instance=ExtResource( 5 )]
+fadetime = 2
+fadeA = 1
+
+[node name="wipe" parent="." instance=ExtResource( 6 )]
+endAlpha = 0
+fadeTime = 3
