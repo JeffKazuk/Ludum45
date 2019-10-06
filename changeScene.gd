@@ -32,7 +32,9 @@ func change():
 	tree.set_current_scene(root.get_child(0))
 	
 	#We do all of that just to insert the spawn location into the player
-	next_level.get_node("Player").SpawnLoc = location
+	var player = next_level.get_node("Player")
+	if player:
+		player.SpawnLoc = location
 
 func spawnFade():
 	faded = true
