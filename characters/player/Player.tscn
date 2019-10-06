@@ -1,10 +1,38 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://characters/player/Player.gd" type="Script" id=1]
-[ext_resource path="res://images/Main Character Front.png" type="Texture" id=2]
-[ext_resource path="res://images/Main Character Side.png" type="Texture" id=3]
-[ext_resource path="res://images/Main Character Sprite Back.png" type="Texture" id=4]
-[ext_resource path="res://images/Main Character Other Side.png" type="Texture" id=5]
+[ext_resource path="res://images/Main frontrun/Main run00.png" type="Texture" id=2]
+[ext_resource path="res://images/Main frontrun/Main run01.png" type="Texture" id=3]
+[ext_resource path="res://images/Main frontrun/Main run02.png" type="Texture" id=4]
+[ext_resource path="res://images/Main frontrun/Main run03.png" type="Texture" id=5]
+[ext_resource path="res://images/Main frontrun/Main run04.png" type="Texture" id=6]
+[ext_resource path="res://images/Main frontrun/Main run05.png" type="Texture" id=7]
+[ext_resource path="res://images/Main frontrun/Main run06.png" type="Texture" id=8]
+[ext_resource path="res://images/Main frontrun/Main run07.png" type="Texture" id=9]
+[ext_resource path="res://images/Main frontrun/Main run08.png" type="Texture" id=10]
+[ext_resource path="res://images/Main frontrun/Main run09.png" type="Texture" id=11]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back00.png" type="Texture" id=12]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back01.png" type="Texture" id=13]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back02.png" type="Texture" id=14]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back03.png" type="Texture" id=15]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back04.png" type="Texture" id=16]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back05.png" type="Texture" id=17]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back06.png" type="Texture" id=18]
+[ext_resource path="res://images/Main backrun/Main Character Sprite Back07.png" type="Texture" id=19]
+[ext_resource path="res://images/Main side left/Main run00.png" type="Texture" id=20]
+[ext_resource path="res://images/Main side left/Main run01.png" type="Texture" id=21]
+[ext_resource path="res://images/Main side left/Main run02.png" type="Texture" id=22]
+[ext_resource path="res://images/Main side left/Main run03.png" type="Texture" id=23]
+[ext_resource path="res://images/Main side left/Main run04.png" type="Texture" id=24]
+[ext_resource path="res://images/Main side left/Main run05.png" type="Texture" id=25]
+[ext_resource path="res://images/Main side left/Main run06.png" type="Texture" id=26]
+[ext_resource path="res://images/Main side left/Main run07.png" type="Texture" id=27]
+[ext_resource path="res://images/Main side left/Main run08.png" type="Texture" id=28]
+[ext_resource path="res://images/Main side left/Main run09.png" type="Texture" id=29]
+[ext_resource path="res://images/Main Character Front.png" type="Texture" id=30]
+[ext_resource path="res://images/Main Character Other Side.png" type="Texture" id=31]
+[ext_resource path="res://images/Main Character Side.png" type="Texture" id=32]
+[ext_resource path="res://images/Main Character Sprite Back.png" type="Texture" id=33]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.39415
@@ -14,10 +42,25 @@ extents = Vector3( 0.4, 0.1, 0.4 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "walk",
-"speed": 5.0
+"name": "walk forward",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "walk back",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "walk side",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Still",
+"speed": 0.0
 } ]
 
 [sub_resource type="CylinderMesh" id=4]
@@ -32,7 +75,7 @@ collision_layer = 9
 script = ExtResource( 1 )
 
 [node name="Body" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="Feet" type="CollisionShape" parent="."]
@@ -45,8 +88,8 @@ transparent = false
 double_sided = false
 alpha_cut = 1
 frames = SubResource( 3 )
-animation = "walk"
-frame = 2
+animation = "Still"
+playing = true
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.001, 0, 0, 0, 0.2, 0, -0.997631, 0 )

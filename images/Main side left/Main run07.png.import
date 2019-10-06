@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Main run03.png-e6da8ae8b4ba4b17540d45d04b53d777.stex"
+path="res://.import/Main run07.png-e6262d2b443d93a51198afa23c9dc33a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main side run/Main run03.png"
-dest_files=[ "res://.import/Main run03.png-e6da8ae8b4ba4b17540d45d04b53d777.stex" ]
+source_file="res://images/Main side left/Main run07.png"
+dest_files=[ "res://.import/Main run07.png-e6262d2b443d93a51198afa23c9dc33a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

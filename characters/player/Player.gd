@@ -9,6 +9,8 @@ var distances = []
 var velocity = Vector3()
 var currently_interactable
 var can_interact = false
+var last_direct = ""
+var directions = {"" : 0, "back" : 3, "forward" : 0, "right" : 1, "left" : 2}
 signal interact
 
 func _ready():
@@ -24,16 +26,26 @@ func get_input():
     velocity.z = 0
     if Input.is_action_pressed("move_forward"):
         velocity.z -= speed
-        $Sprite.frame = 2
+        $Sprite.animation = "walk back"
+        last_direct = "back"
     if Input.is_action_pressed("move_back"):
         velocity.z += speed
-        $Sprite.frame = 0
+        $Sprite.animation = "walk forward"
+        last_direct = "forward"
     if Input.is_action_pressed("strafe_right"):
         velocity.x += speed
-        $Sprite.frame = 3
+        $Sprite.animation = "walk side"
+        $Sprite.flip_h = true
+        last_direct = "right"
     if Input.is_action_pressed("strafe_left"):
         velocity.x -= speed
-        $Sprite.frame = 1
+        $Sprite.animation = "walk side"
+        $Sprite.flip_h = false
+        last_direct = "left"
+    elif not velocity:
+        $Sprite.flip_h = false
+        $Sprite.animation = "Still"
+        $Sprite.frame = directions[last_direct]
        
 func _input(event):
     if event.is_action_pressed("interact"):
