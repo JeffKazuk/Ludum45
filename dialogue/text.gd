@@ -9,7 +9,10 @@ var json_result = {}
 var dialogues = 0;
 var filepath = ""
 
+signal done
+
 func _ready():
+	self.connect("done",get_parent().get_parent().get_parent().get_node("changeScene"),"change")
 	filepath = get_parent().get_parent().get_file()
 	button.set_text("Next")
 	parse_Json()
@@ -17,6 +20,8 @@ func _ready():
 	set_bbcode(json_result["say"][dialogues]["says"])
 	set_visible_characters(0)
 	nameBox.set_bbcode(json_result["say"][dialogues]["name"])
+	
+
 
 
 func _process(delta):
@@ -49,7 +54,6 @@ func _on_Button_pressed():
 
 
 func dialogueDone():
-	print("dialogueDone")
-	pass
+	emit_signal("done")
 
 
