@@ -1,18 +1,19 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://world.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Town/PostOfficeDoor.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Town/MailBox.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/Town/ChefShackDoor.gd" type="Script" id=5]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=6]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=7]
-[ext_resource path="res://post.tscn" type="PackedScene" id=8]
-[ext_resource path="res://house.tscn" type="PackedScene" id=9]
-[ext_resource path="res://models/BorgerTown.tscn" type="PackedScene" id=10]
-[ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=11]
-[ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=12]
-[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=13]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Town/PostOfficeDoor.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Town/MailBox.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Town/ChefShackDoor.gd" type="Script" id=6]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=7]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=8]
+[ext_resource path="res://post.tscn" type="PackedScene" id=9]
+[ext_resource path="res://house.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/BorgerTown.tscn" type="PackedScene" id=11]
+[ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=12]
+[ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -32,6 +33,8 @@ SpawnLoc = "BusStation"
 [node name="Spatial" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.923127, 0.384497, 0, -0.384497, 0.923127, 0, 3.03842, 4.11099 )
 
+[node name="Control" parent="Player" instance=ExtResource( 2 )]
+
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986, -0.000297091, 0.00256742, 0.000310637, 0.999997, 0, 2.88616, 15.9043 )
 environment = SubResource( 2 )
@@ -39,8 +42,8 @@ target = NodePath("../Player/Spatial")
 speed = 4.0
 enabled = true
 
-[node name="World" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+[node name="World" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
@@ -52,70 +55,70 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.036, 1, -5.979 )
 
 [node name="PostOfficeDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="HouseMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.052, 0, -21.573 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="BorgerShackMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4092, 1.24401, -37.188 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="ChefShackMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5581, 1.26154, -37.1838 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="House2MailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.799, 0, -37.188 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="GroceryMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.215, 0, -11.017 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="ChefShackDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2825, 1.15261, -38.3303 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
-[node name="changeScene" parent="." instance=ExtResource( 6 )]
+[node name="changeScene" parent="." instance=ExtResource( 7 )]
 fadetime = 2
 fadeA = 1
 
-[node name="wipe" parent="." instance=ExtResource( 7 )]
+[node name="wipe" parent="." instance=ExtResource( 8 )]
 endAlpha = 0
 fadeTime = 3
 
 [node name="Buildings" type="Node" parent="."]
 
-[node name="post_office" parent="Buildings" instance=ExtResource( 8 )]
-transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+[node name="post_office" parent="Buildings" instance=ExtResource( 9 )]
+transform = Transform( -0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 36.527, 0.000280619, -10.3357 )
 
-[node name="house" parent="Buildings" instance=ExtResource( 9 )]
-transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
+[node name="house" parent="Buildings" instance=ExtResource( 10 )]
+transform = Transform( -0.6, 0, -1.05697e-07, 0, 0.6, 0, 9.05975e-08, 0, -0.7, 36.5278, 0, -19.6378 )
 
-[node name="borger_town" parent="Buildings" instance=ExtResource( 10 )]
-transform = Transform( -2.62268e-008, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-008, 14.943, 0.1, -38.622 )
+[node name="borger_town" parent="Buildings" instance=ExtResource( 11 )]
+transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 14.943, 0.1, -38.622 )
 
-[node name="chef_shack" parent="Buildings" instance=ExtResource( 11 )]
-transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, -15.234, 0.01, -38.616 )
+[node name="chef_shack" parent="Buildings" instance=ExtResource( 12 )]
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -15.234, 0.01, -38.616 )
 
-[node name="groceries" parent="Buildings" instance=ExtResource( 12 )]
+[node name="groceries" parent="Buildings" instance=ExtResource( 13 )]
 transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
 
 [node name="Mailboxes" type="Node" parent="."]
 
-[node name="House" parent="Mailboxes" instance=ExtResource( 13 )]
-transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
+[node name="House" parent="Mailboxes" instance=ExtResource( 14 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 36.0521, 0, -21.5731 )
 
-[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 13 )]
-transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 18.4376, 0, -37.188 )
+[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 14 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 18.4376, 0, -37.188 )
 
-[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 13 )]
-transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.6841, 0, -37.188 )
+[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 14 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -18.6841, 0, -37.188 )
 
-[node name="House2" parent="Mailboxes" instance=ExtResource( 13 )]
-transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
+[node name="House2" parent="Mailboxes" instance=ExtResource( 14 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2.79913, 0, -37.188 )
 
-[node name="Grocery" parent="Mailboxes" instance=ExtResource( 13 )]
-transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )
+[node name="Grocery" parent="Mailboxes" instance=ExtResource( 14 )]
+transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -36.2148, 0, -11.0167 )
