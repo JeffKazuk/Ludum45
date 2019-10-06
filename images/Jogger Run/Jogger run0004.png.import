@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Main Character Sprite Back.png-b89d15c5112c4b153fb15a3561c47368.s3tc.stex"
-path.etc2="res://.import/Main Character Sprite Back.png-b89d15c5112c4b153fb15a3561c47368.etc2.stex"
+path.s3tc="res://.import/Jogger run0004.png-7c7baa9b9b8cd37bc8f0c339faaf6581.s3tc.stex"
+path.etc2="res://.import/Jogger run0004.png-7c7baa9b9b8cd37bc8f0c339faaf6581.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/Main Character Sprite Back.png"
-dest_files=[ "res://.import/Main Character Sprite Back.png-b89d15c5112c4b153fb15a3561c47368.s3tc.stex", "res://.import/Main Character Sprite Back.png-b89d15c5112c4b153fb15a3561c47368.etc2.stex" ]
+source_file="res://images/Jogger Run/Jogger run0004.png"
+dest_files=[ "res://.import/Jogger run0004.png-7c7baa9b9b8cd37bc8f0c339faaf6581.s3tc.stex", "res://.import/Jogger run0004.png-7c7baa9b9b8cd37bc8f0c339faaf6581.etc2.stex" ]
 
 [params]
 
