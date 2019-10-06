@@ -55,5 +55,6 @@ func _on_Button_pressed():
 
 func dialogueDone():
 	emit_signal("done")
+	queue_free()
 
 

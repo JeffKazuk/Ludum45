@@ -73,8 +73,8 @@ margin_bottom = 152.0
 custom_fonts/font = SubResource( 2 )
 
 [node name="nameBox" type="Polygon2D" parent="."]
-position = Vector2( 10, 350 )
-scale = Vector2( 0.705882, 0.444444 )
+position = Vector2( 10, 340 )
+scale = Vector2( 0.823529, 0.555555 )
 color = Color( 0, 0, 0, 0.596078 )
 polygon = PoolVector2Array( 0, 0, 0, 90, 170, 90, 170, 48.3969, 170, 0, 72.8571, 0 )
 
