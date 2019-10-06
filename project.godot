@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GlobalVars="*res://GlobalVars.gd"
+Global="*res://Global.tscn"
 
 [input]
 

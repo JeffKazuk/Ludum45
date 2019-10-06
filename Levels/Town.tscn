@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Town/PostOfficeDoor.gd" type="Script" id=3]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=5]
-[ext_resource path="res://post.tscn" type="PackedScene" id=6]
-[ext_resource path="res://house.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/Town/MailBox.gd" type="Script" id=4]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=6]
+[ext_resource path="res://post.tscn" type="PackedScene" id=7]
+[ext_resource path="res://house.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -48,18 +50,55 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.036, 1, -5.979 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
 script = ExtResource( 3 )
 
-[node name="changeScene" parent="." instance=ExtResource( 4 )]
+[node name="HouseMailBox" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.052, 0, -21.573 )
+script = ExtResource( 4 )
+
+[node name="BorgerShackMailBox" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.007, 0, -37.188 )
+script = ExtResource( 4 )
+
+[node name="ChefShackMailBox" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.115, 0, -37.188 )
+script = ExtResource( 4 )
+
+[node name="House2MailBox" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.799, 0, -37.188 )
+script = ExtResource( 4 )
+
+[node name="GroceryMailBox" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.215, 0, -11.017 )
+script = ExtResource( 4 )
+
+[node name="changeScene" parent="." instance=ExtResource( 5 )]
 fadetime = 2
 fadeA = 1
 
-[node name="wipe" parent="." instance=ExtResource( 5 )]
+[node name="wipe" parent="." instance=ExtResource( 6 )]
 endAlpha = 0
 fadeTime = 3
 
 [node name="Node" type="Node" parent="."]
 
-[node name="post_office" parent="Node" instance=ExtResource( 6 )]
+[node name="post_office" parent="Node" instance=ExtResource( 7 )]
 transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
 
-[node name="Scene Root" parent="Node" instance=ExtResource( 7 )]
+[node name="Scene Root" parent="Node" instance=ExtResource( 8 )]
 transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
+
+[node name="Mailboxes" type="Node" parent="."]
+
+[node name="House" parent="Mailboxes" instance=ExtResource( 9 )]
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
+
+[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 9 )]
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 19.0071, 0, -37.188 )
+
+[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 9 )]
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.1151, 0, -37.188 )
+
+[node name="House2" parent="Mailboxes" instance=ExtResource( 9 )]
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
+
+[node name="Grocery" parent="Mailboxes" instance=ExtResource( 9 )]
+transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )
