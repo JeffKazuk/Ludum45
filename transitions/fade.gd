@@ -10,7 +10,7 @@ var val = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.set_wait_time(fadeTime)
+	timer.wait_time = fadeTime
 	timer.start()
 	
 
