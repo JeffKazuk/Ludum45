@@ -2,6 +2,7 @@ extends KinematicBody
 
 var gravity = Vector3.DOWN * 12  # strength of gravity
 export var speed = 4  # movement speed
+export var SpawnLoc = ""
 var interactables
 var interactable
 var distances = []
@@ -11,8 +12,8 @@ var can_interact = false
 signal interact
 
 func _ready():
-    if null:
-        print("nah")
+    
+    self.translation = get_tree().get_current_scene().get_node(SpawnLoc).translation
 
 func get_input():
     velocity.x = 0
