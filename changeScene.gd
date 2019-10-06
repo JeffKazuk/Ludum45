@@ -32,7 +32,7 @@ func change():
 	var next_level_resource = load(filepath)
 	var next_level = next_level_resource.instance()
 	root.add_child(next_level)
-	tree.set_current_scene(root.get_child(0))
+	tree.set_current_scene(root.get_child(root.get_child_count() - 1))
 	
 	#We do all of that just to insert the spawn location into the player
 	var player = next_level.get_node("Player")
