@@ -3,8 +3,7 @@ extends Node
 
 var fade = preload("res://transitions/fade.tscn")
 var ins = fade.instance()
-var do = true
-var last_loc
+var location
 export var fadetime = 0
 export var fadeA = 0
 var faded = false
@@ -18,7 +17,10 @@ func _ready():
 func change():
 	#How Shane did it
 	#get_tree().change_scene(filepath)
-	var root = get_tree().get_root()
+
+	#Doing it manually
+	var tree = get_tree()
+	var root = tree.get_root()
 	var level = root.get_child(root.get_child_count() - 1)
 	root.remove_child(level)
 	level.call_deferred("free")
@@ -26,9 +28,13 @@ func change():
 	var next_level_resource = load(filepath)
 	var next_level = next_level_resource.instance()
 	root.add_child(next_level)
+	tree.set_current_scene(next_level)
+	
+	#We do all of that just to insert the spawn location into the player
+	next_level.get_node("Player").SpawnLoc = location
 
-func spawnFade(location):
-	get_tree().get_current_scene().get_node("Player").SpawnLoc = location
+func spawnFade(place):
+	location = place
 	faded = true
 	$fadeTimer.wait_time = fadetime
 	$fadeTimer.start()

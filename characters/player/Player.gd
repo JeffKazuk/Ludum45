@@ -12,7 +12,10 @@ var can_interact = false
 signal interact
 
 func _ready():
-    
+    print("spawn" + SpawnLoc)
+    call_deferred("spawn")
+
+func spawn():
     self.translation = get_tree().get_current_scene().get_node(SpawnLoc).translation
 
 func get_input():
