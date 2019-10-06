@@ -34,7 +34,7 @@ speed = 4.0
 enabled = true
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
@@ -56,8 +56,10 @@ fadeA = 1
 endAlpha = 0
 fadeTime = 3
 
-[node name="post_office" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+[node name="Node" type="Node" parent="."]
 
-[node name="Scene Root" parent="." instance=ExtResource( 7 )]
-transform = Transform( -0.6, 0, -1.05697e-07, 0, 0.6, 0, 9.05975e-08, 0, -0.7, 36.5278, 0, -19.6378 )
+[node name="post_office" parent="Node" instance=ExtResource( 6 )]
+transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+
+[node name="Scene Root" parent="Node" instance=ExtResource( 7 )]
+transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
