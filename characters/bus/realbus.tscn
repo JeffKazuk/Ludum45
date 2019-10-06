@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/bus/buth.dae" type="PackedScene" id=1]
 [ext_resource path="res://characters/bus/Bus_Textures_All.material" type="Material" id=2]
 [ext_resource path="res://characters/bus/wheel.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+albedo_color = Color( 0, 0, 0, 0.419608 )
 
 [node name="Scene Root" instance=ExtResource( 1 )]
 
@@ -20,3 +26,8 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.0022
 
 [node name="wheel3" parent="." index="5" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.00227, 0.516581, 0.949155 )
+
+[node name="MeshInstance" type="MeshInstance" parent="." index="6"]
+transform = Transform( 7, 0, 0, 0, 0.01, 0, 0, 0, 4, 0, -0.415103, -2.09706 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )

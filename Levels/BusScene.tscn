@@ -30,5 +30,6 @@ autostart = true
 script = ExtResource( 5 )
 
 [node name="changeScene" parent="." instance=ExtResource( 6 )]
+location = "BusStation"
 fadetime = 7
 fadeA = 1
