@@ -2,28 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.s3tc.stex"
-path.etc2="res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.etc2.stex"
+path="res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://images/Banner Chef.png"
-dest_files=[ "res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.s3tc.stex", "res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.etc2.stex" ]
+dest_files=[ "res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
-flags/mipmaps=true
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
