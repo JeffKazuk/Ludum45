@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://characters/bus/BusScene.gd" type="Script" id=1]
 [ext_resource path="res://transitions/roadenv.tres" type="Environment" id=2]
 [ext_resource path="res://characters/bus/realbus.tscn" type="PackedScene" id=3]
 [ext_resource path="res://transitions/fade.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/bruhtimer.gd" type="Script" id=5]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=6]
 
 [node name="Bus Scene" type="Spatial"]
 script = ExtResource( 1 )
@@ -20,3 +22,14 @@ transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008,
 [node name="fade" parent="." instance=ExtResource( 4 )]
 fadeTime = 3
 alphaEnd = 0
+
+[node name="bruhtimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+script = ExtResource( 5 )
+
+[node name="changeScene" parent="." instance=ExtResource( 6 )]
+location = "BusStation"
+fadetime = 7
+fadeA = 1

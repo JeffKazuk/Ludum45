@@ -5,6 +5,12 @@
 [ext_resource path="res://characters/bus/Bus_Textures_All.material" type="Material" id=3]
 [ext_resource path="res://characters/bus/wheel.tscn" type="PackedScene" id=4]
 
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+albedo_color = Color( 0, 0, 0, 0.419608 )
+
 [node name="Scene Root" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
