@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://models/PostOffice.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/PostOffice/PostOfficeDoor.gd" type="Script" id=3]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/PostOffice/Clerk.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/PostOffice/PostOfficeDoor.gd" type="Script" id=4]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=5]
 
 [node name="PostOfficeInterior" type="Spatial"]
 
@@ -11,23 +12,24 @@
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00170493, 1.08494, 1.19992 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.995091, 1.08494, 1.19992 )
 SpawnLoc = "Town"
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.90634, 0.422549, 0, -0.422549, 0.90634, 0, 3.16968, 4.28928 )
 
 [node name="Interactables" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Clerk" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18519, -1.96088 )
+script = ExtResource( 3 )
 
 [node name="Door" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33447, 2.48242 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
-[node name="changeScene" parent="." instance=ExtResource( 4 )]
+[node name="changeScene" parent="." instance=ExtResource( 5 )]
+location = "PostOffice"
 fadetime = 2
 fadeA = 1
 

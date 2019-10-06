@@ -19,6 +19,10 @@ config/name="Ludum45"
 run/main_scene="res://Levels/scene1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalVars="*res://GlobalVars.gd"
+
 [input]
 
 move_forward={

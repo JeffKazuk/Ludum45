@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Jogger run0003.png-a399132e24f13b09b0f21fe3dbf5eb39.s3tc.stex"
-path.etc2="res://.import/Jogger run0003.png-a399132e24f13b09b0f21fe3dbf5eb39.etc2.stex"
+path.s3tc="res://.import/Borgertown Tilesheet.png-f07a786159cf575d7678d955553726b3.s3tc.stex"
+path.etc2="res://.import/Borgertown Tilesheet.png-f07a786159cf575d7678d955553726b3.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/Jogger Run/Jogger run0003.png"
-dest_files=[ "res://.import/Jogger run0003.png-a399132e24f13b09b0f21fe3dbf5eb39.s3tc.stex", "res://.import/Jogger run0003.png-a399132e24f13b09b0f21fe3dbf5eb39.etc2.stex" ]
+source_file="res://models/Borgertown Tilesheet.png"
+dest_files=[ "res://.import/Borgertown Tilesheet.png-f07a786159cf575d7678d955553726b3.s3tc.stex", "res://.import/Borgertown Tilesheet.png-f07a786159cf575d7678d955553726b3.etc2.stex" ]
 
 [params]
 

@@ -18,12 +18,13 @@ script = ExtResource( 2 )
 
 [node name="ChefShack" parent="." index="0"]
 editor/display_folded = true
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="." index="2"]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4.5, 6 )
 
 [node name="Stuff" type="Spatial" parent="." index="3"]
+editor/display_folded = true
 
 [node name="CSGPolygon" type="CSGPolygon" parent="Stuff" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94064, 0, 0.959473 )
@@ -75,6 +76,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.453, 1.5, -3.449 )
 script = ExtResource( 9 )
 
 [node name="Stove1" type="Spatial" parent="Interactables" index="5"]
+editor/display_folded = true
 script = ExtResource( 10 )
 
 [node name="Borger" parent="Interactables/Stove1" index="0" instance=ExtResource( 11 )]
@@ -86,6 +88,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Stove2" type="Spatial" parent="Interactables" index="6"]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45662, 0.996094, 0.555908 )
 script = ExtResource( 10 )
 
@@ -97,5 +100,11 @@ visible = false
 wait_time = 5.0
 one_shot = true
 
+[node name="Door" type="Spatial" parent="Interactables" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.243, 3.235 )
+
 [node name="Player" parent="." index="5" instance=ExtResource( 12 )]
-transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 3.86334, 1.61243, -1.7041 )
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.1694, 1.24342, 3.01532 )
+
+[node name="Town" type="Spatial" parent="." index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.243, 3.28 )
