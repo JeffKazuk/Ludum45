@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world.tscn" type="PackedScene" id=2]
@@ -11,7 +11,8 @@
 [ext_resource path="res://house.tscn" type="PackedScene" id=9]
 [ext_resource path="res://models/BorgerTown.tscn" type="PackedScene" id=10]
 [ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=11]
-[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=12]
+[ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=12]
+[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -99,19 +100,22 @@ transform = Transform( -2.62268e-008, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-008,
 [node name="chef_shack" parent="Buildings" instance=ExtResource( 11 )]
 transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, -15.234, 0.01, -38.616 )
 
+[node name="groceries" parent="Buildings" instance=ExtResource( 12 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
+
 [node name="Mailboxes" type="Node" parent="."]
 
-[node name="House" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="House" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
 
-[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 18.4376, 0, -37.188 )
 
-[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.6841, 0, -37.188 )
 
-[node name="House2" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="House2" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
 
-[node name="Grocery" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="Grocery" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )

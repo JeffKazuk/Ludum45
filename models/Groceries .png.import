@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.s3tc.stex"
-path.etc2="res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.etc2.stex"
+path.s3tc="res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.s3tc.stex"
+path.etc2="res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/Banner Chef.png"
-dest_files=[ "res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.s3tc.stex", "res://.import/Banner Chef.png-c31a54ce14915e5fc58fd1db96e0352a.etc2.stex" ]
+source_file="res://models/Groceries .png"
+dest_files=[ "res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.s3tc.stex", "res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.etc2.stex" ]
 
 [params]
 
@@ -22,8 +22,8 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
-flags/mipmaps=true
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
