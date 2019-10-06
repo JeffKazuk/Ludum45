@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Jogger run0008.png-af303ab42e5d257f7d81b3fafa25c259.s3tc.stex"
-path.etc2="res://.import/Jogger run0008.png-af303ab42e5d257f7d81b3fafa25c259.etc2.stex"
+path="res://.import/Jogger run0008.png-af303ab42e5d257f7d81b3fafa25c259.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://images/Jogger Run/Jogger run0008.png"
-dest_files=[ "res://.import/Jogger run0008.png-af303ab42e5d257f7d81b3fafa25c259.s3tc.stex", "res://.import/Jogger run0008.png-af303ab42e5d257f7d81b3fafa25c259.etc2.stex" ]
+dest_files=[ "res://.import/Jogger run0008.png-af303ab42e5d257f7d81b3fafa25c259.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
