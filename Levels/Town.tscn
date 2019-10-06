@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world.tscn" type="PackedScene" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=36]
 [ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=37]
 [ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=38]
+[ext_resource path="res://models/trees.tscn" type="PackedScene" id=39]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -59,6 +60,7 @@ background_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 [node name="Town" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 11.8908 )
 SpawnLoc = "BusStation"
 
@@ -66,7 +68,7 @@ SpawnLoc = "BusStation"
 transform = Transform( 1, 0, 0, 0, 0.923124, 0.384505, 0, -0.384505, 0.923124, 0, 3.03842, 4.11099 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
@@ -75,6 +77,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.036, 1, -5.979 )
 
 [node name="Interactables" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="PostOfficeDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
@@ -127,16 +130,16 @@ fadeTime = 3
 editor/display_folded = true
 
 [node name="post_office" parent="Buildings" instance=ExtResource( 33 )]
-transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+transform = Transform( -0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 36.527, 0.000280619, -10.3357 )
 
 [node name="house" parent="Buildings" instance=ExtResource( 34 )]
-transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
+transform = Transform( -0.6, 0, -1.05697e-07, 0, 0.6, 0, 9.05975e-08, 0, -0.7, 36.5278, 0, -19.6378 )
 
 [node name="borger_town" parent="Buildings" instance=ExtResource( 35 )]
-transform = Transform( -2.62268e-008, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-008, 14.943, 0.1, -38.622 )
+transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 14.943, 0.1, -38.622 )
 
 [node name="chef_shack" parent="Buildings" instance=ExtResource( 36 )]
-transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, -15.234, 0.01, -38.616 )
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -15.234, 0.01, -38.616 )
 
 [node name="groceries" parent="Buildings" instance=ExtResource( 37 )]
 transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
@@ -145,19 +148,19 @@ transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
 editor/display_folded = true
 
 [node name="House" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 36.0521, 0, -21.5731 )
 
 [node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 18.4376, 0, -37.188 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 18.4376, 0, -37.188 )
 
 [node name="ChefShack" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.6841, 0, -37.188 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -18.6841, 0, -37.188 )
 
 [node name="House2" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2.79913, 0, -37.188 )
 
 [node name="Grocery" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )
+transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -36.2148, 0, -11.0167 )
 
 [node name="GroceryStore" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1236, 1, -13.891 )
@@ -167,9 +170,788 @@ transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986,
 environment = SubResource( 3 )
 current = true
 size = 4.7
+far = 1000.0
 target = NodePath("../Player/Spatial")
 speed = 4.0
 enabled = true
 
 [node name="Restaurant" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.147, 1, -37.8374 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="bg2" type="Spatial" parent="Background"]
+editor/display_folded = true
+transform = Transform( 0.97387, 0, 0.227105, 0, 1, 0, -0.227105, 0, 0.97387, 22.4405, 0, -11.3606 )
+
+[node name="Sprite3D" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452402, 8.01653, -89.2702 )
+pixel_size = 0.1
+
+[node name="Sprite3D41" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.764104, 0, -0.645093, 0, 1, 0, 0.645093, 0, -0.764104, -1.36811, 8.01653, 43.0225 )
+pixel_size = 0.1
+
+[node name="Sprite3D75" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.33097, 0, 0.836707, 0, 1, 0, 0.46222, 0, -0.25937, -105.518, 8.01653, -64.964 )
+pixel_size = 0.1
+
+[node name="Sprite3D21" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.135352, 0, -0.990797, 0, 1, 0, 0.990797, 0, 0.135352, 55.8609, 8.01653, -22.9074 )
+pixel_size = 0.1
+
+[node name="Sprite3D49" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.742578, 0, 0.669758, 0, 1, 0, -0.669758, 0, -0.742578, -86.5161, 8.01653, 28.0579 )
+pixel_size = 0.1
+
+[node name="Sprite3D83" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.784209, 0, 0.441173, 0, 1, 0, -0.19442, 0, -0.493072, -68.3302, 8.01653, -56.5656 )
+pixel_size = 0.1
+
+[node name="Sprite3D9" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452402, 8.01653, -89.2702 )
+pixel_size = 0.1
+
+[node name="Sprite3D57" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.764104, 0, -0.645093, 0, 1, 0, 0.645093, 0, -0.764104, -1.36811, 8.01653, 43.0225 )
+pixel_size = 0.1
+
+[node name="Sprite3D89" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.33097, 0, 0.836707, 0, 1, 0, 0.46222, 0, -0.25937, -105.518, 8.01653, -64.964 )
+pixel_size = 0.1
+
+[node name="Sprite3D32" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.135352, 0, -0.990797, 0, 1, 0, 0.990797, 0, 0.135352, 55.8609, 8.01653, -22.9074 )
+pixel_size = 0.1
+
+[node name="Sprite3D62" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.742578, 0, 0.669758, 0, 1, 0, -0.669758, 0, -0.742578, -86.5161, 8.01653, 28.0579 )
+pixel_size = 0.1
+
+[node name="Sprite3D94" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.784209, 0, 0.441173, 0, 1, 0, -0.19442, 0, -0.493072, -68.3302, 8.01653, -56.5656 )
+pixel_size = 0.1
+
+[node name="Sprite3D5" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.597502, 0, -0.801868, 0, 1, 0, 0.801868, 0, 0.597502, 43.3383, 8.01653, -69.4222 )
+pixel_size = 0.1
+
+[node name="Sprite3D44" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.973832, 0, 0.227267, 0, 1, 0, -0.227267, 0, -0.973832, -46.9412, 8.01653, 55.5219 )
+pixel_size = 0.1
+
+[node name="Sprite3D78" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.473174, 0, 0.765327, 0, 1, 0, 0.0681969, 0, -0.525613, -103.105, 8.01653, -50.2893 )
+pixel_size = 0.1
+
+[node name="Sprite3D24" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.713616, 0, -0.700537, 0, 1, 0, 0.700537, 0, -0.713616, 42.0002, 8.01653, 22.2703 )
+pixel_size = 0.1
+
+[node name="Sprite3D63" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.0933659, 0, 0.995631, 0, 1, 0, -0.995631, 0, 0.0933659, -105.069, 8.01653, -15.4039 )
+pixel_size = 0.1
+
+[node name="Sprite3D95" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.822328, 0, -0.365231, 0, 1, 0, -0.511545, 0, -0.138712, -25.9423, 8.01653, -74.69 )
+pixel_size = 0.1
+
+[node name="Sprite3D10" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.597502, 0, -0.801868, 0, 1, 0, 0.801868, 0, 0.597502, 43.3383, 8.01653, -69.4222 )
+pixel_size = 0.1
+
+[node name="Sprite3D46" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.973832, 0, 0.227267, 0, 1, 0, -0.227267, 0, -0.973832, -46.9412, 8.01653, 55.5219 )
+pixel_size = 0.1
+
+[node name="Sprite3D80" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.473174, 0, 0.765327, 0, 1, 0, 0.0681969, 0, -0.525613, -103.105, 8.01653, -50.2893 )
+pixel_size = 0.1
+
+[node name="Sprite3D26" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.713616, 0, -0.700537, 0, 1, 0, 0.700537, 0, -0.713616, 42.0002, 8.01653, 22.2703 )
+pixel_size = 0.1
+
+[node name="Sprite3D58" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.0933659, 0, 0.995631, 0, 1, 0, -0.995631, 0, 0.0933659, -105.069, 8.01653, -15.4039 )
+pixel_size = 0.1
+
+[node name="Sprite3D90" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.822328, 0, -0.365231, 0, 1, 0, -0.511545, 0, -0.138712, -25.9423, 8.01653, -74.69 )
+pixel_size = 0.1
+
+[node name="Sprite3D2" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 12.6799, 8.01653, -88.3756 )
+pixel_size = 0.1
+
+[node name="Sprite3D53" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.864515, 0, -0.502607, 0, 1, 0, 0.502607, 0, -0.864515, -11.2883, 8.01653, 50.2267 )
+pixel_size = 0.1
+
+[node name="Sprite3D85" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.180648, 0, 0.881468, 0, 1, 0, 0.410158, 0, -0.335693, -108.816, 8.01653, -59.5442 )
+pixel_size = 0.1
+
+[node name="Sprite3D30" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.0387549, 0, -0.999248, 0, 1, 0, 0.999248, 0, -0.0387549, 56.6295, 8.01653, -10.6713 )
+pixel_size = 0.1
+
+[node name="Sprite3D60" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.614994, 0, 0.78853, 0, 1, 0, -0.78853, 0, -0.614994, -94.9968, 8.01653, 19.2041 )
+pixel_size = 0.1
+
+[node name="Sprite3D92" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.848905, 0, 0.298294, 0, 1, 0, -0.277088, 0, -0.45182, -58.3466, 8.01653, -59.384 )
+pixel_size = 0.1
+
+[node name="Sprite3D13" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 12.6799, 8.01653, -88.3756 )
+pixel_size = 0.1
+
+[node name="Sprite3D36" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.864515, 0, -0.502607, 0, 1, 0, 0.502607, 0, -0.864515, -11.2883, 8.01653, 50.2267 )
+pixel_size = 0.1
+
+[node name="Sprite3D70" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.180648, 0, 0.881468, 0, 1, 0, 0.410158, 0, -0.335693, -108.816, 8.01653, -59.5442 )
+pixel_size = 0.1
+
+[node name="Sprite3D20" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.0387549, 0, -0.999248, 0, 1, 0, 0.999248, 0, -0.0387549, 56.6295, 8.01653, -10.6713 )
+pixel_size = 0.1
+
+[node name="Sprite3D40" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.614994, 0, 0.78853, 0, 1, 0, -0.78853, 0, -0.614994, -94.9968, 8.01653, 19.2041 )
+pixel_size = 0.1
+
+[node name="Sprite3D74" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.848905, 0, 0.298294, 0, 1, 0, -0.277088, 0, -0.45182, -58.3466, 8.01653, -59.384 )
+pixel_size = 0.1
+
+[node name="Sprite3D7" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.449181, 0, -0.893441, 0, 1, 0, 0.893441, 0, 0.449181, 49.9269, 8.01653, -59.0828 )
+pixel_size = 0.1
+
+[node name="Sprite3D42" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.919572, 0, 0.392918, 0, 1, 0, -0.392918, 0, -0.919572, -58.6454, 8.01653, 51.8717 )
+pixel_size = 0.1
+
+[node name="Sprite3D76" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.598882, 0, 0.671533, 0, 1, 0, -0.0241112, 0, -0.529469, -96.6343, 8.01653, -49.9257 )
+pixel_size = 0.1
+
+[node name="Sprite3D22" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.824421, 0, -0.565976, 0, 1, 0, 0.565976, 0, -0.824421, 32.6478, 8.01653, 30.1977 )
+pixel_size = 0.1
+
+[node name="Sprite3D55" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.264837, 0, 0.964293, 0, 1, 0, -0.964293, 0, 0.264837, -103.036, 8.01653, -27.4945 )
+pixel_size = 0.1
+
+[node name="Sprite3D87" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.746414, 0, -0.502479, 0, 1, 0, -0.527861, 0, -0.0477752, -16.2141, 8.01653, -81.069 )
+pixel_size = 0.1
+
+[node name="Sprite3D15" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.449181, 0, -0.893441, 0, 1, 0, 0.893441, 0, 0.449181, 49.9269, 8.01653, -59.0828 )
+pixel_size = 0.1
+
+[node name="Sprite3D54" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.919572, 0, 0.392918, 0, 1, 0, -0.392918, 0, -0.919572, -58.6454, 8.01653, 51.8717 )
+pixel_size = 0.1
+
+[node name="Sprite3D86" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.598882, 0, 0.671533, 0, 1, 0, -0.0241112, 0, -0.529469, -96.6343, 8.01653, -49.9257 )
+pixel_size = 0.1
+
+[node name="Sprite3D31" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.824421, 0, -0.565976, 0, 1, 0, 0.565976, 0, -0.824421, 32.6478, 8.01653, 30.1977 )
+pixel_size = 0.1
+
+[node name="Sprite3D61" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.264837, 0, 0.964293, 0, 1, 0, -0.964293, 0, 0.264837, -103.036, 8.01653, -27.4945 )
+pixel_size = 0.1
+
+[node name="Sprite3D93" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.746414, 0, -0.502479, 0, 1, 0, -0.527861, 0, -0.0477752, -16.2141, 8.01653, -81.069 )
+pixel_size = 0.1
+
+[node name="Sprite3D3" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.906308, 0, -0.422618, 0, 1, 0, 0.422618, 0, 0.906308, 24.4122, 8.01653, -84.8395 )
+pixel_size = 0.1
+
+[node name="Sprite3D50" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.965141, 0, -0.261728, 0, 1, 0, 0.261728, 0, -0.965141, -22.5341, 8.01653, 55.0933 )
+pixel_size = 0.1
+
+[node name="Sprite3D84" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.0536476, 0, 0.898187, 0, 1, 0, 0.309299, 0, -0.430411, -109.741, 8.01653, -55.0385 )
+pixel_size = 0.1
+
+[node name="Sprite3D27" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.296059, 0, -0.955169, 0, 1, 0, 0.955169, 0, -0.296059, 54.7139, 8.01653, 1.43168 )
+pixel_size = 0.1
+
+[node name="Sprite3D59" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.389952, 0, 0.920834, 0, 1, 0, -0.920834, 0, -0.389952, -101.341, 8.01653, 8.72047 )
+pixel_size = 0.1
+
+[node name="Sprite3D91" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.897183, 0, 0.0684167, 0, 1, 0, -0.384586, 0, -0.364709, -47.586, 8.01653, -63.4085 )
+pixel_size = 0.1
+
+[node name="Sprite3D14" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.906308, 0, -0.422618, 0, 1, 0, 0.422618, 0, 0.906308, 24.4122, 8.01653, -84.8395 )
+pixel_size = 0.1
+
+[node name="Sprite3D45" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.965141, 0, -0.261728, 0, 1, 0, 0.261728, 0, -0.965141, -22.5341, 8.01653, 55.0933 )
+pixel_size = 0.1
+
+[node name="Sprite3D79" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.0536476, 0, 0.898187, 0, 1, 0, 0.309299, 0, -0.430411, -109.741, 8.01653, -55.0385 )
+pixel_size = 0.1
+
+[node name="Sprite3D25" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.296059, 0, -0.955169, 0, 1, 0, 0.955169, 0, -0.296059, 54.7139, 8.01653, 1.43168 )
+pixel_size = 0.1
+
+[node name="Sprite3D64" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.389952, 0, 0.920834, 0, 1, 0, -0.920834, 0, -0.389952, -101.341, 8.01653, 8.72047 )
+pixel_size = 0.1
+
+[node name="Sprite3D96" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.897183, 0, 0.0684167, 0, 1, 0, -0.384586, 0, -0.364709, -47.586, 8.01653, -63.4085 )
+pixel_size = 0.1
+
+[node name="Sprite3D8" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.202636, 0, -0.979254, 0, 1, 0, 0.979254, 0, 0.202636, 54.1015, 8.01653, -47.5622 )
+pixel_size = 0.1
+
+[node name="Sprite3D34" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.786544, 0, 0.617533, 0, 1, 0, -0.617533, 0, -0.786544, -69.2671, 8.01653, 45.7618 )
+pixel_size = 0.1
+
+[node name="Sprite3D68" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.752282, 0, 0.49365, 0, 1, 0, -0.160326, 0, -0.505188, -88.3768, 8.01653, -50.9842 )
+pixel_size = 0.1
+
+[node name="Sprite3D18" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.942815, 0, -0.333315, 0, 1, 0, 0.333315, 0, -0.942815, 21.7982, 8.01653, 35.8932 )
+pixel_size = 0.1
+
+[node name="Sprite3D48" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.50539, 0, 0.86289, 0, 1, 0, -0.86289, 0, 0.50539, -98.4204, 8.01653, -38.8455 )
+pixel_size = 0.1
+
+[node name="Sprite3D82" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.59093, 0, -0.678543, 0, 1, 0, -0.52224, 0, 0.0904728, -7.8577, 8.01653, -87.5611 )
+pixel_size = 0.1
+
+[node name="Sprite3D16" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.202636, 0, -0.979254, 0, 1, 0, 0.979254, 0, 0.202636, 54.1015, 8.01653, -47.5622 )
+pixel_size = 0.1
+
+[node name="Sprite3D51" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.786544, 0, 0.617533, 0, 1, 0, -0.617533, 0, -0.786544, -69.2671, 8.01653, 45.7618 )
+pixel_size = 0.1
+
+[node name="Sprite3D65" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.752282, 0, 0.49365, 0, 1, 0, -0.160326, 0, -0.505188, -88.3768, 8.01653, -50.9842 )
+pixel_size = 0.1
+
+[node name="Sprite3D28" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.942815, 0, -0.333315, 0, 1, 0, 0.333315, 0, -0.942815, 21.7982, 8.01653, 35.8932 )
+pixel_size = 0.1
+
+[node name="Sprite3D37" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.50539, 0, 0.86289, 0, 1, 0, -0.86289, 0, 0.50539, -98.4204, 8.01653, -38.8455 )
+pixel_size = 0.1
+
+[node name="Sprite3D71" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.59093, 0, -0.678543, 0, 1, 0, -0.52224, 0, 0.0904728, -7.8577, 8.01653, -87.5611 )
+pixel_size = 0.1
+
+[node name="Sprite3D4" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, 34.8402, 8.01653, -78.2274 )
+pixel_size = 0.1
+
+[node name="Sprite3D43" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.999995, 0, -0.0030127, 0, 1, 0, 0.0030127, 0, -0.999995, -34.7677, 8.01653, 56.7679 )
+pixel_size = 0.1
+
+[node name="Sprite3D77" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.284287, 0, 0.853697, 0, 1, 0, 0.187361, 0, -0.495798, -107.66, 8.01653, -51.9334 )
+pixel_size = 0.1
+
+[node name="Sprite3D23" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.533187, 0, -0.845997, 0, 1, 0, 0.845997, 0, -0.533187, 49.5742, 8.01653, 12.6587 )
+pixel_size = 0.1
+
+[node name="Sprite3D56" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.138336, 0, 0.990384, 0, 1, 0, -0.990384, 0, -0.138336, -104.656, 8.01653, -3.17372 )
+pixel_size = 0.1
+
+[node name="Sprite3D88" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.88432, 0, -0.166122, 0, 1, 0, -0.465875, 0, -0.252744, -36.4913, 8.01653, -68.6962 )
+pixel_size = 0.1
+
+[node name="Sprite3D12" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, 34.8402, 8.01653, -78.2274 )
+pixel_size = 0.1
+
+[node name="Sprite3D33" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.999995, 0, -0.0030127, 0, 1, 0, 0.0030127, 0, -0.999995, -34.7677, 8.01653, 56.7679 )
+pixel_size = 0.1
+
+[node name="Sprite3D67" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.284287, 0, 0.853697, 0, 1, 0, 0.187361, 0, -0.495798, -107.66, 8.01653, -51.9334 )
+pixel_size = 0.1
+
+[node name="Sprite3D17" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.533187, 0, -0.845997, 0, 1, 0, 0.845997, 0, -0.533187, 49.5742, 8.01653, 12.6587 )
+pixel_size = 0.1
+
+[node name="Sprite3D47" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.138336, 0, 0.990384, 0, 1, 0, -0.990384, 0, -0.138336, -104.656, 8.01653, -3.17372 )
+pixel_size = 0.1
+
+[node name="Sprite3D81" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.88432, 0, -0.166122, 0, 1, 0, -0.465875, 0, -0.252744, -36.4913, 8.01653, -68.6962 )
+pixel_size = 0.1
+
+[node name="Sprite3D6" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.0577179, 0, -0.998333, 0, 1, 0, 0.998333, 0, -0.0577179, 55.0302, 8.01653, -35.2496 )
+pixel_size = 0.1
+
+[node name="Sprite3D52" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.599914, 0, 0.800064, 0, 1, 0, -0.800064, 0, -0.599914, -77.9195, 8.01653, 36.9528 )
+pixel_size = 0.1
+
+[node name="Sprite3D66" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.854415, 0, 0.282124, 0, 1, 0, -0.285616, 0, -0.446479, -78.3821, 8.01653, -53.7484 )
+pixel_size = 0.1
+
+[node name="Sprite3D29" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.996957, 0, -0.0779392, 0, 1, 0, 0.0779392, 0, -0.996957, 9.72462, 8.01653, 38.4799 )
+pixel_size = 0.1
+
+[node name="Sprite3D38" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.711501, 0, 0.702683, 0, 1, 0, -0.702683, 0, 0.711501, -90.8636, 8.01653, -48.6105 )
+pixel_size = 0.1
+
+[node name="Sprite3D72" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.395175, 0, -0.808366, 0, 1, 0, -0.481028, 0, 0.222555, -1.69746, 8.01653, -93.8126 )
+pixel_size = 0.1
+
+[node name="Sprite3D11" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.0577179, 0, -0.998333, 0, 1, 0, 0.998333, 0, -0.0577179, 55.0302, 8.01653, -35.2496 )
+pixel_size = 0.1
+
+[node name="Sprite3D35" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.599914, 0, 0.800064, 0, 1, 0, -0.800064, 0, -0.599914, -77.9195, 8.01653, 36.9528 )
+pixel_size = 0.1
+
+[node name="Sprite3D69" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.854415, 0, 0.282124, 0, 1, 0, -0.285616, 0, -0.446479, -78.3821, 8.01653, -53.7484 )
+pixel_size = 0.1
+
+[node name="Sprite3D19" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( -0.996957, 0, -0.0779392, 0, 1, 0, 0.0779392, 0, -0.996957, 9.72462, 8.01653, 38.4799 )
+pixel_size = 0.1
+
+[node name="Sprite3D39" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.711501, 0, 0.702683, 0, 1, 0, -0.702683, 0, 0.711501, -90.8636, 8.01653, -48.6105 )
+pixel_size = 0.1
+
+[node name="Sprite3D73" parent="Background/bg2" instance=ExtResource( 39 )]
+transform = Transform( 0.395175, 0, -0.808366, 0, 1, 0, -0.481028, 0, 0.222555, -1.69746, 8.01653, -93.8126 )
+pixel_size = 0.1
+
+[node name="bg3" type="Spatial" parent="Background"]
+editor/display_folded = true
+transform = Transform( 2.10181, 0, 0.49014, 0, 2.24783, 0, -0.588487, 0, 2.52355, 22.4405, 0, -11.3606 )
+
+[node name="Sprite3D" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452402, 8.01653, -89.2702 )
+pixel_size = 0.1
+
+[node name="Sprite3D41" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.764104, 0, -0.645093, 0, 1, 0, 0.645093, 0, -0.764104, -1.36811, 8.01653, 43.0225 )
+pixel_size = 0.1
+
+[node name="Sprite3D75" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.33097, 0, 0.836707, 0, 1, 0, 0.46222, 0, -0.25937, -105.518, 8.01653, -64.964 )
+pixel_size = 0.1
+
+[node name="Sprite3D21" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.135352, 0, -0.990797, 0, 1, 0, 0.990797, 0, 0.135352, 55.8609, 8.01653, -22.9074 )
+pixel_size = 0.1
+
+[node name="Sprite3D49" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.742578, 0, 0.669758, 0, 1, 0, -0.669758, 0, -0.742578, -86.5161, 8.01653, 28.0579 )
+pixel_size = 0.1
+
+[node name="Sprite3D83" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.784209, 0, 0.441173, 0, 1, 0, -0.19442, 0, -0.493072, -68.3302, 8.01653, -56.5656 )
+pixel_size = 0.1
+
+[node name="Sprite3D9" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452402, 8.01653, -89.2702 )
+pixel_size = 0.1
+
+[node name="Sprite3D57" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.764104, 0, -0.645093, 0, 1, 0, 0.645093, 0, -0.764104, -1.36811, 8.01653, 43.0225 )
+pixel_size = 0.1
+
+[node name="Sprite3D89" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.33097, 0, 0.836707, 0, 1, 0, 0.46222, 0, -0.25937, -105.518, 8.01653, -64.964 )
+pixel_size = 0.1
+
+[node name="Sprite3D32" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.135352, 0, -0.990797, 0, 1, 0, 0.990797, 0, 0.135352, 55.8609, 8.01653, -22.9074 )
+pixel_size = 0.1
+
+[node name="Sprite3D62" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.742578, 0, 0.669758, 0, 1, 0, -0.669758, 0, -0.742578, -86.5161, 8.01653, 28.0579 )
+pixel_size = 0.1
+
+[node name="Sprite3D94" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.784209, 0, 0.441173, 0, 1, 0, -0.19442, 0, -0.493072, -68.3302, 8.01653, -56.5656 )
+pixel_size = 0.1
+
+[node name="Sprite3D5" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.597502, 0, -0.801868, 0, 1, 0, 0.801868, 0, 0.597502, 43.3383, 8.01653, -69.4222 )
+pixel_size = 0.1
+
+[node name="Sprite3D44" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.973832, 0, 0.227267, 0, 1, 0, -0.227267, 0, -0.973832, -46.9412, 8.01653, 55.5219 )
+pixel_size = 0.1
+
+[node name="Sprite3D78" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.473174, 0, 0.765327, 0, 1, 0, 0.0681969, 0, -0.525613, -103.105, 8.01653, -50.2893 )
+pixel_size = 0.1
+
+[node name="Sprite3D24" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.713616, 0, -0.700537, 0, 1, 0, 0.700537, 0, -0.713616, 42.0002, 8.01653, 22.2703 )
+pixel_size = 0.1
+
+[node name="Sprite3D63" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.0933659, 0, 0.995631, 0, 1, 0, -0.995631, 0, 0.0933659, -105.069, 8.01653, -15.4039 )
+pixel_size = 0.1
+
+[node name="Sprite3D95" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.822328, 0, -0.365231, 0, 1, 0, -0.511545, 0, -0.138712, -25.9423, 8.01653, -74.69 )
+pixel_size = 0.1
+
+[node name="Sprite3D10" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.597502, 0, -0.801868, 0, 1, 0, 0.801868, 0, 0.597502, 43.3383, 8.01653, -69.4222 )
+pixel_size = 0.1
+
+[node name="Sprite3D46" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.973832, 0, 0.227267, 0, 1, 0, -0.227267, 0, -0.973832, -46.9412, 8.01653, 55.5219 )
+pixel_size = 0.1
+
+[node name="Sprite3D80" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.473174, 0, 0.765327, 0, 1, 0, 0.0681969, 0, -0.525613, -103.105, 8.01653, -50.2893 )
+pixel_size = 0.1
+
+[node name="Sprite3D26" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.713616, 0, -0.700537, 0, 1, 0, 0.700537, 0, -0.713616, 42.0002, 8.01653, 22.2703 )
+pixel_size = 0.1
+
+[node name="Sprite3D58" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.0933659, 0, 0.995631, 0, 1, 0, -0.995631, 0, 0.0933659, -105.069, 8.01653, -15.4039 )
+pixel_size = 0.1
+
+[node name="Sprite3D90" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.822328, 0, -0.365231, 0, 1, 0, -0.511545, 0, -0.138712, -25.9423, 8.01653, -74.69 )
+pixel_size = 0.1
+
+[node name="Sprite3D2" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 12.6799, 8.01653, -88.3756 )
+pixel_size = 0.1
+
+[node name="Sprite3D53" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.864515, 0, -0.502607, 0, 1, 0, 0.502607, 0, -0.864515, -11.2883, 8.01653, 50.2267 )
+pixel_size = 0.1
+
+[node name="Sprite3D85" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.180648, 0, 0.881468, 0, 1, 0, 0.410158, 0, -0.335693, -108.816, 8.01653, -59.5442 )
+pixel_size = 0.1
+
+[node name="Sprite3D30" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.0387549, 0, -0.999248, 0, 1, 0, 0.999248, 0, -0.0387549, 56.6295, 8.01653, -10.6713 )
+pixel_size = 0.1
+
+[node name="Sprite3D60" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.614994, 0, 0.78853, 0, 1, 0, -0.78853, 0, -0.614994, -94.9968, 8.01653, 19.2041 )
+pixel_size = 0.1
+
+[node name="Sprite3D92" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.848905, 0, 0.298294, 0, 1, 0, -0.277088, 0, -0.45182, -58.3466, 8.01653, -59.384 )
+pixel_size = 0.1
+
+[node name="Sprite3D13" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 12.6799, 8.01653, -88.3756 )
+pixel_size = 0.1
+
+[node name="Sprite3D36" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.864515, 0, -0.502607, 0, 1, 0, 0.502607, 0, -0.864515, -11.2883, 8.01653, 50.2267 )
+pixel_size = 0.1
+
+[node name="Sprite3D70" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.180648, 0, 0.881468, 0, 1, 0, 0.410158, 0, -0.335693, -108.816, 8.01653, -59.5442 )
+pixel_size = 0.1
+
+[node name="Sprite3D20" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.0387549, 0, -0.999248, 0, 1, 0, 0.999248, 0, -0.0387549, 56.6295, 8.01653, -10.6713 )
+pixel_size = 0.1
+
+[node name="Sprite3D40" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.614994, 0, 0.78853, 0, 1, 0, -0.78853, 0, -0.614994, -94.9968, 8.01653, 19.2041 )
+pixel_size = 0.1
+
+[node name="Sprite3D74" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.848905, 0, 0.298294, 0, 1, 0, -0.277088, 0, -0.45182, -58.3466, 8.01653, -59.384 )
+pixel_size = 0.1
+
+[node name="Sprite3D7" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.449181, 0, -0.893441, 0, 1, 0, 0.893441, 0, 0.449181, 49.9269, 8.01653, -59.0828 )
+pixel_size = 0.1
+
+[node name="Sprite3D42" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.919572, 0, 0.392918, 0, 1, 0, -0.392918, 0, -0.919572, -58.6454, 8.01653, 51.8717 )
+pixel_size = 0.1
+
+[node name="Sprite3D76" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.598882, 0, 0.671533, 0, 1, 0, -0.0241112, 0, -0.529469, -96.6343, 8.01653, -49.9257 )
+pixel_size = 0.1
+
+[node name="Sprite3D22" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.824421, 0, -0.565976, 0, 1, 0, 0.565976, 0, -0.824421, 32.6478, 8.01653, 30.1977 )
+pixel_size = 0.1
+
+[node name="Sprite3D55" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.264837, 0, 0.964293, 0, 1, 0, -0.964293, 0, 0.264837, -103.036, 8.01653, -27.4945 )
+pixel_size = 0.1
+
+[node name="Sprite3D87" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.746414, 0, -0.502479, 0, 1, 0, -0.527861, 0, -0.0477752, -16.2141, 8.01653, -81.069 )
+pixel_size = 0.1
+
+[node name="Sprite3D15" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.449181, 0, -0.893441, 0, 1, 0, 0.893441, 0, 0.449181, 49.9269, 8.01653, -59.0828 )
+pixel_size = 0.1
+
+[node name="Sprite3D54" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.919572, 0, 0.392918, 0, 1, 0, -0.392918, 0, -0.919572, -58.6454, 8.01653, 51.8717 )
+pixel_size = 0.1
+
+[node name="Sprite3D86" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.598882, 0, 0.671533, 0, 1, 0, -0.0241112, 0, -0.529469, -96.6343, 8.01653, -49.9257 )
+pixel_size = 0.1
+
+[node name="Sprite3D31" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.824421, 0, -0.565976, 0, 1, 0, 0.565976, 0, -0.824421, 32.6478, 8.01653, 30.1977 )
+pixel_size = 0.1
+
+[node name="Sprite3D61" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.264837, 0, 0.964293, 0, 1, 0, -0.964293, 0, 0.264837, -103.036, 8.01653, -27.4945 )
+pixel_size = 0.1
+
+[node name="Sprite3D93" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.746414, 0, -0.502479, 0, 1, 0, -0.527861, 0, -0.0477752, -16.2141, 8.01653, -81.069 )
+pixel_size = 0.1
+
+[node name="Sprite3D3" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.906308, 0, -0.422618, 0, 1, 0, 0.422618, 0, 0.906308, 24.4122, 8.01653, -84.8395 )
+pixel_size = 0.1
+
+[node name="Sprite3D50" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.965141, 0, -0.261728, 0, 1, 0, 0.261728, 0, -0.965141, -22.5341, 8.01653, 55.0933 )
+pixel_size = 0.1
+
+[node name="Sprite3D84" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.0536476, 0, 0.898187, 0, 1, 0, 0.309299, 0, -0.430411, -109.741, 8.01653, -55.0385 )
+pixel_size = 0.1
+
+[node name="Sprite3D27" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.296059, 0, -0.955169, 0, 1, 0, 0.955169, 0, -0.296059, 54.7139, 8.01653, 1.43168 )
+pixel_size = 0.1
+
+[node name="Sprite3D59" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.389952, 0, 0.920834, 0, 1, 0, -0.920834, 0, -0.389952, -101.341, 8.01653, 8.72047 )
+pixel_size = 0.1
+
+[node name="Sprite3D91" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.897183, 0, 0.0684167, 0, 1, 0, -0.384586, 0, -0.364709, -47.586, 8.01653, -63.4085 )
+pixel_size = 0.1
+
+[node name="Sprite3D14" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.906308, 0, -0.422618, 0, 1, 0, 0.422618, 0, 0.906308, 24.4122, 8.01653, -84.8395 )
+pixel_size = 0.1
+
+[node name="Sprite3D45" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.965141, 0, -0.261728, 0, 1, 0, 0.261728, 0, -0.965141, -22.5341, 8.01653, 55.0933 )
+pixel_size = 0.1
+
+[node name="Sprite3D79" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.0536476, 0, 0.898187, 0, 1, 0, 0.309299, 0, -0.430411, -109.741, 8.01653, -55.0385 )
+pixel_size = 0.1
+
+[node name="Sprite3D25" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.296059, 0, -0.955169, 0, 1, 0, 0.955169, 0, -0.296059, 54.7139, 8.01653, 1.43168 )
+pixel_size = 0.1
+
+[node name="Sprite3D64" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.389952, 0, 0.920834, 0, 1, 0, -0.920834, 0, -0.389952, -101.341, 8.01653, 8.72047 )
+pixel_size = 0.1
+
+[node name="Sprite3D96" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.897183, 0, 0.0684167, 0, 1, 0, -0.384586, 0, -0.364709, -47.586, 8.01653, -63.4085 )
+pixel_size = 0.1
+
+[node name="Sprite3D8" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.202636, 0, -0.979254, 0, 1, 0, 0.979254, 0, 0.202636, 54.1015, 8.01653, -47.5622 )
+pixel_size = 0.1
+
+[node name="Sprite3D34" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.786544, 0, 0.617533, 0, 1, 0, -0.617533, 0, -0.786544, -69.2671, 8.01653, 45.7618 )
+pixel_size = 0.1
+
+[node name="Sprite3D68" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.752282, 0, 0.49365, 0, 1, 0, -0.160326, 0, -0.505188, -88.3768, 8.01653, -50.9842 )
+pixel_size = 0.1
+
+[node name="Sprite3D18" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.942815, 0, -0.333315, 0, 1, 0, 0.333315, 0, -0.942815, 21.7982, 8.01653, 35.8932 )
+pixel_size = 0.1
+
+[node name="Sprite3D48" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.50539, 0, 0.86289, 0, 1, 0, -0.86289, 0, 0.50539, -98.4204, 8.01653, -38.8455 )
+pixel_size = 0.1
+
+[node name="Sprite3D82" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.59093, 0, -0.678543, 0, 1, 0, -0.52224, 0, 0.0904728, -7.8577, 8.01653, -87.5611 )
+pixel_size = 0.1
+
+[node name="Sprite3D16" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.202636, 0, -0.979254, 0, 1, 0, 0.979254, 0, 0.202636, 54.1015, 8.01653, -47.5622 )
+pixel_size = 0.1
+
+[node name="Sprite3D51" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.786544, 0, 0.617533, 0, 1, 0, -0.617533, 0, -0.786544, -69.2671, 8.01653, 45.7618 )
+pixel_size = 0.1
+
+[node name="Sprite3D65" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.752282, 0, 0.49365, 0, 1, 0, -0.160326, 0, -0.505188, -88.3768, 8.01653, -50.9842 )
+pixel_size = 0.1
+
+[node name="Sprite3D28" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.942815, 0, -0.333315, 0, 1, 0, 0.333315, 0, -0.942815, 21.7982, 8.01653, 35.8932 )
+pixel_size = 0.1
+
+[node name="Sprite3D37" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.50539, 0, 0.86289, 0, 1, 0, -0.86289, 0, 0.50539, -98.4204, 8.01653, -38.8455 )
+pixel_size = 0.1
+
+[node name="Sprite3D71" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.59093, 0, -0.678543, 0, 1, 0, -0.52224, 0, 0.0904728, -7.8577, 8.01653, -87.5611 )
+pixel_size = 0.1
+
+[node name="Sprite3D4" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, 34.8402, 8.01653, -78.2274 )
+pixel_size = 0.1
+
+[node name="Sprite3D43" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.999995, 0, -0.0030127, 0, 1, 0, 0.0030127, 0, -0.999995, -34.7677, 8.01653, 56.7679 )
+pixel_size = 0.1
+
+[node name="Sprite3D77" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.284287, 0, 0.853697, 0, 1, 0, 0.187361, 0, -0.495798, -107.66, 8.01653, -51.9334 )
+pixel_size = 0.1
+
+[node name="Sprite3D23" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.533187, 0, -0.845997, 0, 1, 0, 0.845997, 0, -0.533187, 49.5742, 8.01653, 12.6587 )
+pixel_size = 0.1
+
+[node name="Sprite3D56" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.138336, 0, 0.990384, 0, 1, 0, -0.990384, 0, -0.138336, -104.656, 8.01653, -3.17372 )
+pixel_size = 0.1
+
+[node name="Sprite3D88" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.88432, 0, -0.166122, 0, 1, 0, -0.465875, 0, -0.252744, -36.4913, 8.01653, -68.6962 )
+pixel_size = 0.1
+
+[node name="Sprite3D12" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, 34.8402, 8.01653, -78.2274 )
+pixel_size = 0.1
+
+[node name="Sprite3D33" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.999995, 0, -0.0030127, 0, 1, 0, 0.0030127, 0, -0.999995, -34.7677, 8.01653, 56.7679 )
+pixel_size = 0.1
+
+[node name="Sprite3D67" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.284287, 0, 0.853697, 0, 1, 0, 0.187361, 0, -0.495798, -107.66, 8.01653, -51.9334 )
+pixel_size = 0.1
+
+[node name="Sprite3D17" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.533187, 0, -0.845997, 0, 1, 0, 0.845997, 0, -0.533187, 49.5742, 8.01653, 12.6587 )
+pixel_size = 0.1
+
+[node name="Sprite3D47" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.138336, 0, 0.990384, 0, 1, 0, -0.990384, 0, -0.138336, -104.656, 8.01653, -3.17372 )
+pixel_size = 0.1
+
+[node name="Sprite3D81" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.88432, 0, -0.166122, 0, 1, 0, -0.465875, 0, -0.252744, -36.4913, 8.01653, -68.6962 )
+pixel_size = 0.1
+
+[node name="Sprite3D6" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.0577179, 0, -0.998333, 0, 1, 0, 0.998333, 0, -0.0577179, 55.0302, 8.01653, -35.2496 )
+pixel_size = 0.1
+
+[node name="Sprite3D52" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.599914, 0, 0.800064, 0, 1, 0, -0.800064, 0, -0.599914, -77.9195, 8.01653, 36.9528 )
+pixel_size = 0.1
+
+[node name="Sprite3D66" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.854415, 0, 0.282124, 0, 1, 0, -0.285616, 0, -0.446479, -78.3821, 8.01653, -53.7484 )
+pixel_size = 0.1
+
+[node name="Sprite3D29" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.996957, 0, -0.0779392, 0, 1, 0, 0.0779392, 0, -0.996957, 9.72462, 8.01653, 38.4799 )
+pixel_size = 0.1
+
+[node name="Sprite3D38" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.711501, 0, 0.702683, 0, 1, 0, -0.702683, 0, 0.711501, -90.8636, 8.01653, -48.6105 )
+pixel_size = 0.1
+
+[node name="Sprite3D72" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.395175, 0, -0.808366, 0, 1, 0, -0.481028, 0, 0.222555, -1.69746, 8.01653, -93.8126 )
+pixel_size = 0.1
+
+[node name="Sprite3D11" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.0577179, 0, -0.998333, 0, 1, 0, 0.998333, 0, -0.0577179, 55.0302, 8.01653, -35.2496 )
+pixel_size = 0.1
+
+[node name="Sprite3D35" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.599914, 0, 0.800064, 0, 1, 0, -0.800064, 0, -0.599914, -77.9195, 8.01653, 36.9528 )
+pixel_size = 0.1
+
+[node name="Sprite3D69" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.854415, 0, 0.282124, 0, 1, 0, -0.285616, 0, -0.446479, -78.3821, 8.01653, -53.7484 )
+pixel_size = 0.1
+
+[node name="Sprite3D19" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( -0.996957, 0, -0.0779392, 0, 1, 0, 0.0779392, 0, -0.996957, 9.72462, 8.01653, 38.4799 )
+pixel_size = 0.1
+
+[node name="Sprite3D39" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.711501, 0, 0.702683, 0, 1, 0, -0.702683, 0, 0.711501, -90.8636, 8.01653, -48.6105 )
+pixel_size = 0.1
+
+[node name="Sprite3D73" parent="Background/bg3" instance=ExtResource( 39 )]
+transform = Transform( 0.395175, 0, -0.808366, 0, 1, 0, -0.481028, 0, 0.222555, -1.69746, 8.01653, -93.8126 )
+pixel_size = 0.1
