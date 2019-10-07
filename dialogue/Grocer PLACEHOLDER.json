@@ -1,0 +1,29 @@
+{
+    "say":[
+        {
+            "name":"YOU:",
+            "says":"Hey there. I'm looking for Kate, have you seen or talked to her in the past little while?"
+        },
+        {
+            "name":"JOGGER:",
+            "says":"STAY AWAY FROM MEEEEE!!!!!!"
+        },
+        {
+            "name":"YOU:",
+            "says":"Woah sorry, didn't mean to frighten you. Are you okay?"
+        },
+        {
+            "name":"JOGGER:",
+            "says":"I read about you online! All the stuff you did! I don't want anything to do with you!"
+        },
+        {
+            "name":"YOU:",
+            "says":"That was a long time ago. Back then, I used to run every weekend just like you do."
+        },
+        {
+            "name":"JOGGER:",
+            "says":"Oh yeah? Well I guess IF you want to know what I know about Kate, You'll have to catch me first!"
+        }
+        ]
+}
+
