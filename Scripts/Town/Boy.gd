@@ -8,13 +8,13 @@ func _ready():
 	scene_changer = get_parent().get_parent().get_node("changeScene")
 
 func _on_interact():
-	if GlobalVars.race_attempted == false:
+	if GlobalVars.pop_fly_attempted == false:
 		scene_changer.nextLevel = "Ballgame"
 		scene_changer.location = "Game_Spawn"
 		ins.file = "Boy PLACEHOLDER"
 		add_child(ins)
 		
-	elif GlobalVars.race_attempted == true && GlobalVars.race_done == false:
+	elif GlobalVars.pop_fly_attempted == true && GlobalVars.pop_fly_done == false:
 		scene_changer.nextLevel = "Ballgame"
 		scene_changer.location = "Game_Spawn"
 		ins.file = "Boy Rematch PLACEHOLDER"

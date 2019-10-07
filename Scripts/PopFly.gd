@@ -51,6 +51,7 @@ func _on_Timer_timeout():
 		hit_ball()
 	elif tries == 0:
 		if score >= 10:
+			GlobalVars.pop_fly_done = true
 			ins.file = "Boy Win PLACEHOLDER"
 			add_child(ins)
 		elif score < 10:

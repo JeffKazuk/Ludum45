@@ -10,6 +10,8 @@ export var mail_deliveries = {"HouseMailBox": false, "GroceryMailBox": false, "B
 
 export var race_attempted = false
 export var grocery_attempted = false
+export var pop_fly_attempted = false
+export var borgors_attempted = false
 
 func todo():
     var todo = ""
