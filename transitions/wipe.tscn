@@ -10,7 +10,7 @@ script = ExtResource( 1 )
 [node name="black" type="Polygon2D" parent="."]
 position = Vector2( -630.355, -4.91011 )
 rotation = -0.760963
-scale = Vector2( 1.237, 1e-005 )
+scale = Vector2( 1.237, 1e-05 )
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 600, 1020, 600, 1020, 0 )
 

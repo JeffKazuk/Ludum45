@@ -4,7 +4,7 @@
 [ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://dialogue/text.gd" type="Script" id=3]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -19,7 +19,7 @@ use_filter = true
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=3]
 size = 25
 use_mipmaps = true
 use_filter = true
@@ -68,7 +68,7 @@ margin_left = 883.0
 margin_top = 104.0
 margin_right = 983.0
 margin_bottom = 152.0
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="box"]
@@ -80,7 +80,7 @@ margin_bottom = 72.0
 [node name="text" type="RichTextLabel" parent="box/MarginContainer"]
 margin_right = 1010.0
 margin_bottom = 64.0
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 text = "test
 "
