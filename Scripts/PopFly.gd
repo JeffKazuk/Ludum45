@@ -2,18 +2,23 @@ extends Spatial
 
 var circle_radius = 5
 var score = 0
+var tries = 20
 
 var a
 var r
 var R
+var Batter
 
 func _ready():
 	randomize()
+	Batter = get_tree().get_current_scene().find_node("Batter")
 	hit_ball()
 
 
 func hit_ball():
-	
+	tries -= 1
+	if Batter:
+		Batter.play()
 	$"Timer".start()
 	a = randf()*2*PI
 	r = circle_radius * sqrt(randf())
@@ -33,4 +38,7 @@ func _on_Timer_timeout():
 		score += 1
 	get_node("Ball").get_node("AnimatedSprite3D").stop()
 	print(score)
-	hit_ball()
+	if Batter:
+		Batter.frame = 0
+	if tries > 0:
+		hit_ball()

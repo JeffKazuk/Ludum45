@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/girl00.png-16b7ef33c07c6073de189b4500935f7a.stex"
+path="res://.import/circle_09.png-9b44424e0ef9bdec9583a0ca759119f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Boy bat/girl00.png"
-dest_files=[ "res://.import/girl00.png-16b7ef33c07c6073de189b4500935f7a.stex" ]
+source_file="res://images/circles/circle_09.png"
+dest_files=[ "res://.import/circle_09.png-9b44424e0ef9bdec9583a0ca759119f8.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
