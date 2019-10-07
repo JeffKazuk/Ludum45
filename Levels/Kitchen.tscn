@@ -188,7 +188,7 @@ endAlpha = 0
 fadeTime = 1
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 125.0
+wait_time = 155.0
 one_shot = true
 autostart = true
 

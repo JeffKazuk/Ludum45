@@ -1,0 +1,480 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://models/graveyard.dae" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/GraveYard.gd" type="Script" id=2]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/grave.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/her_grave.gd" type="Script" id=5]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0.337255, 0.164706, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+albedo_color = Color( 0.337255, 0.164706, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_unshaded = true
+albedo_color = Color( 0.337255, 0.164706, 0, 1 )
+
+[node name="GraveYard" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="graveyard" parent="." index="0"]
+editor/display_folded = true
+transform = Transform( -1.21213e-009, 0, -0.0277303, 0, 0.0277303, 0, 0.0277303, 0, -1.21213e-009, 0, 0, 0 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.06619, 1.23214, -47.1717 )
+SpawnLoc = "BusStation"
+
+[node name="Spatial" type="Spatial" parent="Player" index="4"]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -1.4703e-007, 2.66144, 3.36365 )
+
+[node name="BusStation" type="Spatial" parent="." index="3"]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.000519276, 1.232, -7.01482 )
+
+[node name="Graves" type="Spatial" parent="." index="4"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
+
+[node name="Grave" parent="Graves" index="0" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.047, 0.566083, 5.54805 )
+
+[node name="Grave102" parent="Graves" index="1" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.8266, 0.566083, 5.54805 )
+
+[node name="Grave38" parent="Graves" index="2" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.047, 0.566083, -25.8265 )
+
+[node name="Grave65" parent="Graves" index="3" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.8266, 0.566083, -25.8265 )
+
+[node name="Grave18" parent="Graves" index="4" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.0461, 0.566083, 5.54805 )
+
+[node name="Grave117" parent="Graves" index="5" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.8256, 0.566083, 5.54805 )
+
+[node name="Grave53" parent="Graves" index="6" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.0461, 0.566083, -25.8265 )
+
+[node name="Grave94" parent="Graves" index="7" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.8256, 0.566083, -25.8265 )
+
+[node name="Grave10" parent="Graves" index="8" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.4111, 0.566083, 5.54805 )
+
+[node name="Grave121" parent="Graves" index="9" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.1906, 0.566083, 5.54805 )
+
+[node name="Grave57" parent="Graves" index="10" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.4111, 0.566083, -25.8265 )
+
+[node name="Grave100" parent="Graves" index="11" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.1906, 0.566083, -25.8265 )
+
+[node name="Grave29" parent="Graves" index="12" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.4101, 0.566083, 5.54805 )
+
+[node name="Grave70" parent="Graves" index="13" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.1896, 0.566083, 5.54805 )
+
+[node name="Grave33" parent="Graves" index="14" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.4101, 0.566083, -25.8265 )
+
+[node name="Grave71" parent="Graves" index="15" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.1896, 0.566083, -25.8265 )
+
+[node name="Grave2" parent="Graves" index="16" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 8.81987 )
+
+[node name="Grave128" parent="Graves" index="17" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 8.81987 )
+
+[node name="Grave64" parent="Graves" index="18" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -22.5546 )
+
+[node name="Grave85" parent="Graves" index="19" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -22.5546 )
+
+[node name="Grave32" parent="Graves" index="20" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 8.81987 )
+
+[node name="Grave76" parent="Graves" index="21" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 8.81987 )
+
+[node name="Grave36" parent="Graves" index="22" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -22.5546 )
+
+[node name="Grave77" parent="Graves" index="23" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -22.5546 )
+
+[node name="Grave16" parent="Graves" index="24" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 8.81987 )
+
+[node name="Grave116" parent="Graves" index="25" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 8.81987 )
+
+[node name="Grave52" parent="Graves" index="26" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -22.5546 )
+
+[node name="Grave92" parent="Graves" index="27" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -22.5546 )
+
+[node name="Grave26" parent="Graves" index="28" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 8.81987 )
+
+[node name="Grave114" parent="Graves" index="29" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 8.81987 )
+
+[node name="Grave50" parent="Graves" index="30" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -22.5546 )
+
+[node name="Grave93" parent="Graves" index="31" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -22.5546 )
+
+[node name="Grave3" parent="Graves" index="32" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 12.0368 )
+
+[node name="Grave120" parent="Graves" index="33" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 12.0368 )
+
+[node name="Grave56" parent="Graves" index="34" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -19.3377 )
+
+[node name="Grave95" parent="Graves" index="35" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -19.3377 )
+
+[node name="Grave28" parent="Graves" index="36" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 12.0368 )
+
+[node name="Grave118" parent="Graves" index="37" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 12.0368 )
+
+[node name="Grave54" parent="Graves" index="38" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -19.3377 )
+
+[node name="Grave87" parent="Graves" index="39" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -19.3377 )
+
+[node name="Grave14" parent="Graves" index="40" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 12.0368 )
+
+[node name="Grave105" parent="Graves" index="41" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 12.0368 )
+
+[node name="Grave41" parent="Graves" index="42" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -19.3377 )
+
+[node name="Grave79" parent="Graves" index="43" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -19.3377 )
+
+[node name="Grave21" parent="Graves" index="44" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 12.0368 )
+
+[node name="Grave122" parent="Graves" index="45" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 12.0368 )
+
+[node name="Grave58" parent="Graves" index="46" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -19.3377 )
+
+[node name="Grave96" parent="Graves" index="47" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -19.3377 )
+
+[node name="Grave4" parent="Graves" index="48" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 15.277 )
+
+[node name="Grave119" parent="Graves" index="49" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 15.277 )
+
+[node name="Grave55" parent="Graves" index="50" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -16.0975 )
+
+[node name="Grave88" parent="Graves" index="51" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -16.0975 )
+
+[node name="Grave27" parent="Graves" index="52" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 15.277 )
+
+[node name="Grave115" parent="Graves" index="53" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 15.277 )
+
+[node name="Grave51" parent="Graves" index="54" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -16.0975 )
+
+[node name="Grave84" parent="Graves" index="55" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -16.0975 )
+
+[node name="Grave13" parent="Graves" index="56" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 15.277 )
+
+[node name="Grave104" parent="Graves" index="57" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 15.277 )
+
+[node name="Grave40" parent="Graves" index="58" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -16.0975 )
+
+[node name="Grave69" parent="Graves" index="59" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -16.0975 )
+
+[node name="Grave20" parent="Graves" index="60" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 15.277 )
+
+[node name="Grave112" parent="Graves" index="61" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 15.277 )
+
+[node name="Grave48" parent="Graves" index="62" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -16.0975 )
+
+[node name="Grave99" parent="Graves" index="63" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -16.0975 )
+
+[node name="Grave5" parent="Graves" index="64" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 18.9294 )
+
+[node name="Grave111" parent="Graves" index="65" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 18.9294 )
+
+[node name="Grave47" parent="Graves" index="66" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -12.4451 )
+
+[node name="Grave68" parent="Graves" index="67" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -12.4451 )
+
+[node name="Grave25" parent="Graves" index="68" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 18.9294 )
+
+[node name="Grave113" parent="Graves" index="69" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 18.9294 )
+
+[node name="Grave49" parent="Graves" index="70" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -12.4451 )
+
+[node name="Grave86" parent="Graves" index="71" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -12.4451 )
+
+[node name="Grave12" parent="Graves" index="72" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 18.9294 )
+
+[node name="Grave110" parent="Graves" index="73" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 18.9294 )
+
+[node name="Grave46" parent="Graves" index="74" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -12.4451 )
+
+[node name="Grave67" parent="Graves" index="75" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -12.4451 )
+
+[node name="Grave24" parent="Graves" index="76" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 18.9294 )
+
+[node name="Grave109" parent="Graves" index="77" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 18.9294 )
+
+[node name="Grave45" parent="Graves" index="78" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -12.4451 )
+
+[node name="Grave66" parent="Graves" index="79" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -12.4451 )
+
+[node name="Grave6" parent="Graves" index="80" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 21.8542 )
+
+[node name="Grave108" parent="Graves" index="81" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 21.8542 )
+
+[node name="Grave44" parent="Graves" index="82" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -9.52028 )
+
+[node name="Grave72" parent="Graves" index="83" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -9.52028 )
+
+[node name="Grave23" parent="Graves" index="84" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 21.8542 )
+
+[node name="Grave127" parent="Graves" index="85" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 21.8542 )
+
+[node name="Grave63" parent="Graves" index="86" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -9.52028 )
+
+[node name="Grave90" parent="Graves" index="87" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -9.52028 )
+
+[node name="Grave11" parent="Graves" index="88" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 21.8542 )
+
+[node name="Grave103" parent="Graves" index="89" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 21.8542 )
+
+[node name="Grave39" parent="Graves" index="90" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -9.52028 )
+
+[node name="Grave82" parent="Graves" index="91" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -9.52028 )
+
+[node name="Grave19" parent="Graves" index="92" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 21.8542 )
+
+[node name="Grave126" parent="Graves" index="93" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 21.8542 )
+
+[node name="Grave62" parent="Graves" index="94" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -9.52028 )
+
+[node name="Grave98" parent="Graves" index="95" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -9.52028 )
+
+[node name="Grave7" parent="Graves" index="96" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 24.7528 )
+
+[node name="Grave124" parent="Graves" index="97" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 24.7528 )
+
+[node name="Grave60" parent="Graves" index="98" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -6.62171 )
+
+[node name="Grave97" parent="Graves" index="99" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -6.62171 )
+
+[node name="Grave30" parent="Graves" index="100" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 24.7528 )
+
+[node name="Grave73" parent="Graves" index="101" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 24.7528 )
+
+[node name="Grave34" parent="Graves" index="102" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -6.62171 )
+
+[node name="Grave74" parent="Graves" index="103" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -6.62171 )
+
+[node name="Grave15" parent="Graves" index="104" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 24.7528 )
+
+[node name="Grave106" parent="Graves" index="105" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 24.7528 )
+
+[node name="Grave42" parent="Graves" index="106" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -6.62171 )
+
+[node name="Grave80" parent="Graves" index="107" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -6.62171 )
+
+[node name="Grave22" parent="Graves" index="108" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 24.7528 )
+
+[node name="Grave107" parent="Graves" index="109" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 24.7528 )
+
+[node name="Grave43" parent="Graves" index="110" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -6.62171 )
+
+[node name="Grave83" parent="Graves" index="111" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -6.62171 )
+
+[node name="Grave8" parent="Graves" index="112" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, 27.6797 )
+
+[node name="Grave101" parent="Graves" index="113" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, 27.6797 )
+
+[node name="Grave37" parent="Graves" index="114" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.1872, 0.566083, -3.69478 )
+
+[node name="Grave78" parent="Graves" index="115" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -32.9667, 0.566083, -3.69478 )
+
+[node name="Grave17" parent="Graves" index="116" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, 27.6797 )
+
+[node name="Grave123" parent="Graves" index="117" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, 27.6797 )
+
+[node name="Grave59" parent="Graves" index="118" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.1862, 0.566083, -3.69478 )
+
+[node name="Grave89" parent="Graves" index="119" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -40.9657, 0.566083, -3.69478 )
+
+[node name="Grave9" parent="Graves" index="120" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, 27.6797 )
+
+[node name="Grave125" parent="Graves" index="121" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, 27.6797 )
+
+[node name="Grave61" parent="Graves" index="122" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -14.5513, 0.566083, -3.69478 )
+
+[node name="Grave91" parent="Graves" index="123" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -36.3308, 0.566083, -3.69478 )
+
+[node name="Grave31" parent="Graves" index="124" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, 27.6797 )
+
+[node name="Grave75" parent="Graves" index="125" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, 27.6797 )
+
+[node name="Grave35" parent="Graves" index="126" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -22.5503, 0.566083, -3.69478 )
+
+[node name="Grave81" parent="Graves" index="127" instance=ExtResource( 4 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.3298, 0.566083, -3.69478 )
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="." index="5"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 5.47985, 0 )
+environment = SubResource( 1 )
+target = NodePath("../Player/Spatial")
+speed = 4.0
+enabled = true
+
+[node name="Interactables" type="Node" parent="." index="6"]
+
+[node name="HerGrave" type="Spatial" parent="Interactables" index="0"]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.000212789, 1.23214, -50.1112 )
+script = ExtResource( 5 )
+
+[node name="CSGSphere" type="CSGSphere" parent="Interactables/HerGrave" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.71455, 0.510052 )
+use_collision = true
+material = SubResource( 2 )
+
+[node name="CSGSphere2" type="CSGSphere" parent="Interactables/HerGrave" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.70286, 0.836079 )
+use_collision = true
+material = SubResource( 3 )
+
+[node name="CSGSphere3" type="CSGSphere" parent="Interactables/HerGrave" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.70286, 0.00679779 )
+use_collision = true
+material = SubResource( 4 )
+
+[node name="Her Grave" parent="." index="7" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.231359, 0.898591, -52.417 )
+
+[node name="CSGBox" type="CSGBox" parent="." index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0238, 0.747388, -25.254 )
+visible = false
+use_collision = true
+width = 30.0
+depth = 103.399
+
+[node name="CSGBox3" type="CSGBox" parent="." index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0397186, 0.747388, 0.311905 )
+visible = false
+use_collision = true
+width = 30.0
+depth = 10.0
+
+[node name="CSGBox2" type="CSGBox" parent="." index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9815, 0.747388, -25.254 )
+visible = false
+use_collision = true
+width = 30.0
+depth = 120.688

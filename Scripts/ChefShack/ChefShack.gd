@@ -22,6 +22,7 @@ func _pickup(item):
 func burgers_made():
 	burgers += 1
 	if burgers == 5:
+		$Timer.stop()
 		#Win stuff
 		$Chef.visible = true
 		$Control.free()
