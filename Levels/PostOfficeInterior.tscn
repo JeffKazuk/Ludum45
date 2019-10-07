@@ -1,37 +1,74 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://models/PostOffice.tscn" type="PackedScene" id=1]
-[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/PostOffice/PostOfficeDoor.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/PostOffice/Clerk.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/PostOffice/PostOfficeDoor.gd" type="Script" id=4]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/PostOfficeInterior.tscn" type="PackedScene" id=5]
+[ext_resource path="res://images/idle postman/postmanidle00.png" type="Texture" id=6]
+[ext_resource path="res://images/idle postman/postmanidle01.png" type="Texture" id=7]
+[ext_resource path="res://images/idle postman/postmanidle02.png" type="Texture" id=8]
+[ext_resource path="res://images/idle postman/postmanidle03.png" type="Texture" id=9]
+[ext_resource path="res://images/idle postman/postmanidle04.png" type="Texture" id=10]
+[ext_resource path="res://images/idle postman/postmanidle05.png" type="Texture" id=11]
+[ext_resource path="res://images/idle postman/postmanidle06.png" type="Texture" id=12]
+[ext_resource path="res://images/idle postman/postmanidle07.png" type="Texture" id=13]
+[ext_resource path="res://images/idle postman/postmanidle08.png" type="Texture" id=14]
+[ext_resource path="res://images/idle postman/postmanidle09.png" type="Texture" id=15]
+[ext_resource path="res://images/idle postman/postmanidle10.png" type="Texture" id=16]
+[ext_resource path="res://images/idle postman/postmanidle11.png" type="Texture" id=17]
+[ext_resource path="res://images/idle postman/postmanidle12.png" type="Texture" id=18]
+[ext_resource path="res://images/idle postman/postmanidle13.png" type="Texture" id=19]
+[ext_resource path="res://images/idle postman/postmanidle14.png" type="Texture" id=20]
+[ext_resource path="res://images/idle postman/postmanidle15.png" type="Texture" id=21]
+[ext_resource path="res://images/idle postman/postmanidle16.png" type="Texture" id=22]
+[ext_resource path="res://images/idle postman/postmanidle17.png" type="Texture" id=23]
+[ext_resource path="res://images/idle postman/postmanidle18.png" type="Texture" id=24]
+[ext_resource path="res://images/idle postman/postmanidle19.png" type="Texture" id=25]
+[ext_resource path="res://images/idle postman/postmanidle20.png" type="Texture" id=26]
+[ext_resource path="res://images/idle postman/postmanidle21.png" type="Texture" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
 
 [node name="PostOfficeInterior" type="Spatial"]
 
-[node name="Scene Root" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.995091, 1.08494, 1.19992 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 3.1156, 1.2285, 1.19992 )
 SpawnLoc = "Town"
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.90634, 0.422549, 0, -0.422549, 0.90634, 0, 3.16968, 4.28928 )
+transform = Transform( 1, 0, 0, 0, 0.90634, 0.422549, 0, -0.422549, 0.90634, 0, 4.16419, 6.76511 )
 
 [node name="Interactables" type="Node" parent="."]
 
+[node name="Door" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24326, 0.0479939, 5.14672 )
+script = ExtResource( 2 )
+
 [node name="Clerk" type="Spatial" parent="Interactables"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18519, -1.96088 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.149, 1.228, 0.936 )
 script = ExtResource( 3 )
 
-[node name="Door" type="Spatial" parent="Interactables"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33447, 2.48242 )
-script = ExtResource( 4 )
-
-[node name="changeScene" parent="." instance=ExtResource( 5 )]
+[node name="changeScene" parent="." instance=ExtResource( 4 )]
 location = "PostOffice"
 fadetime = 2
 fadeA = 1
 
 [node name="Town" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18946, 2.47158 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.227, 1.228, 4.201 )
+
+[node name="PostOfficeInterior" parent="." instance=ExtResource( 5 )]
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
+
+[node name="Clerk" type="AnimatedSprite3D" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.14868, 1.14928, 0.935983 )
+alpha_cut = 2
+frames = SubResource( 1 )
+frame = 8
+playing = true

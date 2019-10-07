@@ -66,9 +66,11 @@ func _process(delta):
         interactables = get_parent().find_node("Interactables").get_children()
         for interactable in interactable:
             distances.append(self.translation.distance_squared_to(interactable.translation))
-        currently_interactable = interactables[distances.find(distances.min())]
-        if distances.min() <= 2:
+        if distances.min() <= 4:
+            currently_interactable = interactables[distances.find(distances.min())]
             can_interact = true
+        else:
+            can_interact = false
     
 
 func _physics_process(delta):

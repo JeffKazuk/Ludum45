@@ -48,19 +48,19 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CylinderMesh" id=4]
+[sub_resource type="CylinderMesh" id=2]
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=3]
 flags_transparent = true
 albedo_color = Color( 0, 0, 0, 0.509804 )
 
-[sub_resource type="ProceduralSky" id=2]
+[sub_resource type="ProceduralSky" id=4]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 ground_horizon_color = Color( 0.27451, 0.392157, 0.27451, 1 )
 
-[sub_resource type="Environment" id=3]
+[sub_resource type="Environment" id=5]
 background_mode = 2
-background_sky = SubResource( 2 )
+background_sky = SubResource( 4 )
 background_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 
 [node name="Town" type="Spatial"]
@@ -74,7 +74,7 @@ SpawnLoc = "BusStation"
 transform = Transform( 1, 0, 0, 0, 0.923124, 0.384505, 0, -0.384505, 0.923124, 0, 3.03842, 4.11099 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
@@ -120,14 +120,14 @@ script = ExtResource( 6 )
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 27.7152, 1.14159, -28.4807 )
 alpha_cut = 2
 frames = SubResource( 1 )
-frame = 5
+frame = 1
 playing = true
 script = ExtResource( 30 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Interactables/Jogger"]
 transform = Transform( 0.3, 0, 0, 0, 0.01, 0, 0, 0, 0.2, 0, -0.640968, 0 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="changeScene" parent="." instance=ExtResource( 31 )]
 fadetime = 2
@@ -141,16 +141,16 @@ fadeTime = 3
 editor/display_folded = true
 
 [node name="post_office" parent="Buildings" instance=ExtResource( 33 )]
-transform = Transform( -0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
 
 [node name="house" parent="Buildings" instance=ExtResource( 34 )]
-transform = Transform( -0.6, 0, -1.05697e-07, 0, 0.6, 0, 9.05975e-08, 0, -0.7, 36.5278, 0, -19.6378 )
+transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
 
 [node name="borger_town" parent="Buildings" instance=ExtResource( 35 )]
-transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 14.943, 0.1, -38.622 )
+transform = Transform( -2.62268e-008, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-008, 14.943, 0.1, -38.622 )
 
 [node name="chef_shack" parent="Buildings" instance=ExtResource( 36 )]
-transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -15.234, 0.01, -38.616 )
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, -15.234, 0.01, -38.616 )
 
 [node name="groceries" parent="Buildings" instance=ExtResource( 37 )]
 transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
@@ -159,26 +159,26 @@ transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
 editor/display_folded = true
 
 [node name="House" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 36.0521, 0, -21.5731 )
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
 
 [node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 18.4376, 0, -37.188 )
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 18.4376, 0, -37.188 )
 
 [node name="ChefShack" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -18.6841, 0, -37.188 )
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.6841, 0, -37.188 )
 
 [node name="House2" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2.79913, 0, -37.188 )
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
 
 [node name="Grocery" parent="Mailboxes" instance=ExtResource( 38 )]
-transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -36.2148, 0, -11.0167 )
+transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )
 
 [node name="GroceryStore" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1236, 1, -13.891 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986, -0.000297091, 0.00256742, 0.000310637, 0.999997, 0, 2.88616, 15.9043 )
-environment = SubResource( 3 )
+environment = SubResource( 5 )
 current = true
 size = 4.7
 far = 1000.0
