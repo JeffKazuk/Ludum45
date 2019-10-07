@@ -50,7 +50,7 @@ func _on_Timer_timeout():
 	if tries > 0:
 		hit_ball()
 	elif tries == 0:
-		if score >= 7:
+		if score >= 2:
 			GlobalVars.pop_fly_done = true
 			ins.file = "kid2"
 			add_child(ins)
