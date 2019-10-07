@@ -58,7 +58,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32477, 4.99985 )
 script = ExtResource( 2 )
 
 [node name="Jerry" type="Spatial" parent="Interactables"]
-transform = Transform( -2, 0, -1.74846e-007, 0, 2, 0, 1.74846e-007, 0, -2, -8.27111, 1.25696, 0.76001 )
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.27111, 1.25696, 0.76001 )
 script = ExtResource( 3 )
 
 [node name="changeScene" parent="." instance=ExtResource( 4 )]
@@ -66,14 +66,14 @@ location = "Town"
 nextLevel = "GroceryStoreGame"
 
 [node name="GroceryInterior" parent="." instance=ExtResource( 5 )]
-transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0 )
 
 [node name="Jerry" type="AnimatedSprite3D" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 2 )
-frame = 6
+frame = 19
 playing = true
 
 [node name="Town" type="Spatial" parent="."]

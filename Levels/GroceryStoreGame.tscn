@@ -41,10 +41,10 @@
 [ext_resource path="res://images/sprite_7.png" type="Texture" id=39]
 [ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=40]
 
-[sub_resource type="Environment" id=2]
+[sub_resource type="Environment" id=1]
 background_mode = 1
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
@@ -84,7 +84,7 @@ SpawnLoc = "Town"
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 7, 10 )
-environment = SubResource( 2 )
+environment = SubResource( 1 )
 
 [node name="Interactables" type="Node" parent="."]
 
@@ -109,21 +109,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20964, 1.79541, -4.27861 )
 script = ExtResource( 3 )
 
 [node name="Jerry" type="Spatial" parent="Interactables"]
-transform = Transform( -2, 0, -1.74846e-007, 0, 2, 0, 1.74846e-007, 0, -2, -8.27111, 1.25696, 0.76001 )
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.27111, 1.25696, 0.76001 )
 script = ExtResource( 4 )
 
 [node name="changeScene" parent="." instance=ExtResource( 5 )]
 location = "GroceryStore"
 
 [node name="GroceryInterior" parent="." instance=ExtResource( 6 )]
-transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0 )
 
 [node name="Jerry" type="AnimatedSprite3D" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
-frames = SubResource( 1 )
-frame = 15
+frames = SubResource( 2 )
+frame = 8
 playing = true
 
 [node name="Town" type="Spatial" parent="."]
