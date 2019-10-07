@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mail.wav-6e4cb1b950e85f526e94b29ba862f70e.sample"
+
+[deps]
+
+source_file="res://sound/effects/mail.wav"
+dest_files=[ "res://.import/mail.wav-6e4cb1b950e85f526e94b29ba862f70e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

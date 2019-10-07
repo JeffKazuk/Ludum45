@@ -13,7 +13,7 @@ func _process(delta):
 	if walking:
 		$Player.translation.x -= 0.1
 		$Player/Sprite.animation = "walk side"
-		dialogue = get_node("Interactables").get_node("HerGrave").get_child(0)
+		dialogue = get_node("Interactables").get_node("HerGrave").get_child(3)
 		if dialogue:
 			dialogue.visible = false
 			$CSGBox.use_collision = false
