@@ -10,13 +10,8 @@
 [ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=8]
 [ext_resource path="res://images/Chef Sprite.png" type="Texture" id=9]
 
-[sub_resource type="BoxShape" id=1]
-
-[sub_resource type="Environment" id=2]
+[sub_resource type="Environment" id=1]
 background_mode = 1
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 9.66572, 1, 1 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -25,7 +20,7 @@ transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1.23722, 0 )
 SpawnLoc = "Town"
 
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
-transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0 )
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
 
 [node name="Interactables" type="Node" parent="."]
 editor/display_folded = true
@@ -37,13 +32,6 @@ script = ExtResource( 3 )
 [node name="Chef" type="Spatial" parent="Interactables"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 2.50702, 1.19152, 0.264897 )
 script = ExtResource( 4 )
-
-[node name="StaticBody" type="StaticBody" parent="Interactables/Chef"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371579, 0, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Interactables/Chef/StaticBody"]
-transform = Transform( 0.6, 0, 0, 0, 1, 0, 0, 0, 1.2, 0, 0, 0 )
-shape = SubResource( 1 )
 
 [node name="Town" type="Spatial" parent="."]
 transform = Transform( 0.999013, 0, -0.0444196, 0, 1, 0, 0.0444196, 0, 0.999013, 0, 1.237, 2.68108 )
@@ -83,7 +71,7 @@ transform = Transform( 0.0226237, 0, 0.39959, 0, 0.5, 0, -0.499488, 0, 0.018099,
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 3.711, 5.5 )
-environment = SubResource( 2 )
+environment = SubResource( 1 )
 
 [node name="changeScene" parent="." instance=ExtResource( 7 )]
 
@@ -92,16 +80,6 @@ endAlpha = 0
 fadeTime = 1
 
 [node name="Chef" type="Sprite3D" parent="."]
-transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 3.1767, 1.19152, -0.458046 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 3.1767, 1.19152, 0.264897 )
 alpha_cut = 1
 texture = ExtResource( 9 )
-
-[node name="StaticBody" type="StaticBody" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.47175 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3207, 0, 2.18937 )
-shape = SubResource( 3 )

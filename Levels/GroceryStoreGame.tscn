@@ -131,7 +131,7 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 2 )
-frame = 11
+frame = 22
 playing = true
 
 [node name="Wants" type="AnimatedSprite3D" parent="."]
@@ -156,6 +156,7 @@ one_shot = true
 autostart = true
 
 [node name="Control" type="Control" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 37 )

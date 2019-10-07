@@ -45,7 +45,7 @@ func _on_Timer_timeout():
 	if $"Ball".overlaps_body(get_parent().get_node("Player")):
 		score += 1
 	get_node("Ball").get_node("AnimatedSprite3D").stop()
-	print(score)
+	get_parent().get_node("Control/CanvasLayer/MarginContainer/list").set_bbcode(str(score))
 	if Batter:
 		Batter.frame = 0
 	if tries > 0:
