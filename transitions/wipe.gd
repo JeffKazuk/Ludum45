@@ -21,7 +21,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(endAlpha==1):
-		black.scale.y = ((1-$tim.time_left)*3/$tim.wait_time*3)
+		black.scale.y = 3*((1-$tim.time_left)/$tim.wait_time)
 	elif(endAlpha==0):
 		que = true
 		black.scale.y = (($tim.time_left)*3/$tim.wait_time*3)

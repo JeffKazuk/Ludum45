@@ -27,7 +27,7 @@ extra_spacing_char = 1
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 55
+size = 40
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )

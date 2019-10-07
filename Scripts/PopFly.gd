@@ -5,7 +5,7 @@ var ins = dialogue.instance()
 
 var circle_radius = 5
 var score = 0
-var tries = 20
+var tries = 10
 
 var a
 var r
@@ -50,10 +50,10 @@ func _on_Timer_timeout():
 	if tries > 0:
 		hit_ball()
 	elif tries == 0:
-		if score >= 10:
+		if score >= 7:
 			GlobalVars.pop_fly_done = true
-			ins.file = "Boy Win PLACEHOLDER"
+			ins.file = "kid2"
 			add_child(ins)
-		elif score < 10:
-			ins.file = "Boy Lose PLACEHOLDER"
+		elif score < 7:
+			ins.file = "kidlose"
 			add_child(ins)

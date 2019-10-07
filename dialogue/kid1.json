@@ -14,6 +14,14 @@
         },
         {
             "name":"YOU:",
+            "says":"That's right."
+        },
+        {
+            "name":"KID:",
+            "says":"Great! Wanna play catch with us?"
+        },
+        {
+            "name":"YOU:",
             "says":"Sure. If I do, could you tell me what you know about where Kate went?"
         },
         {
