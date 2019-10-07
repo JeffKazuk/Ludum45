@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://models/RestaurantInterior.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Restaurant/Door.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Restaurant/Rear Door.gd" type="Script" id=4]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1.23722, 0 )
+
+[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
+
+[node name="Interactables" type="Node" parent="."]
+
+[node name="Door" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23515, 2.98125 )
+script = ExtResource( 3 )
+
+[node name="Rear Door" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.914, 1.40369, -4.382 )
+script = ExtResource( 4 )
+
+[node name="Town" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.237, 3 )
+
+[node name="Town2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88402, 1.237, -4.18152 )
