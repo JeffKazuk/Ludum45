@@ -1,5 +1,7 @@
 extends Spatial
 
+var dialogue = preload("res://dialogue/Dialogue.tscn")
+var ins = dialogue.instance()
 var produce = {1 : "Corn", 2 : "Tomatoes", 3 : "Apples", 4 : "Bananas", 5 : "Oranges"}
 var currently_holding = ""
 var wants = ""
@@ -33,13 +35,16 @@ func _on_Timer_timeout():
 		#Lose
 		$changeScene.nextLevel = "GroceryStore"
 		$changeScene.location = "GameLost"
-		get_node("Control/CanvasLayer/MarginContainer2/list").set_bbcode("Not Fast Enough")
-		$changeScene.spawnFade()
-	elif score> goal:
+		ins.file = "grocerlose"
+		add_child(ins)
+		$Control.free()
+	elif score>= goal:
 		#Win
 		GlobalVars.grocery_done = true
-		get_node("Control/CanvasLayer/MarginContainer2/list").set_bbcode("You Win")
+		ins.file = "grocer2"
+		add_child(ins)
 		$changeScene.nextLevel = "Town"
 		$changeScene.location = "GroceryStore"
-		$changeScene.spawnFade()
+		$Control.free()
+		
 		

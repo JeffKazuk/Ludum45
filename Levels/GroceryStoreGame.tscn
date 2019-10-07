@@ -109,21 +109,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20964, 1.79541, -4.27861 )
 script = ExtResource( 3 )
 
 [node name="Jerry" type="Spatial" parent="Interactables"]
-transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.27111, 1.25696, 0.76001 )
+transform = Transform( -2, 0, -1.74846e-007, 0, 2, 0, 1.74846e-007, 0, -2, -8.27111, 1.25696, 0.76001 )
 script = ExtResource( 4 )
 
 [node name="changeScene" parent="." instance=ExtResource( 5 )]
 location = "GroceryStore"
 
 [node name="GroceryInterior" parent="." instance=ExtResource( 6 )]
-transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0 )
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
 
 [node name="Jerry" type="AnimatedSprite3D" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 2 )
-frame = 8
+frame = 5
 playing = true
 
 [node name="Town" type="Spatial" parent="."]
@@ -131,6 +131,7 @@ transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0335215, 1.19274, 3.94
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 65.0
+one_shot = true
 autostart = true
 
 [node name="Control" type="Control" parent="."]
