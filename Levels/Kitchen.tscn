@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://models/ChefShack.gd" type="Script" id=1]
 [ext_resource path="res://models/ChefShackKitchen.tscn" type="PackedScene" id=2]
@@ -12,8 +12,10 @@
 [ext_resource path="res://Scripts/ChefShack/Stove.gd" type="Script" id=10]
 [ext_resource path="res://models/Burger.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/ChefShack/Door.gd" type="Script" id=12]
-[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=13]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=14]
+[ext_resource path="res://images/Chef Sprite.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/ChefShack/Chef.gd" type="Script" id=14]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0, 0, 0, 1 )
@@ -31,7 +33,7 @@ script = ExtResource( 1 )
 transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, -2.38844, 4.27677, 4.38873 )
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -2.38844, 3.89504, 6.22674 )
 environment = SubResource( 2 )
 current = true
 
@@ -54,7 +56,6 @@ depth = 1.0
 material = ExtResource( 4 )
 
 [node name="Interactables" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Plates" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.794, 1.84, -6.405 )
@@ -83,6 +84,7 @@ script = ExtResource( 10 )
 
 [node name="Borger" parent="Interactables/Stove1" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123715, -0.016098, -0.00980186 )
+visible = false
 
 [node name="Timer" type="Timer" parent="Interactables/Stove1"]
 wait_time = 5.0
@@ -95,6 +97,7 @@ script = ExtResource( 10 )
 
 [node name="Borger" parent="Interactables/Stove2" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123715, -0.016098, -0.00980186 )
+visible = false
 
 [node name="Timer" type="Timer" parent="Interactables/Stove2"]
 wait_time = 5.0
@@ -107,6 +110,7 @@ script = ExtResource( 10 )
 
 [node name="Borger" parent="Interactables/Stove3" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123715, -0.016098, -0.00980186 )
+visible = false
 
 [node name="Timer" type="Timer" parent="Interactables/Stove3"]
 wait_time = 5.0
@@ -116,11 +120,17 @@ one_shot = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.098, 1.228, 0 )
 script = ExtResource( 12 )
 
-[node name="Player" parent="." instance=ExtResource( 13 )]
+[node name="Chef" type="Sprite3D" parent="Interactables"]
+transform = Transform( 2.5, 0, 0, 0, 2, 0, 0, 0, 2, -4.43143, 1.17732, -0.628292 )
+alpha_cut = 2
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[node name="Player" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.098, 1.228, 0 )
 SpawnLoc = "Town"
 
 [node name="Town" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.098, 1.228, 0 )
 
-[node name="changeScene" parent="." instance=ExtResource( 14 )]
+[node name="changeScene" parent="." instance=ExtResource( 16 )]
