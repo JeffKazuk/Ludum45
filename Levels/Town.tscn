@@ -1,23 +1,24 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://world.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Town/PostOfficeDoor.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Town/MailBox.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/Town/ChefShackDoor.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/Town/GroceryStoreDoor.gd" type="Script" id=6]
-[ext_resource path="res://Scripts/Town/Jogger.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/Town/Boy.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/Town/Bus_Stop.gd" type="Script" id=9]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Buildings.tscn" type="PackedScene" id=11]
-[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=12]
-[ext_resource path="res://models/tree/tree.tscn" type="PackedScene" id=13]
-[ext_resource path="res://images/boy.png" type="Texture" id=14]
-[ext_resource path="res://images/girl.png" type="Texture" id=15]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=16]
-[ext_resource path="res://characters/bus/realbus.tscn" type="PackedScene" id=17]
-[ext_resource path="res://UI.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Levels/Town.gd" type="Script" id=1]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Town/PostOfficeDoor.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Town/MailBox.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Town/ChefShackDoor.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Town/GroceryStoreDoor.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Town/Jogger.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Town/Boy.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Town/Bus_Stop.gd" type="Script" id=10]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Buildings.tscn" type="PackedScene" id=12]
+[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/tree/tree.tscn" type="PackedScene" id=14]
+[ext_resource path="res://images/boy.png" type="Texture" id=15]
+[ext_resource path="res://images/girl.png" type="Texture" id=16]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=17]
+[ext_resource path="res://characters/bus/realbus.tscn" type="PackedScene" id=18]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -28,20 +29,21 @@ background_mode = 2
 background_sky = SubResource( 1 )
 background_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 
-[sub_resource type="CylinderMesh" id=4]
+[sub_resource type="CylinderMesh" id=3]
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=4]
 flags_transparent = true
 albedo_color = Color( 0, 0, 0, 0.509804 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=5]
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 51.1731, 1, 1 )
 
 [node name="Town" type="Spatial"]
+script = ExtResource( 1 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Player" parent="." instance=ExtResource( 2 )]
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 11.8908 )
 SpawnLoc = "BusStation"
@@ -49,7 +51,7 @@ SpawnLoc = "BusStation"
 [node name="Spatial" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.923124, 0.384505, 0, -0.384505, 0.923124, 0, 3.03842, 4.11099 )
 
-[node name="World" parent="." instance=ExtResource( 2 )]
+[node name="World" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
@@ -65,69 +67,69 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5734, 1, -25.3425 )
 
 [node name="PostOfficeDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="HouseMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.052, 0, -21.573 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="BorgerShackMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4092, 1.24401, -37.188 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="ChefShackMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5581, 1.26154, -37.1838 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="House2MailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.799, 0, -37.188 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="GroceryMailBox" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.215, 0, -11.017 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="ChefShackDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2825, 1.15261, -38.3303 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="GroceryStoreDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4288, 1.08716, -14.0609 )
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="Jogger" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.715, 1.142, -28.481 )
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="Boy" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9092, 1.14159, -6.80394 )
-script = ExtResource( 8 )
-
-[node name="Bus_Stop" type="Spatial" parent="Interactables"]
 script = ExtResource( 9 )
 
-[node name="changeScene" parent="." instance=ExtResource( 10 )]
+[node name="Bus_Stop" type="Spatial" parent="Interactables"]
+script = ExtResource( 10 )
+
+[node name="changeScene" parent="." instance=ExtResource( 11 )]
 fadetime = 2
 fadeA = 1
 
-[node name="Buildings" parent="." instance=ExtResource( 11 )]
+[node name="Buildings" parent="." instance=ExtResource( 12 )]
 
 [node name="Mailboxes" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="House" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="House" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
 
-[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 18.4376, 0, -37.188 )
 
-[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.6841, 0, -37.188 )
 
-[node name="House2" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="House2" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
 
-[node name="Grocery" parent="Mailboxes" instance=ExtResource( 12 )]
+[node name="Grocery" parent="Mailboxes" instance=ExtResource( 13 )]
 transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )
 
 [node name="GroceryStore" type="Spatial" parent="."]
@@ -153,148 +155,148 @@ editor/display_folded = true
 editor/display_folded = true
 transform = Transform( 0.7, 0, 0, 0, 1, 0, 0, 0, 0.7, -33.1164, 0, 19.6608 )
 
-[node name="Spatial" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.0507, 0, 3.5009, 0, 9.99999, 0, -5.25135, 0, 9.36716, -1.51399, 7.97592, -166.085 )
 
-[node name="Spatial29" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial29" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -8.05671, 0, -8.43508, 0, 9.99998, 0, 12.6526, 0, -5.37113, 137.537, 7.97591, 22.4583 )
 
-[node name="Spatial39" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial39" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -7.01473, 0, 8.83912, 0, 9.99996, 0, -13.2587, 0, -4.67649, -78.6475, 7.9759, -2.12471 )
 
-[node name="Spatial13" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial13" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 11.4249, 0, -6.47977, 0, 9.99998, 0, 9.71967, 0, 7.61657, 125.483, 7.97591, -112.902 )
 
-[node name="Spatial25" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial25" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -14.974, 0, 0.58777, 0, 9.99996, 0, -0.881661, 0, -9.98269, 4.11757, 7.9759, 56.4594 )
 
-[node name="Spatial34" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial34" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 8.16964, 0, 8.38665, 0, 9.99995, 0, -12.58, 0, 5.44643, -42.2389, 7.9759, -134.907 )
 
-[node name="Spatial6" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial6" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.0719, 0, -3.46295, 0, 9.99998, 0, 5.19443, 0, 9.38124, 70.4797, 7.97591, -161.591 )
 
-[node name="Spatial31" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial31" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -14.3629, 0, -2.88344, 0, 9.99997, 0, 4.32515, 0, -9.57525, 77.3489, 7.9759, 62.2165 )
 
-[node name="Spatial38" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial38" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 3.34157, 0, 9.74869, 0, 9.99995, 0, -14.623, 0, 2.22771, -83.4493, 7.9759, -74.0984 )
 
-[node name="Spatial15" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial15" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 2.30951, 0, -9.88074, 0, 9.99996, 0, 14.8211, 0, 1.53967, 156.59, 7.9759, -47.8203 )
 
-[node name="Spatial19" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial19" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -10.7676, 0, 6.96204, 0, 9.99995, 0, -10.4431, 0, -7.17841, -59.9038, 7.9759, 23.225 )
 
-[node name="Spatial40" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial40" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.401, 0, 2.7976, 0, 9.99993, 0, -4.1964, 0, 9.60067, 18.302, 7.97589, -174.125 )
 
-[node name="Spatial4" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial4" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.967, 0, -0.662695, 0, 9.99998, 0, 0.994042, 0, 9.97801, 35.2594, 7.97591, -170.919 )
 
-[node name="Spatial30" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial30" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -12.5486, 0, -5.47854, 0, 9.99996, 0, 8.21781, 0, -8.36572, 111.086, 7.9759, 48.4585 )
 
-[node name="Spatial45" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial45" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -0.939054, 0, 9.98036, 0, 9.99995, 0, -14.9705, 0, -0.62603, -88.1703, 7.9759, -37.9711 )
 
-[node name="Spatial14" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial14" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 6.41463, 0, -9.03947, 0, 9.99996, 0, 13.5592, 0, 4.27642, 147.6, 7.9759, -83.1286 )
 
-[node name="Spatial21" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial21" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -13.2855, 0, 4.64257, 0, 9.99995, 0, -6.96385, 0, -8.85699, -31.4677, 7.97589, 46.0037 )
 
-[node name="Spatial43" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial43" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 12.6216, 0, 5.40343, 0, 9.99993, 0, -8.10514, 0, 8.41442, -15.5569, 7.97589, -160.669 )
 
-[node name="Spatial7" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial7" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 10.6889, 0, -7.01574, 0, 9.99996, 0, 10.5236, 0, 7.12594, 101.492, 7.9759, -141.247 )
 
-[node name="Spatial20" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial20" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -14.8705, 0, 1.3111, 0, 9.99995, 0, -1.96665, 0, -9.91366, 40.3389, 7.9759, 64.6451 )
 
-[node name="Spatial46" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial46" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 9.06153, 0, 7.96903, 0, 9.99993, 0, -11.9535, 0, 6.04103, -67.2623, 7.97589, -107.469 )
 
-[node name="Spatial10" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial10" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -3.99233, 0, -9.63928, 0, 9.99995, 0, 14.4589, 0, -2.66156, 153.907, 7.97589, -10.8278 )
 
-[node name="Spatial27" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial27" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -5.51796, 0, 9.29877, 0, 9.99993, 0, -13.9481, 0, -3.67865, -80.0349, 7.97589, -7.92589 )
 
-[node name="Spatial44" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial44" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.8522, 0, -1.39979, 0, 9.99992, 0, 2.09969, 0, 9.90152, 55.3322, 7.97588, -176.222 )
 
-[node name="Spatial2" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial2" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.9051, 0, 1.12268, 0, 9.99998, 0, -1.68402, 0, 9.93678, 16.683, 7.97591, -170.444 )
 
-[node name="Spatial23" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial23" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -10.8867, 0, -6.87921, 0, 9.99997, 0, 10.3188, 0, -7.25784, 125.632, 7.97591, 36.8947 )
 
-[node name="Spatial47" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial47" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -3.58691, 0, 9.70987, 0, 9.99996, 0, -14.5648, 0, -2.39128, -85.3104, 7.9759, -19.61 )
 
-[node name="Spatial11" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial11" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 8.72414, 0, -8.13467, 0, 9.99997, 0, 12.202, 0, 5.8161, 138.146, 7.97591, -99.1261 )
 
-[node name="Spatial28" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial28" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -14.3123, 0, 2.99313, 0, 9.99995, 0, -4.48969, 0, -9.54154, -14.2873, 7.9759, 53.0843 )
 
-[node name="Spatial41" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial41" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 10.9787, 0, 6.81396, 0, 9.99994, 0, -10.2209, 0, 7.31913, -30.2057, 7.97589, -149.236 )
 
-[node name="Spatial5" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial5" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 12.3903, 0, -5.63636, 0, 9.99997, 0, 8.45454, 0, 8.26022, 87.1098, 7.97591, -153.014 )
 
-[node name="Spatial18" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial18" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -14.9832, 0, -0.473168, 0, 9.99996, 0, 0.709751, 0, -9.98879, 58.9067, 7.9759, 65.3811 )
 
-[node name="Spatial37" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial37" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 6.79085, 0, 8.91649, 0, 9.99994, 0, -13.3747, 0, 4.52724, -77.0821, 7.97589, -91.6934 )
 
-[node name="Spatial9" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial9" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -1.35684, 0, -9.95899, 0, 9.99995, 0, 14.9385, 0, -0.904561, 157.189, 7.9759, -29.1182 )
 
-[node name="Spatial22" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial22" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -7.91095, 0, 8.49616, 0, 9.99994, 0, -12.7442, 0, -5.27398, -71.6425, 7.97589, 8.6535 )
 
-[node name="Spatial42" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial42" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.9889, 0, 0.383727, 0, 9.99992, 0, -0.575591, 0, 9.99261, 36.7717, 7.97588, -177.124 )
 
-[node name="Spatial3" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial3" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.2782, 0, -3.06468, 0, 9.99997, 0, 4.59701, 0, 9.5188, 53.6384, 7.97591, -167.406 )
 
-[node name="Spatial32" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial32" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -14.1679, 0, -3.28425, 0, 9.99995, 0, 4.92637, 0, -9.44529, 94.2965, 7.9759, 56.7192 )
 
-[node name="Spatial33" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial33" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 2.72258, 0, 9.83388, 0, 9.99994, 0, -14.7508, 0, 1.81506, -87.0499, 7.97589, -56.6491 )
 
-[node name="Spatial16" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial16" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 2.93182, 0, -9.80711, 0, 9.99995, 0, 14.7107, 0, 1.95454, 153.475, 7.9759, -65.3627 )
 
-[node name="Spatial26" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial26" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -11.198, 0, 6.65346, 0, 9.99994, 0, -9.98018, 0, -7.46532, -46.8544, 7.97589, 35.3557 )
 
-[node name="Spatial36" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial36" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 14.2114, 0, 3.19955, 0, 9.99992, 0, -4.79934, 0, 9.4743, 1.30597, 7.97588, -168.779 )
 
-[node name="Spatial8" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial8" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 7.81507, 0, -8.53552, 0, 9.99995, 0, 12.8033, 0, 5.21004, 113.121, 7.9759, -126.587 )
 
-[node name="Spatial24" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial24" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -13.9485, 0, 3.67808, 0, 9.99994, 0, -5.51711, 0, -9.29899, 22.2276, 7.97589, 59.9423 )
 
-[node name="Spatial48" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial48" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 11.6919, 0, 6.26449, 0, 9.99992, 0, -9.39674, 0, 7.79459, -54.2201, 7.97588, -120.887 )
 
-[node name="Spatial12" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial12" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -7.38234, 0, -8.70504, 0, 9.99994, 0, 13.0576, 0, -4.92157, 146.759, 7.97589, 6.46493 )
 
-[node name="Spatial17" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial17" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( -1.96756, 0, 9.91358, 0, 9.99992, 0, -14.8703, 0, -1.3117, -84.7393, 7.97588, -26.0367 )
 
-[node name="Spatial35" parent="Background/Spatial" instance=ExtResource( 13 )]
+[node name="Spatial35" parent="Background/Spatial" instance=ExtResource( 14 )]
 transform = Transform( 13.8985, 0, -3.76118, 0, 9.99991, 0, 5.64174, 0, 9.26569, 73.4006, 7.97588, -171.357 )
 
 [node name="Jogger_sprite" type="AnimatedSprite3D" parent="."]
@@ -304,53 +306,53 @@ playing = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Jogger_sprite"]
 transform = Transform( 0.3, 0, 0, 0, 0.01, 0, 0, 0, 0.2, 0, -0.640968, 0 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="Jogger_sprite"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Jogger_sprite/StaticBody"]
 transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 0, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Boy" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9092, 1.14159, -6.80394 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9504, 0.635326, -6.80389 )
 alpha_cut = 2
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Boy"]
 transform = Transform( 0.3, 0, 0, 0, 0.01, 0, 0, 0, 0.2, 0, -0.640968, 0 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="StaticBody2" type="StaticBody" parent="Boy"]
 transform = Transform( 1, 0, 0, 0, 1.8, 0, 0, 0, 1, 0.0485516, -0.00576949, 0.132531 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Boy/StaticBody2"]
 transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 0, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Girl" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8806, 1.14159, -6.80394 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8806, 0.654101, -6.80394 )
 alpha_cut = 2
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Girl"]
 transform = Transform( 0.3, 0, 0, 0, 0.01, 0, 0, 0, 0.2, 0, -0.640968, 0 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="StaticBody3" type="StaticBody" parent="Girl"]
 transform = Transform( 1, 0, 0, 0, 1.8, 0, 0, 0, 1, 0.00849533, 0.30608, 0.00153637 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Girl/StaticBody3"]
 transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 0, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Ballgame" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9092, 1.14159, -4.63915 )
 
-[node name="wipe" parent="." instance=ExtResource( 16 )]
+[node name="wipe" parent="." instance=ExtResource( 17 )]
 endAlpha = 0
 fadeTime = 1
 
@@ -359,21 +361,21 @@ editor/display_folded = true
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.937 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -52.0311 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.2613, 0, -25.6844 )
-shape = SubResource( 7 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -50.2613, 0, -25.6844 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="StaticBody"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.0527, 0, -25.6844 )
-shape = SubResource( 7 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 51.0527, 0, -25.6844 )
+shape = SubResource( 6 )
 
-[node name="bus" parent="." instance=ExtResource( 17 )]
-transform = Transform( -0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, 8.5763, 0.27, -2.50502 )
+[node name="bus" parent="." instance=ExtResource( 18 )]
+transform = Transform( -0.4, 0, -6.03983e-008, 0, 0.4, 0, 6.03983e-008, 0, -0.4, 8.5763, 0.27, -2.50502 )
 
-[node name="UI" parent="." instance=ExtResource( 18 )]
+[node name="UI" parent="." instance=ExtResource( 19 )]
