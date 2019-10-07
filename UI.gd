@@ -8,8 +8,8 @@ var list = {0:"-Visit the Post-Office",1:"-Visit the Grocery Store",2:"-Visit th
 var todo = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	for x in range(list.size()):
+	checkDone()
+	for x in list.keys():
 		todo += list[x]+"\n"
 		if(list.size()==5):
 			$CanvasLayer/MarginContainer.margin_top -= 25
@@ -28,11 +28,11 @@ func _ready():
 		$CanvasLayer/MarginContainer/list.set_bbcode(todo)
 func _process(delta):
 	GlobalVars.todo()
-	checkDone()
+	
 	$CanvasLayer/MarginContainer.modulate = Color(1,1,1,1-$timer.time_left/$timer.wait_time)
 
 func checkDone():
-	if(GlobalVars.dopop == 1):
+	if(GlobalVars.pop_fly_done):
 		list.erase(3)
 
 func hide():
