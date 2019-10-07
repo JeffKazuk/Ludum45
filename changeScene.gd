@@ -13,6 +13,8 @@ var faded = false
 
 export var nextLevel = ""
 var filepath = ""
+
+
 func _ready():
 	filepath = "res://Levels/" + nextLevel + ".tscn"
 	

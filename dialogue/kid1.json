@@ -1,0 +1,31 @@
+{
+    "say":[
+        {
+            "name":"KID:",
+            "says":"Hey mister! My dad says you're a bad man and that I shouldn't talk to you or you'll hurt me!"
+        },
+        {
+            "name":"YOU:",
+            "says":"I'm sorry to hear that."
+        },
+        {
+            "name":"KID:",
+            "says":"But.. I guess if you haven't hurt me yet, you're probably not going to, right?"
+        },
+        {
+            "name":"YOU:",
+            "says":"That's right."
+        },
+        {
+            "name":"KID:",
+            "says":"Great! Wanna play catch with us?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Sure. If I do, could you tell me what you know about where Kate went?"
+        },
+        {
+            "name":"KID:",
+            "says":"Sure thing mister! Lets go!"
+        }]
+}

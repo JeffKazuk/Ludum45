@@ -1,0 +1,16 @@
+{
+    "say":[
+        {
+            "name":"GROCER:",
+            "says":"Ready to try again?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Yeah."
+        },
+        {
+            "name":"GROCER:",
+            "says":"Sure. Let's begin!"
+        }
+        ]
+}

@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/ChefShack Tilesheet.png-f5f0e10857b814a96cce60b722a8ff4a.s3tc.stex"
-path.etc2="res://.import/ChefShack Tilesheet.png-f5f0e10857b814a96cce60b722a8ff4a.etc2.stex"
+path="res://.import/ChefShack Tilesheet.png-f5f0e10857b814a96cce60b722a8ff4a.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://models/ChefShack Tilesheet.png"
-dest_files=[ "res://.import/ChefShack Tilesheet.png-f5f0e10857b814a96cce60b722a8ff4a.s3tc.stex", "res://.import/ChefShack Tilesheet.png-f5f0e10857b814a96cce60b722a8ff4a.etc2.stex" ]
+dest_files=[ "res://.import/ChefShack Tilesheet.png-f5f0e10857b814a96cce60b722a8ff4a.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

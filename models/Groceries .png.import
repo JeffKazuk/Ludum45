@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.s3tc.stex"
-path.etc2="res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.etc2.stex"
+path="res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://models/Groceries .png"
-dest_files=[ "res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.s3tc.stex", "res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.etc2.stex" ]
+dest_files=[ "res://.import/Groceries .png-6d0fd13e98d420fd21a28ed6f0345753.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

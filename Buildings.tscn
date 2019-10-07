@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://post.tscn" type="PackedScene" id=1]
+[ext_resource path="res://house.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/BorgerTown.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/House2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/House3.tscn" type="PackedScene" id=7]
+
+[node name="Buildings" type="Node"]
+
+[node name="post_office" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+
+[node name="house" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
+
+[node name="borger_town" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.62268e-008, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-008, 14.943, 0.1, -38.622 )
+
+[node name="chef_shack" parent="." instance=ExtResource( 4 )]
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, -15.234, 0.01, -38.616 )
+
+[node name="groceries" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
+
+[node name="Scene Root" parent="." instance=ExtResource( 6 )]
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, -38.9324 )
+
+[node name="Scene Root2" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.424264, 0, -0.424264, 0, 0.6, 0, 0.424264, 0, -0.424264, 34.9083, 0, -38.1299 )

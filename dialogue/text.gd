@@ -10,6 +10,8 @@ var dialogues = 0;
 var filepath = ""
 
 signal done
+signal hide1
+signal unhide1
 
 func _ready():
 	self.connect("done",get_tree().get_current_scene().get_node("changeScene"),"spawnFade")
@@ -20,7 +22,8 @@ func _ready():
 	set_bbcode(json_result["say"][dialogues]["says"])
 	set_visible_characters(0)
 	nameBox.set_bbcode(json_result["say"][dialogues]["name"])
-	
+	if(not get_tree().get_current_scene().get_node("UI")==null):
+		get_tree().get_current_scene().get_node("UI").hide()
 
 
 
@@ -51,6 +54,8 @@ func _on_Button_pressed():
 	
 	if (dialogues>json_result["say"].size()-1):
 		dialogueDone()
+		if(not get_tree().get_current_scene().get_node("Town/UI")==null):
+			get_tree().get_current_scene().get_node("Town/UI").unhide()
 
 
 func dialogueDone():

@@ -1,0 +1,24 @@
+{
+    "say":[
+        {
+            "name":"GROCER:",
+            "says":"Thanks for your help, I really appreciate it. If you decide you're looking for a job, let me know. I probably know better than anyone how hard it is to find work as an ex-con."
+        },
+        {
+            "name":"YOU:",
+            "says":"I'll consider it. Thanks."
+        },
+        {
+            "name":"GROCER:",
+            "says":"Sure. Anyways, Kate wanted to live in the city. Pretty sure she moved out of town right out of high school. That's pretty much all I know."
+        },
+        {
+            "name":"YOU:",
+            "says":"Thank you."
+        },
+        {
+            "name":"GROCER:",
+            "says":"No problem. Good luck."
+        }
+        ]
+}

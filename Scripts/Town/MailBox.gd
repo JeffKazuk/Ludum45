@@ -1,7 +1,7 @@
 extends Spatial
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(self.get_name())
+	pass
 
 func _on_interact():
 	if GlobalVars.mail_started:

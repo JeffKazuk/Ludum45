@@ -1,0 +1,15 @@
+{
+    "say":[
+        {
+            "name":"CHEF:",
+            "says":"Have you come to attempt my challenge once more?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Yes chef."
+        },
+        {
+            "name":"CHEF:",
+            "says":"Very well. May the best burger be delicious! Because I'm going to eat it."
+        }]
+}

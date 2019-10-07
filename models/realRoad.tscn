@@ -7,40 +7,82 @@
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="Sprite3D" parent="." index="2" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 48.6913, 4.47221, -45.2908 )
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 60.6464, 4.62011, -45.2908 )
 
-[node name="Sprite3D2" parent="." index="3" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 37.3904, 4.47221, -45.2908 )
+[node name="Sprite3D20" parent="." index="3" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 64.4094, 6.70268, -54.3991 )
 
-[node name="Sprite3D3" parent="." index="4" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 27.7794, 4.99031, -40.5814 )
+[node name="Sprite3D12" parent="." index="4" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -16.2811, 4.62011, -45.2908 )
 
-[node name="Sprite3D4" parent="." index="5" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 20.2226, 4.99031, -40.5814 )
+[node name="Sprite3D26" parent="." index="5" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -12.5181, 6.70268, -54.3991 )
 
-[node name="Sprite3D5" parent="." index="6" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 10.8716, 4.99031, -40.5814 )
+[node name="Sprite3D8" parent="." index="6" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 22.1778, 4.62011, -45.2908 )
 
-[node name="Sprite3D6" parent="." index="7" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -0.72463, 4.68887, -38.4621 )
+[node name="Sprite3D24" parent="." index="7" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 25.9408, 6.70268, -54.3991 )
 
-[node name="Sprite3D7" parent="." index="8" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -11.1002, 4.22601, -39.4819 )
+[node name="Sprite3D4" parent="." index="8" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 41.4214, 4.62011, -45.2908 )
 
-[node name="Sprite3D8" parent="." index="9" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -22.0628, 4.21137, -39.5658 )
+[node name="Sprite3D19" parent="." index="9" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 45.1845, 6.70268, -54.3991 )
 
-[node name="Sprite3D9" parent="." index="10" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -33.0012, 4.32215, -40.4042 )
+[node name="Sprite3D25" parent="." index="10" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -31.743, 6.70268, -54.4825 )
 
-[node name="Sprite3D10" parent="." index="11" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -45.8064, 4.23685, -41.826 )
+[node name="Sprite3D27" parent="." index="11" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -41.3741, 6.70268, -54.4825 )
 
-[node name="Sprite3D11" parent="." index="12" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -58.0348, 4.21431, -42.083 )
+[node name="Sprite3D28" parent="." index="12" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -50.9724, 6.70268, -54.4825 )
 
-[node name="Sprite3D12" parent="." index="13" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -69.1387, 4.22473, -41.8129 )
+[node name="Sprite3D7" parent="." index="13" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 2.9529, 4.62011, -45.2908 )
 
-[node name="Sprite3D13" parent="." index="14" instance=ExtResource( 2 )]
-transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -79.8373, 4.24389, -44.3968 )
+[node name="Sprite3D23" parent="." index="14" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 6.71591, 6.70268, -54.3991 )
+
+[node name="Sprite3D2" parent="." index="15" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 51.0355, 4.62011, -45.2908 )
+
+[node name="Sprite3D17" parent="." index="16" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 54.7985, 6.70268, -54.3991 )
+
+[node name="Sprite3D9" parent="." index="17" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -25.892, 4.62011, -45.2908 )
+
+[node name="Sprite3D10" parent="." index="18" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -32.5598, 4.62011, -45.7552 )
+
+[node name="Sprite3D13" parent="." index="19" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -42.1407, 4.62011, -45.7552 )
+
+[node name="Sprite3D14" parent="." index="20" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -51.739, 4.62011, -45.7552 )
+
+[node name="Sprite3D11" parent="." index="21" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -32.5598, 4.62011, -45.7552 )
+
+[node name="Sprite3D31" parent="." index="22" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -22.129, 6.70268, -54.3991 )
+
+[node name="Sprite3D5" parent="." index="23" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 12.5669, 4.62011, -45.2908 )
+
+[node name="Sprite3D30" parent="." index="24" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 16.33, 6.70268, -54.3991 )
+
+[node name="Sprite3D3" parent="." index="25" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 31.8106, 4.62011, -45.2908 )
+
+[node name="Sprite3D18" parent="." index="26" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, 35.5736, 6.70268, -54.3991 )
+
+[node name="Sprite3D6" parent="." index="27" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -6.65798, 4.62011, -45.2908 )
+
+[node name="Sprite3D21" parent="." index="28" instance=ExtResource( 2 )]
+transform = Transform( 7.52954, 0, 0, 0, 7.52954, 0, 0, 0, 7.52954, -2.89496, 6.70268, -54.3991 )
