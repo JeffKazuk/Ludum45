@@ -1,7 +1,7 @@
 extends KinematicBody
 
 #var gravity = Vector3.DOWN * 12  # strength of gravity
-export var speed = 4  # movement speed
+export var speed = 5  # movement speed
 export var SpawnLoc = ""
 var interactables
 var interactable
@@ -23,6 +23,7 @@ func spawn():
 
 func get_input():
     velocity.x = 0
+    velocity.y = 0
     velocity.z = 0
     if Input.is_action_pressed("move_forward"):
         velocity.z -= speed
