@@ -111,7 +111,7 @@ script = ExtResource( 6 )
 [node name="Jogger" type="AnimatedSprite3D" parent="Interactables"]
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0.359131, 1.14159, -15.3782 )
 frames = SubResource( 1 )
-frame = 1
+frame = 18
 playing = true
 script = ExtResource( 30 )
 
