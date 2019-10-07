@@ -6,8 +6,9 @@ export var borgers_done = false
 export var grocery_done = false
 
 export var mail_started = false
-
 export var mail_deliveries = {"HouseMailBox": false, "GroceryMailBox": false, "BorgerShackMailBox": false, "ChefShackMailBox": false, "House2MailBox": false}
+
+export var race_attempted = false
 
 func todo():
     var todo = ""

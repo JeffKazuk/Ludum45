@@ -2,28 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/postmanidle20.png-de4dd8c04dae51791f2ad2b01e102666.s3tc.stex"
-path.etc2="res://.import/postmanidle20.png-de4dd8c04dae51791f2ad2b01e102666.etc2.stex"
+path="res://.import/postmanidle20.png-de4dd8c04dae51791f2ad2b01e102666.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://images/idle postman/postmanidle20.png"
-dest_files=[ "res://.import/postmanidle20.png-de4dd8c04dae51791f2ad2b01e102666.s3tc.stex", "res://.import/postmanidle20.png-de4dd8c04dae51791f2ad2b01e102666.etc2.stex" ]
+dest_files=[ "res://.import/postmanidle20.png-de4dd8c04dae51791f2ad2b01e102666.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

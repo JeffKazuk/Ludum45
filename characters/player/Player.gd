@@ -53,7 +53,8 @@ func _input(event):
     if event.is_action_pressed("interact"):
         if get_parent().find_node("Interactables"):
             for interactable in interactables:
-                self.disconnect("interact", interactable, "_on_interact")
+                if self.is_connected("interact", interactable, "_on_interact"):
+                    self.disconnect("interact", interactable, "_on_interact")
             self.connect("interact", currently_interactable, "_on_interact")
             if can_interact:
                 emit_signal("interact")

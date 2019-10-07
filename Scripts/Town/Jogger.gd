@@ -1,13 +1,17 @@
-extends AnimatedSprite3D
+extends Spatial
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var dialogue = preload ("res://dialogue/Dialogue.tscn")
+var ins = dialogue.instance()
+var scenechanger
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	scenechanger = get_parent().get_parent().get_node("changeScene")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_interact():
+	if GlobalVars.race_attempted == false:
+		ins.file = "jogger1"
+		add_child(ins)
+	elif GlobalVars.race_attempted == true && GlobalVars.race_done == false:
+		ins.file = "joggerrematch"
+		add_child(ins)
