@@ -1,13 +1,13 @@
 extends Spatial
-
+var changeScene
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	call_deferred("establish_change_scene")
+	
+func establish_change_scene():
+	changeScene = get_tree().get_current_scene().get_node("changeScene")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_interact():
+	changeScene.nextLevel = "Kitchen"
+	changeScene.location = "Restaurant"
+	changeScene.spawnFade()

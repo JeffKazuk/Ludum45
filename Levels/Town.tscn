@@ -39,7 +39,7 @@
 [ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=37]
 [ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=38]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
 "loop": true,
@@ -47,13 +47,13 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="ProceduralSky" id=2]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 ground_horizon_color = Color( 0.27451, 0.392157, 0.27451, 1 )
 
-[sub_resource type="Environment" id=2]
+[sub_resource type="Environment" id=3]
 background_mode = 2
-background_sky = SubResource( 1 )
+background_sky = SubResource( 2 )
 background_color = Color( 0.266667, 0.431373, 0.27451, 1 )
 
 [node name="Town" type="Spatial"]
@@ -110,7 +110,7 @@ script = ExtResource( 6 )
 
 [node name="Jogger" type="AnimatedSprite3D" parent="Interactables"]
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0.359131, 1.14159, -15.3782 )
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 frame = 1
 playing = true
 script = ExtResource( 30 )
@@ -164,9 +164,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1236, 1, -13.891 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 0.999983, 0.00527397, -0.00256902, -0.00527475, 0.999986, -0.000297091, 0.00256742, 0.000310637, 0.999997, 0, 2.88616, 15.9043 )
-environment = SubResource( 2 )
+environment = SubResource( 3 )
 current = true
 size = 4.7
 target = NodePath("../Player/Spatial")
 speed = 4.0
 enabled = true
+
+[node name="Restaurant" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.147, 1, -37.8374 )
