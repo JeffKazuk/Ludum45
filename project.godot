@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Ludum45"
+config/name="Fetch Quest"
 run/main_scene="res://Levels/scene1.tscn"
-config/icon="res://icon.png"
+config/icon="res://icon.ico"
 
 [autoload]
 
