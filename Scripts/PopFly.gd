@@ -16,6 +16,7 @@ func _ready():
 	randomize()
 	get_parent().get_node("changeScene").nextLevel = "Town"
 	get_parent().get_node("changeScene").location = "Ballgame"
+	GlobalVars.pop_fly_attempted = true
 	call_deferred("get_batter")
 	hit_ball()
 
@@ -54,6 +55,6 @@ func _on_Timer_timeout():
 			GlobalVars.pop_fly_done = true
 			ins.file = "kid2"
 			add_child(ins)
-		elif score < 7:
+		elif score < 10:
 			ins.file = "kidlose"
 			add_child(ins)

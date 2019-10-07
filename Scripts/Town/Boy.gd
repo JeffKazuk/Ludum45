@@ -17,5 +17,5 @@ func _on_interact():
 	elif GlobalVars.pop_fly_attempted == true && GlobalVars.pop_fly_done == false:
 		scene_changer.nextLevel = "Ballgame"
 		scene_changer.location = "Game_Spawn"
-		ins.file = "kidrematch"
+		ins.file = "kiderematch"
 		add_child(ins)

@@ -27,22 +27,28 @@ func get_input():
     velocity.z = 0
     if Input.is_action_pressed("move_forward"):
         velocity.z -= speed
-        $Sprite.animation = "walk back"
-        last_direct = "back"
     if Input.is_action_pressed("move_back"):
         velocity.z += speed
-        $Sprite.animation = "walk forward"
-        last_direct = "forward"
     if Input.is_action_pressed("strafe_right"):
         velocity.x += speed
-        $Sprite.animation = "walk side"
         $Sprite.flip_h = true
-        last_direct = "right"
     if Input.is_action_pressed("strafe_left"):
-        velocity.x -= speed
-        $Sprite.animation = "walk side"
+        velocity.x -= speed    
         $Sprite.flip_h = false
+
+    if velocity.z > 0 :
+        $Sprite.animation = "walk forward"
+        last_direct = "forward"
+    elif velocity.z < 0:
+        $Sprite.animation = "walk back"
+        last_direct = "back"
+    elif velocity.x > 0:
+        $Sprite.animation = "walk side"
+        last_direct = "right"
+    elif velocity.x < 0:
+        $Sprite.animation = "walk side"
         last_direct = "left"
+
     elif not velocity:
         $Sprite.animation = "Still"
         $Sprite.frame = directions[last_direct]
