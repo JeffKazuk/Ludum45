@@ -1,22 +1,21 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/ChefShack/ChefShack.gd" type="Script" id=1]
 [ext_resource path="res://models/ChefShackKitchen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/Stovbe.tres" type="Material" id=3]
 [ext_resource path="res://models/Plate.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/ChefShack/Items.gd" type="Script" id=5]
-[ext_resource path="res://models/Bun.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/BigBun.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/Burger.tscn" type="PackedScene" id=7]
 [ext_resource path="res://models/Ketchup.tscn" type="PackedScene" id=8]
 [ext_resource path="res://models/Tomato.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/ChefShack/Stove.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/ChefShack/Door.gd" type="Script" id=11]
 [ext_resource path="res://Scripts/ChefShack/PrepTable.gd" type="Script" id=12]
-[ext_resource path="res://models/BigBun.tscn" type="PackedScene" id=13]
-[ext_resource path="res://models/Tomat.tscn" type="PackedScene" id=14]
-[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=15]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=16]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=17]
+[ext_resource path="res://models/Tomat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=15]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0, 0, 0, 1 )
@@ -83,12 +82,11 @@ script = ExtResource( 5 )
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.118013, 0 )
 
 [node name="Bun" type="Spatial" parent="Interactables"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.239, 1.84, -4.113 )
 script = ExtResource( 5 )
 
-[node name="Object" parent="Interactables/Bun" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13855, -0.541077, 0 )
+[node name="Scene Root" parent="Interactables/Bun" instance=ExtResource( 6 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.108111, -0.444214, 0 )
 
 [node name="Raw_Burger" type="Spatial" parent="Interactables"]
 editor/display_folded = true
@@ -161,27 +159,27 @@ script = ExtResource( 11 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8934, 1.18982, -1.7373 )
 script = ExtResource( 12 )
 
-[node name="Bun" parent="Interactables/PrepTable" instance=ExtResource( 13 )]
+[node name="Bun" parent="Interactables/PrepTable" instance=ExtResource( 6 )]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.212097, 0 )
 
 [node name="Burger" parent="Interactables/PrepTable" instance=ExtResource( 7 )]
 transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.217148, 0 )
 
-[node name="Tomat" parent="Interactables/PrepTable" instance=ExtResource( 14 )]
+[node name="Tomat" parent="Interactables/PrepTable" instance=ExtResource( 13 )]
 transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.00585938, 0.286163, 0 )
 
 [node name="Plate" parent="Interactables/PrepTable" instance=ExtResource( 4 )]
 
-[node name="Player" parent="." instance=ExtResource( 15 )]
+[node name="Player" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.098, 1.228, 0 )
 SpawnLoc = "Restaurant"
 
 [node name="Restaurant" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.098, 1.228, 0 )
 
-[node name="changeScene" parent="." instance=ExtResource( 16 )]
+[node name="changeScene" parent="." instance=ExtResource( 15 )]
 
-[node name="wipe" parent="." instance=ExtResource( 17 )]
+[node name="wipe" parent="." instance=ExtResource( 16 )]
 endAlpha = 0
 fadeTime = 1
 
