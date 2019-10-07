@@ -1,12 +1,13 @@
 extends Spatial
 
-var dialogue = preload ("res://dialogue/Dialogue.tscn")
+var dialogue = preload("res://dialogue/Dialogue.tscn")
 var ins = dialogue.instance()
-var scenechanger
+#var scenechanger
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	scenechanger = get_parent().get_parent().get_node("changeScene")
+	pass
+	#scenechanger = get_parent().get_parent().get_node("changeScene")
 
 func _on_interact():
 	if GlobalVars.race_attempted == false:
