@@ -138,6 +138,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9092, 1.14159, -6.80394 )
 script = ExtResource( 9 )
 
 [node name="Bus_Stop" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8552, 1.02276, -5.34765 )
 script = ExtResource( 10 )
 
 [node name="changeScene" parent="." instance=ExtResource( 11 )]
@@ -335,7 +336,7 @@ transform = Transform( 13.8985, 0, -3.76118, 0, 9.99991, 0, 5.64174, 0, 9.26569,
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 27.7152, 1.14159, -28.4807 )
 alpha_cut = 2
 frames = SubResource( 7 )
-frame = 3
+frame = 11
 playing = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Jogger_sprite"]
