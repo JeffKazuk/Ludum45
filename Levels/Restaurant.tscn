@@ -20,7 +20,7 @@ transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1.23722, 0 )
 SpawnLoc = "Town"
 
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
-transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0 )
 
 [node name="Interactables" type="Node" parent="."]
 
@@ -39,34 +39,34 @@ transform = Transform( 0.999013, 0, -0.0444196, 0, 1, 0, 0.0444196, 0, 0.999013,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88402, 1.237, -4.18152 )
 
 [node name="table" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -5.75487, 0, -3.8407 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.75487, 0, -3.8407 )
 
 [node name="table2" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -1.74418, 0, -3.8407 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.74418, 0, -3.8407 )
 
 [node name="stool1" parent="." instance=ExtResource( 6 )]
-transform = Transform( -2.18557e-008, 0, 0.4, 0, 0.5, 0, -0.5, 0, -1.74846e-008, -5.18842, 2.57084e-007, -1.29008 )
+transform = Transform( -2.18557e-08, 0, 0.4, 0, 0.5, 0, -0.5, 0, -1.74846e-08, -5.18842, 2.57084e-07, -1.29008 )
 
 [node name="stool7" parent="." instance=ExtResource( 6 )]
-transform = Transform( -2.18557e-008, 0, 0.4, 0, 0.5, 0, -0.5, 0, -1.74846e-008, -1.51937, 2.57084e-007, -1.29008 )
+transform = Transform( -2.18557e-08, 0, 0.4, 0, 0.5, 0, -0.5, 0, -1.74846e-08, -1.51937, 2.57084e-07, -1.29008 )
 
 [node name="stool2" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -5.30527, 2.57084e-007, -3.0506 )
+transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -5.30527, 2.57084e-07, -3.0506 )
 
 [node name="stool6" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -1.63622, 2.57084e-007, -3.0506 )
+transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -1.63622, 2.57084e-07, -3.0506 )
 
 [node name="stool3" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -8.16753, 2.57084e-007, -1.27344 )
+transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -8.16753, 2.57084e-07, -1.27344 )
 
 [node name="stool5" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.10634, 0, 0.390849, 0, 0.5, 0, -0.488561, 0, -0.0850717, -3.34021, 4.95503e-007, -1.2717 )
+transform = Transform( -0.10634, 0, 0.390849, 0, 0.5, 0, -0.488561, 0, -0.0850717, -3.34021, 4.95503e-07, -1.2717 )
 
 [node name="stool4" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.111136, 0, 0.389994, 0, 0.5, 0, -0.487492, 0, 0.0889085, -7.90856, 2.57084e-007, -2.90286 )
+transform = Transform( 0.111136, 0, 0.389994, 0, 0.5, 0, -0.487492, 0, 0.0889085, -7.90856, 2.57084e-07, -2.90286 )
 
 [node name="stool8" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.0226237, 0, 0.39959, 0, 0.5, 0, -0.499488, 0, 0.018099, -3.52585, 2.57084e-007, -2.90286 )
+transform = Transform( 0.0226237, 0, 0.39959, 0, 0.5, 0, -0.499488, 0, 0.018099, -3.52585, 2.57084e-07, -2.90286 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 3.711, 5.5 )
