@@ -73,6 +73,7 @@ current = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2113, 0, -12.3562 )
 
 [node name="Town" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="World" parent="Town" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
@@ -252,7 +253,7 @@ transform = Transform( 13.8985, 0, -3.76118, 0, 9.99991, 0, 5.64174, 0, 9.26569,
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 27.7152, 1.14159, -28.4807 )
 alpha_cut = 2
 frames = SubResource( 8 )
-frame = 5
+frame = 16
 playing = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Town/Jogger_sprite"]

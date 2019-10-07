@@ -1,5 +1,8 @@
 extends Spatial
 
+var dialogue = preload("res://dialogue/Dialogue.tscn")
+var ins = dialogue.instance()
+
 var circle_radius = 5
 var score = 0
 var tries = 20
@@ -11,9 +14,13 @@ var Batter
 
 func _ready():
 	randomize()
-	Batter = get_tree().get_current_scene().find_node("Batter")
+	get_parent().get_node("changeScene").nextLevel = "Town"
+	get_parent().get_node("changeScene").location = "Ballgame"
+	call_deferred("get_batter")
 	hit_ball()
 
+func get_batter():
+	Batter = get_tree().get_current_scene().find_node("Batter")
 
 func hit_ball():
 	tries -= 1
@@ -43,4 +50,9 @@ func _on_Timer_timeout():
 	if tries > 0:
 		hit_ball()
 	elif tries == 0:
-		
+		if score >= 10:
+			ins.file = "Boy Win PLACEHOLDER"
+			add_child(ins)
+		elif score < 10:
+			ins.file = "Boy Lose PLACEHOLDER"
+			add_child(ins)
