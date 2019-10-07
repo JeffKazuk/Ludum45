@@ -20,7 +20,7 @@ func _on_interact():
 		$Borger.visible = false
 
 func _process(delta):
-	print($Timer.time_left)
+	#print($Timer.time_left)
 	if $Timer.time_left!=0:
 		get_node("Borger").get_node("Cylinder").get_surface_material(0).albedo_color.r8 = ($Timer.time_left/$Timer.wait_time)*192+63
 		get_node("Borger").get_node("Cylinder").get_surface_material(0).albedo_color.g8 = ($Timer.time_left/$Timer.wait_time)*49+34
