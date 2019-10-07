@@ -3,6 +3,7 @@ extends Spatial
 var dialogue = preload("res://dialogue/Dialogue.tscn")
 var ins = dialogue.instance()
 var produce = {1 : "Corn", 2 : "Tomatoes", 3 : "Apples", 4 : "Bananas", 5 : "Oranges"}
+var sprites = {"Corn" : 0,"Tomatoes" : 1 ,"Apples" : 2,"Bananas" : 3,"Oranges" : 4}
 var currently_holding = ""
 var wants = ""
 var score = 0
@@ -15,7 +16,7 @@ func _ready():
 
 func new_want():
 	wants = produce[randi()%5+1]
-	print(wants)
+	$Wants.frame = sprites[wants]
 
 func get_time_left():
 	return $Timer.time_left
@@ -41,7 +42,7 @@ func _on_Timer_timeout():
 	elif score>= goal:
 		#Win
 		GlobalVars.grocery_done = true
-		ins.file = "grocer2"
+		ins.file = "grocer1"
 		add_child(ins)
 		$changeScene.nextLevel = "Town"
 		$changeScene.location = "GroceryStore"
