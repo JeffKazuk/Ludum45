@@ -142,7 +142,6 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Stove3" type="Spatial" parent="Interactables"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73724, 1.22875, -6.38345 )
 script = ExtResource( 10 )
 

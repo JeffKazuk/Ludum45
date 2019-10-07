@@ -7,7 +7,7 @@ var sprites = {"Corn" : 0,"Tomatoes" : 1 ,"Apples" : 2,"Bananas" : 3,"Oranges" :
 var currently_holding = ""
 var wants = ""
 var score = 0
-var goal = 15
+var goal = 10
 
 func _ready():
 	randomize()
