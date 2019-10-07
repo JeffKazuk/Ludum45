@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Levels/Town.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=17]
 [ext_resource path="res://characters/bus/realbus.tscn" type="PackedScene" id=18]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=19]
+[ext_resource path="res://models/bus_stop.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -379,3 +380,6 @@ shape = SubResource( 6 )
 transform = Transform( -0.4, 0, -6.03983e-008, 0, 0.4, 0, 6.03983e-008, 0, -0.4, 8.5763, 0.27, -2.50502 )
 
 [node name="UI" parent="." instance=ExtResource( 19 )]
+
+[node name="Scene Root" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 11.9011, -0.154844, -5.19324 )
