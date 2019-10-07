@@ -1,0 +1,19 @@
+{
+    "say":[
+        {
+            "name":"KID:",
+            "says":"Wow you're really bad at catch mister!"
+        },
+        {
+            "name":"YOU:",
+            "says":"I guess so."
+        },
+        {
+            "name":"KID:",
+            "says":"That's okay, I'm bad at stuff to. Like math! If you ever want to play again just come find us!"
+        },
+        {
+            "name":"YOU:",
+            "says":"I will."
+        }]
+}

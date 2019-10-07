@@ -1,0 +1,36 @@
+{
+    "say":[
+        {
+            "name":"KID:",
+            "says":"Wow you're almost as good as Kate was, mister!"
+        },
+        {
+            "name":"YOU:",
+            "says":"Thanks."
+        },
+        {
+            "name":"KID:",
+            "says":"You're welcome! Kate was my babysitter. She would always make us play the quiet game, and the winner would get 5 dollars!"
+        },
+        {
+            "name":"YOU:",
+            "says":"Sounds like a fun game."
+        },
+        {
+            "name":"KID:",
+            "says":"It sure was! When she moved away, She said she was going to miss us a lot, but she said she'd send us postcards from the west coast!"
+        },
+        {
+            "name":"YOU:",
+            "says":"Wow, that's sure nice of her."
+        },
+        {
+            "name":"KID:",
+            "says":"Yeah! She hasn't sent one yet, but I'm sure she'll get to it one day."
+        },
+        {
+            "name":"YOU:",
+            "says":"I'm sure she will."
+        }
+        ]
+}
