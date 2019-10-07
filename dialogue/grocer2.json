@@ -1,0 +1,49 @@
+{
+    "say":[
+        {
+            "name":"GROCER:",
+            "says":"Hey there stranger. How was your vacation?"
+        },
+        {
+            "name":"YOU:",
+            "says":"Probably about as good as your vacation."
+        },
+        {
+            "name":"GROCER:",
+            "says":"Yeah, but my stint wasn't nearly as long as yours. What are you doing back?"
+        },
+        {
+            "name":"YOU:",
+            "says":"I'm here to find Kate, I was hoping you knew where she went."
+        },
+        {
+            "name":"GROCER:",
+            "says":"Well, even if I did I'm not sure anyone in the town trusts you. Myself included."
+        },
+        {
+            "name":"YOU:",
+            "says":"I'm not looking for forgiveness, just trying to find my sister."
+        },
+        {
+            "name":"GROCER:",
+            "says":"Yeah I know. Look, I can help you out, but you gotta help me too."
+        },
+        {
+            "name":"YOU:",
+            "says":"What did you have in mind?"
+        }
+        ,
+        {
+            "name":"GROCER:",
+            "says":"Well, you could help stock the store."
+        },
+        {
+            "name":"YOU:",
+            "says":"Sure."
+        },
+        {
+            "name":"GROCER:",
+            "says":"Sounds great! Let's get started."
+        }
+        ]
+}
