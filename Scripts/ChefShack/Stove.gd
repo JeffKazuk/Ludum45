@@ -4,20 +4,24 @@ var chefshack
 signal pickup
 var cooked_color = Color(63/255,34/255,0/255)
 var raw_color = Color(255/255,83/255,83/255)
+var burger = false
 
 func _ready():
     chefshack = get_parent().get_parent()
     self.connect("pickup", chefshack, "_pickup", ["Burger_Cooked"])
 
 func _on_interact():
-	if chefshack.currently_holding == "Burger_Raw":
+	if chefshack.currently_holding == "Raw_Burger":
 		chefshack.currently_holding = ""
 		get_node("Borger").get_node("Cylinder").get_surface_material(0).albedo_color = cooked_color
 		$Borger.visible = true
 		$Timer.start()
-	elif $Timer.time_left == 0:
+		get_parent().get_node("Raw_Burger").reset()
+		burger = true
+	elif $Timer.time_left == 0 && burger:
 		emit_signal("pickup")
 		$Borger.visible = false
+		burger = false
 
 func _process(delta):
 	#print($Timer.time_left)

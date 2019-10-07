@@ -1,13 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://chefUI.gd" type="Script" id=1]
 [ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=2]
-
-[sub_resource type="DynamicFont" id=2]
-size = 20
-font_data = ExtResource( 2 )
+[ext_resource path="res://images/sprite_0.png" type="Texture" id=3]
+[ext_resource path="res://images/sprite_1.png" type="Texture" id=4]
+[ext_resource path="res://images/sprite_2.png" type="Texture" id=5]
+[ext_resource path="res://images/sprite_3.png" type="Texture" id=6]
+[ext_resource path="res://images/sprite_4.png" type="Texture" id=7]
+[ext_resource path="res://images/sprite_6.png" type="Texture" id=8]
+[ext_resource path="res://images/sprite_7.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "empty",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "sprites",
+"speed": 0.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
 size = 60
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -31,7 +51,7 @@ margin_left = 25.0
 margin_top = 5.0
 margin_right = 1024.0
 margin_bottom = 600.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "To do:"
 text = "To do:"
@@ -41,6 +61,48 @@ scroll_active = false
 scale = Vector2( 1.72222, 0.5 )
 color = Color( 0, 0, 0, 0.0392157 )
 polygon = PoolVector2Array( 0, 0, 180, 0, 180, 80, 90, 80, 0, 80 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="CanvasLayer/MarginContainer"]
+position = Vector2( 10, 500 )
+scale = Vector2( 0.611111, 1.125 )
+color = Color( 0, 0, 0, 0.384314 )
+polygon = PoolVector2Array( 0, 0, 180, 0, 180, 38.8778, 180, 80, 90, 80, 0, 80 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer/MarginContainer"]
+position = Vector2( 65, 545 )
+scale = Vector2( 2.8125, 2.8125 )
+frames = SubResource( 3 )
+animation = "empty"
+
+[node name="Sprite1" type="Sprite" parent="CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 830, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 9 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 850, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 870, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 9 )
+
+[node name="Sprite4" type="Sprite" parent="CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 890, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 9 )
+
+[node name="Sprite5" type="Sprite" parent="CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 910, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 9 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 margin_right = 1030.0
@@ -53,7 +115,7 @@ margin_left = 450.0
 margin_top = 256.0
 margin_right = 1030.0
 margin_bottom = 600.0
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "To do:"
 text = "To do:"
