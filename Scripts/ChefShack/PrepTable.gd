@@ -35,5 +35,5 @@ func _on_interact():
 		$Tomat.visible = false
 		$Burger.visible = false
 		get_tree().get_current_scene().get_node("Control").burger_made()
-		get_tree().get_current_scene().burger_made()
+		get_tree().get_current_scene().burgers_made()
 		get_tree().get_current_scene().reset()

@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://models/RestaurantInterior.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Restaurant/Door.gd" type="Script" id=3]
-[ext_resource path="res://table.tscn" type="PackedScene" id=4]
-[ext_resource path="res://stool.tscn" type="PackedScene" id=5]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=6]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=7]
-[ext_resource path="res://images/Chef Sprite.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/ChefShack/Chef.gd" type="Script" id=4]
+[ext_resource path="res://table.tscn" type="PackedScene" id=5]
+[ext_resource path="res://stool.tscn" type="PackedScene" id=6]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=7]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=8]
+[ext_resource path="res://images/Chef Sprite.png" type="Texture" id=9]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -22,6 +23,7 @@ SpawnLoc = "Town"
 transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
 
 [node name="Interactables" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Door" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23515, 2.98125 )
@@ -29,6 +31,7 @@ script = ExtResource( 3 )
 
 [node name="Chef" type="Spatial" parent="Interactables"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 2.50702, 1.19152, 0.264897 )
+script = ExtResource( 4 )
 
 [node name="Town" type="Spatial" parent="."]
 transform = Transform( 0.999013, 0, -0.0444196, 0, 1, 0, 0.0444196, 0, 0.999013, 0, 1.237, 2.68108 )
@@ -36,47 +39,47 @@ transform = Transform( 0.999013, 0, -0.0444196, 0, 1, 0, 0.0444196, 0, 0.999013,
 [node name="Kitchen" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88402, 1.237, -4.18152 )
 
-[node name="table" parent="." instance=ExtResource( 4 )]
+[node name="table" parent="." instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -5.75487, 0, -3.8407 )
 
-[node name="table2" parent="." instance=ExtResource( 4 )]
+[node name="table2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -1.74418, 0, -3.8407 )
 
-[node name="stool1" parent="." instance=ExtResource( 5 )]
+[node name="stool1" parent="." instance=ExtResource( 6 )]
 transform = Transform( -2.18557e-008, 0, 0.4, 0, 0.5, 0, -0.5, 0, -1.74846e-008, -5.18842, 2.57084e-007, -1.29008 )
 
-[node name="stool7" parent="." instance=ExtResource( 5 )]
+[node name="stool7" parent="." instance=ExtResource( 6 )]
 transform = Transform( -2.18557e-008, 0, 0.4, 0, 0.5, 0, -0.5, 0, -1.74846e-008, -1.51937, 2.57084e-007, -1.29008 )
 
-[node name="stool2" parent="." instance=ExtResource( 5 )]
+[node name="stool2" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -5.30527, 2.57084e-007, -3.0506 )
 
-[node name="stool6" parent="." instance=ExtResource( 5 )]
+[node name="stool6" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -1.63622, 2.57084e-007, -3.0506 )
 
-[node name="stool3" parent="." instance=ExtResource( 5 )]
+[node name="stool3" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.0736201, 0, 0.39564, 0, 0.5, 0, -0.49455, 0, -0.0588961, -8.16753, 2.57084e-007, -1.27344 )
 
-[node name="stool5" parent="." instance=ExtResource( 5 )]
+[node name="stool5" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.10634, 0, 0.390849, 0, 0.5, 0, -0.488561, 0, -0.0850717, -3.34021, 4.95503e-007, -1.2717 )
 
-[node name="stool4" parent="." instance=ExtResource( 5 )]
+[node name="stool4" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.111136, 0, 0.389994, 0, 0.5, 0, -0.487492, 0, 0.0889085, -7.90856, 2.57084e-007, -2.90286 )
 
-[node name="stool8" parent="." instance=ExtResource( 5 )]
+[node name="stool8" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.0226237, 0, 0.39959, 0, 0.5, 0, -0.499488, 0, 0.018099, -3.52585, 2.57084e-007, -2.90286 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 3.711, 5.5 )
 environment = SubResource( 1 )
 
-[node name="changeScene" parent="." instance=ExtResource( 6 )]
+[node name="changeScene" parent="." instance=ExtResource( 7 )]
 
-[node name="wipe" parent="." instance=ExtResource( 7 )]
+[node name="wipe" parent="." instance=ExtResource( 8 )]
 endAlpha = 0
 fadeTime = 1
 
 [node name="Chef" type="Sprite3D" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 3.1767, 1.19152, 0.264897 )
 alpha_cut = 1
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
