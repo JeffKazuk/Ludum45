@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Scripts/Grocery/GroceryStoreGame.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
@@ -35,10 +35,11 @@
 [ext_resource path="res://images/apple.png" type="Texture" id=33]
 [ext_resource path="res://images/banana.png" type="Texture" id=34]
 [ext_resource path="res://images/orange.png" type="Texture" id=35]
-[ext_resource path="res://Scripts/Grocery/GroceUI.gd" type="Script" id=36]
-[ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=37]
-[ext_resource path="res://images/sprite_7.png" type="Texture" id=38]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=39]
+[ext_resource path="res://images/thotbubble.png" type="Texture" id=36]
+[ext_resource path="res://Scripts/Grocery/GroceUI.gd" type="Script" id=37]
+[ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=38]
+[ext_resource path="res://images/sprite_7.png" type="Texture" id=39]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=40]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -61,7 +62,7 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=3]
 size = 30
-font_data = ExtResource( 37 )
+font_data = ExtResource( 38 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -80,7 +81,7 @@ animations = [ {
 size = 60
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 37 )
+font_data = ExtResource( 38 )
 
 [node name="GroceryStore" type="Spatial"]
 script = ExtResource( 1 )
@@ -130,16 +131,21 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 2 )
-frame = 23
+frame = 11
 playing = true
 
 [node name="Wants" type="AnimatedSprite3D" parent="."]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -7.64103, 2.87333, 0.867919 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -7.5, 3.06, 0.868 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 6 )
 frame = 1
 playing = true
+
+[node name="Bubble" type="Sprite3D" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -7.64103, 2.87333, 0.86315 )
+alpha_cut = 2
+texture = ExtResource( 36 )
 
 [node name="Town" type="Spatial" parent="."]
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0335215, 1.19274, 3.94912 )
@@ -152,7 +158,7 @@ autostart = true
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 36 )
+script = ExtResource( 37 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 
@@ -194,31 +200,31 @@ animation = "empty"
 visible = false
 position = Vector2( 830, 554.872 )
 scale = Vector2( 1.65947, 1.70657 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="Sprite2" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
 visible = false
 position = Vector2( 850, 554.872 )
 scale = Vector2( 1.65947, 1.70657 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="Sprite3" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
 visible = false
 position = Vector2( 870, 554.872 )
 scale = Vector2( 1.65947, 1.70657 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="Sprite4" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
 visible = false
 position = Vector2( 890, 554.872 )
 scale = Vector2( 1.65947, 1.70657 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="Sprite5" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
 visible = false
 position = Vector2( 910, 554.872 )
 scale = Vector2( 1.65947, 1.70657 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="Control/CanvasLayer"]
 margin_right = 1030.0
@@ -244,7 +250,7 @@ one_shot = true
 wait_time = 5.0
 one_shot = true
 
-[node name="wipe" parent="." instance=ExtResource( 39 )]
+[node name="wipe" parent="." instance=ExtResource( 40 )]
 endAlpha = 0
 fadeTime = 6
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

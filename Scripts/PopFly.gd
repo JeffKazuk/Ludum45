@@ -16,6 +16,7 @@ func _ready():
 	randomize()
 	get_parent().get_node("changeScene").nextLevel = "Town"
 	get_parent().get_node("changeScene").location = "Ballgame"
+	GlobalVars.pop_fly_attempted = true
 	call_deferred("get_batter")
 	hit_ball()
 

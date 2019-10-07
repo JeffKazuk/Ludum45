@@ -13,7 +13,7 @@ func get_currently_holding():
 	return currently_holding
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	GlobalVars.borgors_attempted = true
 	
 func _pickup(item):
 	currently_holding = item

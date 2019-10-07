@@ -11,6 +11,7 @@ var goal = 15
 
 func _ready():
 	randomize()
+	GlobalVars.grocery_attempted = true
 	score = 0
 	new_want()
 
