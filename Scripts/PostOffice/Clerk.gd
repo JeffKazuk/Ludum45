@@ -1,6 +1,6 @@
 extends Spatial
 
-var dialogue = preload ("res://dialogue/Dialogue.tscn")
+var dialogue = preload("res://dialogue/Dialogue.tscn")
 var ins = dialogue.instance()
 
 func _ready():

@@ -331,14 +331,14 @@ transform = Transform( -1.96756, 0, 9.91358, 0, 9.99992, 0, -14.8703, 0, -1.3117
 [node name="Spatial35" parent="Background/Spatial" instance=ExtResource( 16 )]
 transform = Transform( 13.8985, 0, -3.76118, 0, 9.99991, 0, 5.64174, 0, 9.26569, 73.4006, 7.97588, -171.357 )
 
-[node name="Jogger" type="AnimatedSprite3D" parent="."]
-editor/display_folded = true
+[node name="Jogger_sprite" type="AnimatedSprite3D" parent="."]
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 27.7152, 1.14159, -28.4807 )
 alpha_cut = 2
 frames = SubResource( 1 )
+frame = 4
 playing = true
 
-[node name="MeshInstance" type="MeshInstance" parent="Jogger"]
+[node name="MeshInstance" type="MeshInstance" parent="Jogger_sprite"]
 transform = Transform( 0.3, 0, 0, 0, 0.01, 0, 0, 0, 0.2, 0, -0.640968, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
