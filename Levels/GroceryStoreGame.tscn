@@ -1,0 +1,235 @@
+[gd_scene load_steps=46 format=2]
+
+[ext_resource path="res://Scripts/Grocery/GroceryStoreGame.gd" type="Script" id=1]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Grocery/Produce.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Grocery/GameJerry.gd" type="Script" id=4]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/GroceryInterior.tscn" type="PackedScene" id=6]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle00.png" type="Texture" id=7]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle01.png" type="Texture" id=8]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle02.png" type="Texture" id=9]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle03.png" type="Texture" id=10]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle04.png" type="Texture" id=11]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle05.png" type="Texture" id=12]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle06.png" type="Texture" id=13]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle07.png" type="Texture" id=14]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle08.png" type="Texture" id=15]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle09.png" type="Texture" id=16]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle10.png" type="Texture" id=17]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle11.png" type="Texture" id=18]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle12.png" type="Texture" id=19]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle13.png" type="Texture" id=20]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle14.png" type="Texture" id=21]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle15.png" type="Texture" id=22]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle16.png" type="Texture" id=23]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle17.png" type="Texture" id=24]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle18.png" type="Texture" id=25]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle19.png" type="Texture" id=26]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle20.png" type="Texture" id=27]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle21.png" type="Texture" id=28]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle22.png" type="Texture" id=29]
+[ext_resource path="res://images/Jerry Idle/Jerry Idle23.png" type="Texture" id=30]
+[ext_resource path="res://Scripts/Grocery/GroceUI.gd" type="Script" id=31]
+[ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=32]
+[ext_resource path="res://images/sprite_0.png" type="Texture" id=33]
+[ext_resource path="res://images/sprite_1.png" type="Texture" id=34]
+[ext_resource path="res://images/sprite_2.png" type="Texture" id=35]
+[ext_resource path="res://images/sprite_3.png" type="Texture" id=36]
+[ext_resource path="res://images/sprite_4.png" type="Texture" id=37]
+[ext_resource path="res://images/sprite_6.png" type="Texture" id=38]
+[ext_resource path="res://images/sprite_7.png" type="Texture" id=39]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=40]
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 32 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "empty",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": false,
+"name": "sprites",
+"speed": 0.0
+} ]
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 32 )
+
+[node name="GroceryStore" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0335215, 1.19274, 3.94912 )
+SpawnLoc = "Town"
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 7, 10 )
+environment = SubResource( 2 )
+
+[node name="Interactables" type="Node" parent="."]
+
+[node name="Corn" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22353, 1.64884, 0.423211 )
+script = ExtResource( 3 )
+
+[node name="Tomatoes" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64884, -4.34319 )
+script = ExtResource( 3 )
+
+[node name="Apples" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20877, 1.64884, -4.55915 )
+script = ExtResource( 3 )
+
+[node name="Bananas" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.52964, 1.64884, -0.63827 )
+script = ExtResource( 3 )
+
+[node name="Oranges" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20964, 1.79541, -4.27861 )
+script = ExtResource( 3 )
+
+[node name="Jerry" type="Spatial" parent="Interactables"]
+transform = Transform( -2, 0, -1.74846e-007, 0, 2, 0, 1.74846e-007, 0, -2, -8.27111, 1.25696, 0.76001 )
+script = ExtResource( 4 )
+
+[node name="changeScene" parent="." instance=ExtResource( 5 )]
+location = "GroceryStore"
+
+[node name="GroceryInterior" parent="." instance=ExtResource( 6 )]
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
+
+[node name="Jerry" type="AnimatedSprite3D" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
+flip_h = true
+alpha_cut = 2
+frames = SubResource( 1 )
+frame = 15
+playing = true
+
+[node name="Town" type="Spatial" parent="."]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0335215, 1.19274, 3.94912 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 65.0
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 31 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/CanvasLayer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 25
+
+[node name="list" type="RichTextLabel" parent="Control/CanvasLayer/MarginContainer"]
+margin_left = 25.0
+margin_top = 5.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "To do:"
+text = "To do:"
+scroll_active = false
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/CanvasLayer/MarginContainer"]
+scale = Vector2( 1.72222, 0.5 )
+color = Color( 0, 0, 0, 0.0392157 )
+polygon = PoolVector2Array( 0, 0, 180, 0, 180, 80, 90, 80, 0, 80 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Control/CanvasLayer/MarginContainer"]
+position = Vector2( 10, 500 )
+scale = Vector2( 0.611111, 1.125 )
+color = Color( 0, 0, 0, 0.384314 )
+polygon = PoolVector2Array( 0, 0, 180, 0, 180, 38.8778, 180, 80, 90, 80, 0, 80 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Control/CanvasLayer/MarginContainer"]
+position = Vector2( 65, 545 )
+scale = Vector2( 2.8125, 2.8125 )
+frames = SubResource( 4 )
+animation = "empty"
+
+[node name="Sprite1" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 830, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 39 )
+
+[node name="Sprite2" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 850, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 39 )
+
+[node name="Sprite3" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 870, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 39 )
+
+[node name="Sprite4" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 890, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 39 )
+
+[node name="Sprite5" type="Sprite" parent="Control/CanvasLayer/MarginContainer"]
+visible = false
+position = Vector2( 910, 554.872 )
+scale = Vector2( 1.65947, 1.70657 )
+texture = ExtResource( 39 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/CanvasLayer"]
+margin_right = 1030.0
+margin_bottom = 600.0
+custom_constants/margin_top = 256
+custom_constants/margin_left = 450
+
+[node name="list" type="RichTextLabel" parent="Control/CanvasLayer/MarginContainer2"]
+margin_left = 450.0
+margin_top = 256.0
+margin_right = 1030.0
+margin_bottom = 600.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "To do:"
+text = "To do:"
+scroll_active = false
+
+[node name="timer" type="Timer" parent="Control"]
+one_shot = true
+
+[node name="CountDown" type="Timer" parent="Control"]
+wait_time = 5.0
+one_shot = true
+
+[node name="wipe" parent="." instance=ExtResource( 40 )]
+endAlpha = 0
+fadeTime = 6
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
