@@ -1,8 +1,7 @@
 extends Spatial
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var dialogue = preload("res://dialogue/Dialogue.tscn")
+var ins = dialogue.instance()
 var burgers = 0
 
 export var currently_holding = ""
@@ -14,7 +13,7 @@ func get_currently_holding():
 	return currently_holding
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	GlobalVars.borgors_attempted = true
 	
 func _pickup(item):
 	currently_holding = item
@@ -24,8 +23,10 @@ func burgers_made():
 	burgers += 1
 	if burgers == 5:
 		#Win stuff
-		get_node("Control/CanvasLayer/MarginContainer2/list").set_bbcode("You Win!")
-		$changeScene.spawnFade()
+		$Chef.visible = true
+		$Control.free()
+		ins.file = "chef2"
+		add_child(ins)
 		GlobalVars.borgers_done = true
 
 func reset():
@@ -40,5 +41,7 @@ func reset():
 
 
 func _on_Timer_timeout():
-	get_node("Control/CanvasLayer/MarginContainer2/list").set_bbcode("Not Fast Enough")
-	$changeScene.spawnFade()
+	$Chef.visible = true
+	$Control.free()
+	ins.file = "cheffail"
+	add_child(ins)

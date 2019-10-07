@@ -6,7 +6,7 @@
 [ext_resource path="res://images/sprite_1.png" type="Texture" id=4]
 [ext_resource path="res://images/sprite_2.png" type="Texture" id=5]
 [ext_resource path="res://images/sprite_3.png" type="Texture" id=6]
-[ext_resource path="res://images/sprite_4.png" type="Texture" id=7]
+[ext_resource path="res://images/sprite_5.png" type="Texture" id=7]
 [ext_resource path="res://images/sprite_6.png" type="Texture" id=8]
 [ext_resource path="res://images/sprite_7.png" type="Texture" id=9]
 
@@ -14,7 +14,7 @@
 size = 30
 font_data = ExtResource( 2 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [  ],
 "loop": true,
@@ -27,7 +27,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 60
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -71,7 +71,7 @@ polygon = PoolVector2Array( 0, 0, 180, 0, 180, 38.8778, 180, 80, 90, 80, 0, 80 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer/MarginContainer"]
 position = Vector2( 65, 545 )
 scale = Vector2( 2.8125, 2.8125 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "empty"
 
 [node name="Sprite1" type="Sprite" parent="CanvasLayer/MarginContainer"]
@@ -115,7 +115,7 @@ margin_left = 450.0
 margin_top = 256.0
 margin_right = 1030.0
 margin_bottom = 600.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "To do:"
 text = "To do:"

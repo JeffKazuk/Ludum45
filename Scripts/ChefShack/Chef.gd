@@ -11,11 +11,11 @@ func _on_interact():
 	if GlobalVars.borgors_attempted == false:
 		scene_changer.nextLevel = "Kitchen"
 		scene_changer.location = "Restaurant"
-		ins.file = "Boy PLACEHOLDER"
+		ins.file = "chef1"
 		add_child(ins)
 		
 	elif GlobalVars.borgors_attempted == true && GlobalVars.borgors_done == false:
 		scene_changer.nextLevel = "Kitchen"
 		scene_changer.location = "Restaurant"
-		ins.file = "Boy Rematch PLACEHOLDER"
+		ins.file = "chefrematch"
 		add_child(ins)

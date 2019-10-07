@@ -18,10 +18,10 @@ script = ExtResource( 1 )
 margin_right = 1024.0
 margin_bottom = 590.0
 custom_constants/margin_top = 565
-custom_constants/margin_left = 25
+custom_constants/margin_left = 20
 
 [node name="list" type="RichTextLabel" parent="CanvasLayer/MarginContainer"]
-margin_left = 25.0
+margin_left = 20.0
 margin_top = 565.0
 margin_right = 1024.0
 margin_bottom = 590.0
@@ -31,9 +31,9 @@ bbcode_text = "To do:"
 text = "To do:"
 scroll_active = false
 
-[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/MarginContainer"]
-position = Vector2( 0, 560 )
-scale = Vector2( 1.72222, 0.5 )
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer"]
+position = Vector2( 0, 600 )
+scale = Vector2( 1.2, 1e-05 )
 color = Color( 0, 0, 0, 0.380392 )
 polygon = PoolVector2Array( 0, 0, 180, 0, 180, 80, 90, 80, 0, 80 )
 

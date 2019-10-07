@@ -77,7 +77,7 @@ transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.14868, 1.14928, 0.720595 )
 alpha_cut = 2
 frames = SubResource( 1 )
-frame = 18
+frame = 17
 playing = true
 
 [node name="StaticBody" type="StaticBody" parent="Clerk"]

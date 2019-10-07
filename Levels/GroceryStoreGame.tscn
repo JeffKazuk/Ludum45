@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Scripts/Grocery/GroceryStoreGame.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
@@ -30,14 +30,14 @@
 [ext_resource path="res://images/Jerry Idle/Jerry Idle21.png" type="Texture" id=28]
 [ext_resource path="res://images/Jerry Idle/Jerry Idle22.png" type="Texture" id=29]
 [ext_resource path="res://images/Jerry Idle/Jerry Idle23.png" type="Texture" id=30]
-[ext_resource path="res://Scripts/Grocery/GroceUI.gd" type="Script" id=31]
-[ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=32]
-[ext_resource path="res://images/sprite_0.png" type="Texture" id=33]
-[ext_resource path="res://images/sprite_1.png" type="Texture" id=34]
-[ext_resource path="res://images/sprite_2.png" type="Texture" id=35]
-[ext_resource path="res://images/sprite_3.png" type="Texture" id=36]
-[ext_resource path="res://images/sprite_4.png" type="Texture" id=37]
-[ext_resource path="res://images/sprite_6.png" type="Texture" id=38]
+[ext_resource path="res://images/corn.png" type="Texture" id=31]
+[ext_resource path="res://images/tomate.png" type="Texture" id=32]
+[ext_resource path="res://images/apple.png" type="Texture" id=33]
+[ext_resource path="res://images/banana.png" type="Texture" id=34]
+[ext_resource path="res://images/orange.png" type="Texture" id=35]
+[ext_resource path="res://images/thotbubble.png" type="Texture" id=36]
+[ext_resource path="res://Scripts/Grocery/GroceUI.gd" type="Script" id=37]
+[ext_resource path="res://fonts/CardenioModern-Bold.otf" type="DynamicFontData" id=38]
 [ext_resource path="res://images/sprite_7.png" type="Texture" id=39]
 [ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=40]
 
@@ -52,9 +52,17 @@ animations = [ {
 "speed": 12.0
 } ]
 
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.0
+} ]
+
 [sub_resource type="DynamicFont" id=3]
 size = 30
-font_data = ExtResource( 32 )
+font_data = ExtResource( 38 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -63,7 +71,7 @@ animations = [ {
 "name": "empty",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": false,
 "name": "sprites",
 "speed": 0.0
@@ -73,7 +81,7 @@ animations = [ {
 size = 60
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 32 )
+font_data = ExtResource( 38 )
 
 [node name="GroceryStore" type="Spatial"]
 script = ExtResource( 1 )
@@ -109,35 +117,48 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20964, 1.79541, -4.27861 )
 script = ExtResource( 3 )
 
 [node name="Jerry" type="Spatial" parent="Interactables"]
-transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.27111, 1.25696, 0.76001 )
+transform = Transform( -2, 0, -1.74846e-007, 0, 2, 0, 1.74846e-007, 0, -2, -8.27111, 1.25696, 0.76001 )
 script = ExtResource( 4 )
 
 [node name="changeScene" parent="." instance=ExtResource( 5 )]
 location = "GroceryStore"
 
 [node name="GroceryInterior" parent="." instance=ExtResource( 6 )]
-transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0 )
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, 0, 0, 0 )
 
 [node name="Jerry" type="AnimatedSprite3D" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 2 )
-frame = 22
+frame = 11
 playing = true
+
+[node name="Wants" type="AnimatedSprite3D" parent="."]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -7.5, 3.06, 0.868 )
+flip_h = true
+alpha_cut = 2
+frames = SubResource( 6 )
+frame = 1
+playing = true
+
+[node name="Bubble" type="Sprite3D" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -7.64103, 2.87333, 0.86315 )
+alpha_cut = 2
+texture = ExtResource( 36 )
 
 [node name="Town" type="Spatial" parent="."]
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0335215, 1.19274, 3.94912 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 65.0
+one_shot = true
 autostart = true
 
 [node name="Control" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 31 )
+script = ExtResource( 37 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 
