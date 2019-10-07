@@ -42,3 +42,5 @@ func _on_Timer_timeout():
 		Batter.frame = 0
 	if tries > 0:
 		hit_ball()
+	elif tries == 0:
+		
