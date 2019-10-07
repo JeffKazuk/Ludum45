@@ -64,6 +64,7 @@ func _input(event):
             self.connect("interact", currently_interactable, "_on_interact")
             if can_interact:
                 emit_signal("interact")
+                $Grab.play()
 
 
 

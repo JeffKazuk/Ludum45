@@ -5,8 +5,5 @@ func _ready():
 
 func _on_interact():
 	if GlobalVars.mail_started:
+		$MailBox.play()
 		GlobalVars.mail_deliveries[get_name()] = true
-	print(GlobalVars.mail_deliveries[get_name()])
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

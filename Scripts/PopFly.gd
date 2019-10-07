@@ -27,6 +27,7 @@ func hit_ball():
 	tries -= 1
 	if Batter:
 		Batter.play()
+	get_parent().get_node("BatEffect").play()
 	$"Timer".start()
 	a = randf()*2*PI
 	r = circle_radius * sqrt(randf())

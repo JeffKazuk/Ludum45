@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/ChefShack/ChefShack.gd" type="Script" id=1]
 [ext_resource path="res://models/ChefShackKitchen.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=15]
 [ext_resource path="res://images/Chef Sprite.png" type="Texture" id=16]
 [ext_resource path="res://chefUI.tscn" type="PackedScene" id=17]
+[ext_resource path="res://sound/effects/chef.wav" type="AudioStream" id=18]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0, 0, 0, 1 )
@@ -199,4 +200,9 @@ alpha_cut = 2
 texture = ExtResource( 16 )
 
 [node name="Control" parent="." instance=ExtResource( 17 )]
+
+[node name="PizzaTime" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 529.393, 295.37 )
+stream = ExtResource( 18 )
+autoplay = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

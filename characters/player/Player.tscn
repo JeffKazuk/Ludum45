@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://characters/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://images/Main frontrun/Main run00.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://images/Main backrun/Main Character Sprite Back05.png" type="Texture" id=31]
 [ext_resource path="res://images/Main backrun/Main Character Sprite Back06.png" type="Texture" id=32]
 [ext_resource path="res://images/Main backrun/Main Character Sprite Back07.png" type="Texture" id=33]
+[ext_resource path="res://sound/effects/grab.wav" type="AudioStream" id=34]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.39415
@@ -95,3 +96,7 @@ playing = true
 transform = Transform( 0.5, 0, 0, 0, 0.001, 0, 0, 0, 0.2, 0, -0.997631, 0 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
+
+[node name="Grab" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 495.781, 270.745 )
+stream = ExtResource( 34 )

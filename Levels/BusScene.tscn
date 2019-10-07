@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://characters/bus/BusScene.gd" type="Script" id=1]
 [ext_resource path="res://transitions/roadenv.tres" type="Environment" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Levels/bruhtimer.gd" type="Script" id=5]
 [ext_resource path="res://changeScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/Bogo.png" type="Texture" id=7]
+[ext_resource path="res://sound/effects/busloop.wav" type="AudioStream" id=8]
 
 [node name="Bus Scene" type="Spatial"]
 script = ExtResource( 1 )
@@ -39,3 +40,7 @@ fadeA = 1
 transform = Transform( -4.37114e-008, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-008, -3.78552e-008, 7.36391, 1.5426, -3.79833 )
 alpha_cut = 2
 texture = ExtResource( 7 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 525.021, 293.816 )
+stream = ExtResource( 8 )
