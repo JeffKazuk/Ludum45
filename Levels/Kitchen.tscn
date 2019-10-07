@@ -1,21 +1,22 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://models/ChefShack.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/ChefShack/ChefShack.gd" type="Script" id=1]
 [ext_resource path="res://models/ChefShackKitchen.tscn" type="PackedScene" id=2]
-[ext_resource path="res://models/PhysicsPlate.tscn" type="PackedScene" id=3]
-[ext_resource path="res://models/Stovbe.tres" type="Material" id=4]
-[ext_resource path="res://Scripts/ChefShack/Plates.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/ChefShack/Buns.gd" type="Script" id=6]
-[ext_resource path="res://Scripts/ChefShack/Burgers.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/ChefShack/Condiments.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/ChefShack/Toppings.gd" type="Script" id=9]
+[ext_resource path="res://models/Stovbe.tres" type="Material" id=3]
+[ext_resource path="res://models/Plate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/ChefShack/Items.gd" type="Script" id=5]
+[ext_resource path="res://models/Bun.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/Burger.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/Ketchup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/Tomato.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/ChefShack/Stove.gd" type="Script" id=10]
-[ext_resource path="res://models/Burger.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scripts/ChefShack/Door.gd" type="Script" id=12]
-[ext_resource path="res://images/Chef Sprite.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/ChefShack/Chef.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/ChefShack/Door.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/ChefShack/PrepTable.gd" type="Script" id=12]
+[ext_resource path="res://models/BigBun.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/Tomat.tscn" type="PackedScene" id=14]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=15]
 [ext_resource path="res://changeScene.tscn" type="PackedScene" id=16]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0, 0, 0, 1 )
@@ -37,52 +38,88 @@ transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -
 environment = SubResource( 2 )
 current = true
 
+[node name="Lights" type="Node" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 13.8999, 0 )
+light_bake_mode = 2
+
+[node name="OmniLight" type="OmniLight" parent="Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.78833, -3.29199 )
+light_energy = 2.0
+light_indirect_energy = 2.0
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="Lights"]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -2.388, 3.895, 6.227 )
+light_energy = 0.5
+light_bake_mode = 2
+
 [node name="Stuff" type="Spatial" parent="."]
-
-[node name="Plate" parent="Stuff" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07512, 1.20923, -2.89983 )
-
-[node name="Plate2" parent="Stuff" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07512, 1.20923, -4.06304 )
-
-[node name="Plate3" parent="Stuff" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07512, 1.20923, -0.554248 )
 
 [node name="CSGBox" type="CSGBox" parent="Stuff"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87674, 0.700073, -1.74065 )
 width = 1.0
 height = 1.0
 depth = 1.0
-material = ExtResource( 4 )
+material = ExtResource( 3 )
+
+[node name="Plate2" parent="Stuff" instance=ExtResource( 4 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.1059, 1.168, -4.10736 )
+
+[node name="Plate3" parent="Stuff" instance=ExtResource( 4 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.1059, 1.168, -2.91262 )
+
+[node name="Plate4" parent="Stuff" instance=ExtResource( 4 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.1059, 1.168, -0.553724 )
 
 [node name="Interactables" type="Node" parent="."]
 
-[node name="Plates" type="Spatial" parent="Interactables"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.794, 1.84, -6.405 )
+[node name="Plate" type="Spatial" parent="Interactables"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.794, 1.28601, -6.405 )
 script = ExtResource( 5 )
 
-[node name="Buns" type="Spatial" parent="Interactables"]
+[node name="Objecet" parent="Interactables/Plate" instance=ExtResource( 4 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.118013, 0 )
+
+[node name="Bun" type="Spatial" parent="Interactables"]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.239, 1.84, -4.113 )
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
-[node name="Burgers" type="Spatial" parent="Interactables"]
+[node name="Object" parent="Interactables/Bun" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13855, -0.541077, 0 )
+
+[node name="Raw_Burger" type="Spatial" parent="Interactables"]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.124, 1.84, -2.895 )
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 
-[node name="Condiments" type="Spatial" parent="Interactables"]
+[node name="Object" parent="Interactables/Raw_Burger" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0264888, -0.533582, -0.0210309 )
+
+[node name="Ketchup" type="Spatial" parent="Interactables"]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.073, 1.84, -1.704 )
-script = ExtResource( 8 )
+script = ExtResource( 5 )
 
-[node name="Toppings" type="Spatial" parent="Interactables"]
+[node name="Object" parent="Interactables/Ketchup" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.177665, 0 )
+
+[node name="Tomato" type="Spatial" parent="Interactables"]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.08754, 1.84045, -0.538264 )
-script = ExtResource( 9 )
+script = ExtResource( 5 )
+
+[node name="Object" parent="Interactables/Tomato" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.414012, 0 )
 
 [node name="Stove1" type="Spatial" parent="Interactables"]
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3847, 1.22875, -6.38345 )
 script = ExtResource( 10 )
 
-[node name="Borger" parent="Interactables/Stove1" instance=ExtResource( 11 )]
+[node name="Borger" parent="Interactables/Stove1" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123715, -0.016098, -0.00980186 )
 visible = false
 
@@ -95,7 +132,7 @@ editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04516, 1.22875, -6.38345 )
 script = ExtResource( 10 )
 
-[node name="Borger" parent="Interactables/Stove2" instance=ExtResource( 11 )]
+[node name="Borger" parent="Interactables/Stove2" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123715, -0.016098, -0.00980186 )
 visible = false
 
@@ -108,7 +145,7 @@ editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73724, 1.22875, -6.38345 )
 script = ExtResource( 10 )
 
-[node name="Borger" parent="Interactables/Stove3" instance=ExtResource( 11 )]
+[node name="Borger" parent="Interactables/Stove3" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123715, -0.016098, -0.00980186 )
 visible = false
 
@@ -117,14 +154,23 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Door" type="Spatial" parent="Interactables"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.098, 1.228, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.098, 1.228, 1.27082 )
+script = ExtResource( 11 )
+
+[node name="PrepTable" type="Spatial" parent="Interactables"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8934, 1.18982, -1.7373 )
 script = ExtResource( 12 )
 
-[node name="Chef" type="Sprite3D" parent="Interactables"]
-transform = Transform( 2.5, 0, 0, 0, 2, 0, 0, 0, 2, -4.43143, 1.17732, -0.628292 )
-alpha_cut = 2
-texture = ExtResource( 13 )
-script = ExtResource( 14 )
+[node name="Bun" parent="Interactables/PrepTable" instance=ExtResource( 13 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.212097, 0 )
+
+[node name="Burger" parent="Interactables/PrepTable" instance=ExtResource( 7 )]
+transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.217148, 0 )
+
+[node name="Tomat" parent="Interactables/PrepTable" instance=ExtResource( 14 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.00585938, 0.286163, 0 )
+
+[node name="Plate" parent="Interactables/PrepTable" instance=ExtResource( 4 )]
 
 [node name="Player" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.098, 1.228, 0 )
@@ -134,3 +180,11 @@ SpawnLoc = "Restaurant"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.098, 1.228, 0 )
 
 [node name="changeScene" parent="." instance=ExtResource( 16 )]
+
+[node name="wipe" parent="." instance=ExtResource( 17 )]
+endAlpha = 0
+fadeTime = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 125.0
+autostart = true
