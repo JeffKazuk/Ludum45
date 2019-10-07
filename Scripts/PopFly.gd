@@ -45,13 +45,12 @@ func _on_Timer_timeout():
 	if $"Ball".overlaps_body(get_parent().get_node("Player")):
 		score += 1
 	get_node("Ball").get_node("AnimatedSprite3D").stop()
-	get_parent().get_node("Control/CanvasLayer/MarginContainer/list").set_bbcode(str(score))
 	if Batter:
 		Batter.frame = 0
 	if tries > 0:
 		hit_ball()
 	elif tries == 0:
-		if score >= 7:
+		if score >= 2:
 			GlobalVars.pop_fly_done = true
 			ins.file = "kid2"
 			add_child(ins)

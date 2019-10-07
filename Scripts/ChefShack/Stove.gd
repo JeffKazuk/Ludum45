@@ -2,8 +2,8 @@ extends Spatial
 
 var chefshack
 signal pickup
-var cooked_color = Color(63/255,34/255,0/255)
-var raw_color = Color(255/255,83/255,83/255)
+var cooked_color = Color(float(63)/255,float(34)/255,float(0)/255)
+var raw_color = Color(float(255)/255,float(83)/255,float(83)/255)
 var burger = false
 
 func _ready():
@@ -17,6 +17,11 @@ func _on_interact():
 		$Borger.visible = true
 		$Timer.start()
 		get_parent().get_node("Raw_Burger").reset()
+		burger = true
+	elif chefshack.currently_holding == "Burger_Cooked":
+		get_node("Borger").get_node("Cylinder").get_surface_material(0).albedo_color = cooked_color
+		chefshack.currently_holding = ""
+		$Borger.visible = true
 		burger = true
 	elif $Timer.time_left == 0 && burger:
 		emit_signal("pickup")

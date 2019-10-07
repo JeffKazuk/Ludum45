@@ -131,7 +131,7 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.82674, 1.25696, 0.867919 )
 flip_h = true
 alpha_cut = 2
 frames = SubResource( 2 )
-frame = 22
+frame = 8
 playing = true
 
 [node name="Wants" type="AnimatedSprite3D" parent="."]
