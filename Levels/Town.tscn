@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world.tscn" type="PackedScene" id=2]
@@ -6,14 +6,46 @@
 [ext_resource path="res://Scripts/Town/MailBox.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Town/ChefShackDoor.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Town/GroceryStoreDoor.gd" type="Script" id=6]
-[ext_resource path="res://changeScene.tscn" type="PackedScene" id=7]
-[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=8]
-[ext_resource path="res://post.tscn" type="PackedScene" id=9]
-[ext_resource path="res://house.tscn" type="PackedScene" id=10]
-[ext_resource path="res://models/BorgerTown.tscn" type="PackedScene" id=11]
-[ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=12]
-[ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=13]
-[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=14]
+[ext_resource path="res://images/Jogger Idle/Jogger idle00.png" type="Texture" id=7]
+[ext_resource path="res://images/Jogger Idle/Jogger idle01.png" type="Texture" id=8]
+[ext_resource path="res://images/Jogger Idle/Jogger idle02.png" type="Texture" id=9]
+[ext_resource path="res://images/Jogger Idle/Jogger idle03.png" type="Texture" id=10]
+[ext_resource path="res://images/Jogger Idle/Jogger idle04.png" type="Texture" id=11]
+[ext_resource path="res://images/Jogger Idle/Jogger idle05.png" type="Texture" id=12]
+[ext_resource path="res://images/Jogger Idle/Jogger idle06.png" type="Texture" id=13]
+[ext_resource path="res://images/Jogger Idle/Jogger idle07.png" type="Texture" id=14]
+[ext_resource path="res://images/Jogger Idle/Jogger idle08.png" type="Texture" id=15]
+[ext_resource path="res://images/Jogger Idle/Jogger idle09.png" type="Texture" id=16]
+[ext_resource path="res://images/Jogger Idle/Jogger idle10.png" type="Texture" id=17]
+[ext_resource path="res://images/Jogger Idle/Jogger idle11.png" type="Texture" id=18]
+[ext_resource path="res://images/Jogger Idle/Jogger idle12.png" type="Texture" id=19]
+[ext_resource path="res://images/Jogger Idle/Jogger idle13.png" type="Texture" id=20]
+[ext_resource path="res://images/Jogger Idle/Jogger idle14.png" type="Texture" id=21]
+[ext_resource path="res://images/Jogger Idle/Jogger idle15.png" type="Texture" id=22]
+[ext_resource path="res://images/Jogger Idle/Jogger idle16.png" type="Texture" id=23]
+[ext_resource path="res://images/Jogger Idle/Jogger idle17.png" type="Texture" id=24]
+[ext_resource path="res://images/Jogger Idle/Jogger idle18.png" type="Texture" id=25]
+[ext_resource path="res://images/Jogger Idle/Jogger idle19.png" type="Texture" id=26]
+[ext_resource path="res://images/Jogger Idle/Jogger idle20.png" type="Texture" id=27]
+[ext_resource path="res://images/Jogger Idle/Jogger idle21.png" type="Texture" id=28]
+[ext_resource path="res://images/Jogger Idle/Jogger idle22.png" type="Texture" id=29]
+[ext_resource path="res://Scripts/Town/Jogger.gd" type="Script" id=30]
+[ext_resource path="res://changeScene.tscn" type="PackedScene" id=31]
+[ext_resource path="res://transitions/wipe.tscn" type="PackedScene" id=32]
+[ext_resource path="res://post.tscn" type="PackedScene" id=33]
+[ext_resource path="res://house.tscn" type="PackedScene" id=34]
+[ext_resource path="res://models/BorgerTown.tscn" type="PackedScene" id=35]
+[ext_resource path="res://models/ChefShack.tscn" type="PackedScene" id=36]
+[ext_resource path="res://models/GroceryStore.tscn" type="PackedScene" id=37]
+[ext_resource path="res://models/Mailbox.tscn" type="PackedScene" id=38]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
 
 [sub_resource type="ProceduralSky" id=1]
 ground_bottom_color = Color( 0.266667, 0.431373, 0.27451, 1 )
@@ -34,7 +66,7 @@ SpawnLoc = "BusStation"
 transform = Transform( 1, 0, 0, 0, 0.923124, 0.384505, 0, -0.384505, 0.923124, 0, 3.03842, 4.11099 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
 
 [node name="PostOffice" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
@@ -43,7 +75,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.405, 1, -8.43947 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.036, 1, -5.979 )
 
 [node name="Interactables" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="PostOfficeDoor" type="Spatial" parent="Interactables"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5095, 0.957861, -7.99889 )
@@ -77,47 +108,56 @@ script = ExtResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4288, 1.08716, -14.0609 )
 script = ExtResource( 6 )
 
-[node name="changeScene" parent="." instance=ExtResource( 7 )]
+[node name="Jogger" type="AnimatedSprite3D" parent="Interactables"]
+transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0.359131, 1.14159, -15.3782 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+script = ExtResource( 30 )
+
+[node name="changeScene" parent="." instance=ExtResource( 31 )]
 fadetime = 2
 fadeA = 1
 
-[node name="wipe" parent="." instance=ExtResource( 8 )]
+[node name="wipe" parent="." instance=ExtResource( 32 )]
 endAlpha = 0
 fadeTime = 3
 
 [node name="Buildings" type="Node" parent="."]
+editor/display_folded = true
 
-[node name="post_office" parent="Buildings" instance=ExtResource( 9 )]
-transform = Transform( -0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 36.527, 0.000280619, -10.3357 )
+[node name="post_office" parent="Buildings" instance=ExtResource( 33 )]
+transform = Transform( -0.6, 0, -9.05975e-008, 0, 0.6, 0, 9.05975e-008, 0, -0.6, 36.527, 0.000280619, -10.3357 )
 
-[node name="house" parent="Buildings" instance=ExtResource( 10 )]
-transform = Transform( -0.6, 0, -1.05697e-07, 0, 0.6, 0, 9.05975e-08, 0, -0.7, 36.5278, 0, -19.6378 )
+[node name="house" parent="Buildings" instance=ExtResource( 34 )]
+transform = Transform( -0.6, 0, -1.05697e-007, 0, 0.6, 0, 9.05975e-008, 0, -0.7, 36.5278, 0, -19.6378 )
 
-[node name="borger_town" parent="Buildings" instance=ExtResource( 11 )]
-transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 14.943, 0.1, -38.622 )
+[node name="borger_town" parent="Buildings" instance=ExtResource( 35 )]
+transform = Transform( -2.62268e-008, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-008, 14.943, 0.1, -38.622 )
 
-[node name="chef_shack" parent="Buildings" instance=ExtResource( 12 )]
-transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -15.234, 0.01, -38.616 )
+[node name="chef_shack" parent="Buildings" instance=ExtResource( 36 )]
+transform = Transform( -2.62268e-008, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-008, -15.234, 0.01, -38.616 )
 
-[node name="groceries" parent="Buildings" instance=ExtResource( 13 )]
+[node name="groceries" parent="Buildings" instance=ExtResource( 37 )]
 transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -37.897, 0.1, -14.008 )
 
 [node name="Mailboxes" type="Node" parent="."]
+editor/display_folded = true
 
-[node name="House" parent="Mailboxes" instance=ExtResource( 14 )]
-transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 36.0521, 0, -21.5731 )
+[node name="House" parent="Mailboxes" instance=ExtResource( 38 )]
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 36.0521, 0, -21.5731 )
 
-[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 14 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 18.4376, 0, -37.188 )
+[node name="BorgerShack" parent="Mailboxes" instance=ExtResource( 38 )]
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 18.4376, 0, -37.188 )
 
-[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 14 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -18.6841, 0, -37.188 )
+[node name="ChefShack" parent="Mailboxes" instance=ExtResource( 38 )]
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, -18.6841, 0, -37.188 )
 
-[node name="House2" parent="Mailboxes" instance=ExtResource( 14 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2.79913, 0, -37.188 )
+[node name="House2" parent="Mailboxes" instance=ExtResource( 38 )]
+transform = Transform( -0.5, 0, -4.37114e-008, 0, 0.5, 0, 4.37114e-008, 0, -0.5, 2.79913, 0, -37.188 )
 
-[node name="Grocery" parent="Mailboxes" instance=ExtResource( 14 )]
-transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -36.2148, 0, -11.0167 )
+[node name="Grocery" parent="Mailboxes" instance=ExtResource( 38 )]
+transform = Transform( -2.18557e-008, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-008, -36.2148, 0, -11.0167 )
 
 [node name="GroceryStore" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1236, 1, -13.891 )
